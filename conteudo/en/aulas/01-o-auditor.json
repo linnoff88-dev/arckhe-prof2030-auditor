@@ -1,0 +1,294 @@
+{
+  "slug": "o-auditor",
+  "num": 1,
+  "menu": "The auditor",
+  "titulo": "The AI auditor: what you assess, what you don't, and the written authorization",
+  "titulo_curto": "The AI auditor",
+  "minutos": 18,
+  "lead": "The company already uses AI in places leadership doesn't even know about. Someone needs to look with a method, show the evidence, and say what to do first. That is the AI auditor. Before you open any system, you agree in writing on what you will look at, what you won't, and who authorized it.",
+  "objetivo": "define the scope of the assessment, say what you don't do, and get the owner's written authorization before looking at any system.",
+  "competencias": [
+    "delimitar-escopo-auditoria",
+    "obter-autorizacao-escrita",
+    "reconhecer-quando-escalar"
+  ],
+  "aprende": [
+    {
+      "t": "What an AI auditor delivers (and what they don't)"
+    },
+    {
+      "t": "The 6 steps of the work, from authorization to report"
+    },
+    {
+      "t": "When to stop and call another professional"
+    },
+    {
+      "t": "The scope agreement and authorization, ready to copy"
+    }
+  ],
+  "hero_alt": "Two people at an office desk; one signs a one-page document next to a stamp.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "The auditor's work, from start to finish",
+      "sub": "Six steps. Nothing starts before the first one. Tap each one.",
+      "nos": [
+        {
+          "icone": "caneta",
+          "titulo": "Authorization",
+          "sub": "written scope",
+          "forte": true,
+          "detalhe": "The owner (or whoever is responsible for the company) signs off on what you will look at, how far you will go, for how long, and what stays out. Without this, you open nothing. This is this lesson."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Inventory",
+          "sub": "what exists",
+          "detalhe": "A list of apps, agents, integrations, and tools that employees use on their own (the \"shadow AI\"). Each item has an owner. Lesson 2."
+        },
+        {
+          "icone": "alvo",
+          "titulo": "Triage",
+          "sub": "rating and evidence",
+          "detalhe": "Each item gets a risk rating based on a simple matrix (OWASP LLM and Agentic) and proof of what you saw. Lesson 3."
+        },
+        {
+          "icone": "lupa",
+          "titulo": "Review",
+          "sub": "apps, agents, data",
+          "detalhe": "Three fronts: app built by AI (lesson 4), agent that acts on its own (lesson 5), data and vendors (lesson 6)."
+        },
+        {
+          "icone": "escudo",
+          "titulo": "Governance",
+          "sub": "rules that stay",
+          "detalhe": "A 20-item checklist that the company keeps up after you leave, based on NIST AI RMF, ISO/IEC 42001, the EU AI Act, and LGPD (Brazil's data protection law). Lesson 7."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "Report",
+          "sub": "1 page + 30 days",
+          "detalhe": "Executive summary, findings with evidence, what was not verified, and a 30-day plan. Lesson 8."
+        }
+      ],
+      "legenda": "Scope of this program: assessment and triage of AI risks. It is not a pentest, nor incident response, nor a legal opinion.",
+      "dica": "A pentest is really trying to break in; that requires a contract and a dedicated professional. You read, ask, and record."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "What you do and what you don't",
+      "sub": "Making the limit clear is what gives your work credibility.",
+      "passos": [
+        {
+          "titulo": "You do",
+          "sub": "assessment and triage",
+          "texto": [
+            "You map what the company uses in AI, read settings and documents the owner has released, and interview the people who use them.",
+            "You rate each risk with evidence and say what to do now, in 7 days, and in 30 days."
+          ],
+          "exemplo": {
+            "rot": "At Horizonte",
+            "texto": "You open the customer spreadsheet with the login Patrícia gave you and note that it is open to \"anyone with the link\"."
+          }
+        },
+        {
+          "titulo": "You do not do",
+          "sub": "three limits",
+          "texto": [
+            "<b>Pentest</b>: you do not try to break in, you do not run attack tools, you do not test anyone's password.",
+            "<b>Incident response</b>: if a break-in is happening, you do not investigate alone. <b>Legal opinion</b>: you point out the LGPD (Brazil's data protection law) risk; whether it is illegal is for a lawyer to say."
+          ],
+          "exemplo": {
+            "rot": "Ready-made phrase",
+            "texto": "I point out the risk and the evidence. The legal conclusion is up to your lawyer."
+          }
+        },
+        {
+          "titulo": "When to stop",
+          "sub": "and escalate",
+          "texto": [
+            "Stop and tell the owner the same day if you find: signs of a break-in in progress, personal data already leaked, a crime, or anything outside the signed scope.",
+            "Write down what you saw, don't touch anything, and point to the right professional: security (incident), lawyer (LGPD (Brazil's data protection law)), the vendor's IT."
+          ],
+          "exemplo": {
+            "rot": "At Horizonte",
+            "texto": "In the agent's log you see requests nobody recognizes. You stop, tell Carlos and Rafael (IT), and suggest calling incident response."
+          }
+        },
+        {
+          "titulo": "Never",
+          "sub": "fixed rules",
+          "texto": [
+            "Never ask for or keep anyone's password: the access owner is the one who types it. Never copy a secret into the report: show only where it is and the first 4 characters.",
+            "Never promise \"total security\". What you could not see becomes \"not verified\", never \"ok\"."
+          ],
+          "exemplo": {
+            "rot": "In the report",
+            "texto": "API key exposed in app.js, line 12 (starts with sk-t…). Not verified: whether the key is still active."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Template to copy: scope agreement and authorization",
+      "sub": "One page. Fill in the fields between < > and ask for a signature before you start.",
+      "blocos": [
+        {
+          "rot": "Scope agreement and authorization",
+          "icone": "caneta",
+          "conteudo": "SCOPE AGREEMENT AND AUTHORIZATION — AI RISK ASSESSMENT\n\nCompany: <legal name>            CNPJ: <number>\nAuthorizing person: <name, title>\nAssessor: <your name>            Contact: <email / phone>\nPeriod: from <date> to <date>\n\n1. WHAT THIS WORK IS\nAssessment and triage of risks in the use of artificial intelligence.\nIt is NOT a penetration test (pentest), NOT incident response and\nNOT a legal opinion. It does not issue certification.\n\n2. WHAT WILL BE ASSESSED (scope)\n[ ] AI tools used by employees (inventory)\n[ ] App(s): <name and address>\n[ ] Agent(s): <name, channel (WhatsApp, email...)>\n[ ] Integrations / connectors (MCP, automations): <which>\n[ ] Spreadsheets and databases that feed the AI: <which>\n[ ] AI vendors and contracts: <which>\n\n3. WHAT IS OUT OF SCOPE\n- <e.g.: third-party systems, customer website, the bank's production environment>\n\n4. HOW THE ASSESSOR WORKS\n- Read-only: settings, documents, code and records that have been released.\n- Access with a read-only login created by the company; never receives anyone's password.\n- Does not change, delete, test attacks, or send anything on behalf of the company.\n- Secrets found appear in the report only as location + first 4 characters.\n- Personal data seen stays confidential and does not leave the company's environment.\n\n5. WHEN THE ASSESSOR STOPS AND REPORTS (the same day)\n- Sign of a break-in in progress or personal data already leaked.\n- Indication of a crime.\n- Anything outside the scope above.\nIn these cases they record what they saw, touch nothing and point to\nthe right professional (security, legal, vendor).\n\n6. DELIVERABLE\nOne-page executive report + findings with evidence +\nunverified items + 30-day plan. Date: <date>.\n\n7. AUTHORIZATION\nI authorize the assessment described above, within the scope and period.\n\n_____________________________    Date: ___/___/______\n<name of the authorizing person>, <title>\n\n_____________________________    Date: ___/___/______\n<name of the assessor>"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "How to check",
+            "html": "<ol><li>The scope lists each app, agent and integration by name.</li><li>\"What is out of scope\" has at least one item.</li><li>The three denials (not a pentest, not incident response, not a legal opinion) are written out.</li><li>Whoever signs answers for the company (owner or director), not just the person who called you.</li></ol>"
+          },
+          {
+            "rot": "Common mistakes",
+            "html": "<ul><li><b>Authorization by WhatsApp</b> (\"go ahead and take a look\"): it doesn't say what or how far. Send the agreement and ask for a signature, even a digital one.</li><li><b>Scope \"all of IT\"</b>: impossible to deliver. List it piece by piece.</li><li><b>Receiving the owner's password</b>: ask for a read-only login in your name.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "Use the lab company. The names are fictional.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Horizonte Distribuidora agreement",
+          "min": "25 min",
+          "texto": "Open the <a href=\"https://inematds.github.io/prof2030-lab/\" target=\"_blank\" rel=\"noopener\">Horizonte Distribuidora</a> page. Fill in the agreement with the lab's 6 pieces (orders app, WhatsApp agent, customer spreadsheet, MCP integration with email, customer service summary and dashboard) and the inventory. The person who authorizes is the owner, Carlos Mendes.",
+          "pronto": "the agreement has the 6 pieces in scope, at least 1 item out of scope, the three denials written out and the signature field for Carlos."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Your boundary phrase",
+          "min": "10 min",
+          "texto": "Write, in your own words, the phrase you say when the client asks for something outside the scope (e.g.: \"then try to break in to see if it holds up\").",
+          "pronto": "the phrase fits in two lines, says what you don't do and points to who does."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "Carlos says over WhatsApp: \"go ahead and look at everything\". Do you start?",
+          "opcoes": [
+            "Yes, the message is already authorization.",
+            "No. You send the agreement with the scope piece by piece and wait for the signature.",
+            "Yes, but only on the weekend.",
+            "Only if Rafael (IT) also sends a message."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "codigo",
+          "explica": "\"Look at everything\" doesn't say what, how far, or for how long. The agreement protects you and the company. The common mistake is thinking good will replaces scope."
+        },
+        {
+          "p": "During the assessment, you see strange requests in the agent's log that nobody recognizes. What do you do?",
+          "opcoes": [
+            "Investigate on your own until you find the intruder.",
+            "Note it down for the final report.",
+            "Stop, record what you saw without touching anything, tell the owner the same day, and suggest incident response.",
+            "Delete the strange requests."
+          ],
+          "certa": 2,
+          "cert": true,
+          "ref": "passos",
+          "explica": "A sign of an intrusion in progress is out of scope and urgent. You don't investigate it (that's incident response), and you don't wait for the report. You raise the alarm and point to who handles it."
+        },
+        {
+          "p": "Which of these is the AI auditor's job in this program?",
+          "opcoes": [
+            "Run an attack tool against the website.",
+            "Say whether the use of data is illegal.",
+            "Classify the risk of an open spreadsheet and show the evidence.",
+            "Issue an ISO 42001 certificate."
+          ],
+          "certa": 2,
+          "ref": "diagrama",
+          "explica": "Assessing and triaging with evidence is your job. An attack is a pentest, illegality is a legal opinion, and an ISO certificate comes from a certification body."
+        },
+        {
+          "p": "You found an API key in the code. How does it appear in the report?",
+          "opcoes": [
+            "The whole key, to prove it.",
+            "File, line, and the first 4 characters.",
+            "It doesn't appear, so you don't scare anyone.",
+            "In a password-protected attachment."
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "The evidence has to be verifiable without spreading the secret. Location + the first 4 characters are enough for Rafael to find and replace the key."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "Six steps",
+          "texto": "Authorization, inventory, triage, review, governance, and report. Nothing starts before authorization."
+        },
+        {
+          "t": "One-page agreement",
+          "texto": "Scope item by item, what stays out, how you work, when you stop, and who signs."
+        },
+        {
+          "t": "Why now",
+          "texto": "Gartner forecasts AI governance spending of US$ 492 million in 2026 and more than US$ 1 billion in 2030. In Brazil, only 27% of companies say they have mature governance (Deloitte, 2026)."
+        },
+        {
+          "t": "Scope",
+          "texto": "Assessment and triage of AI risks. This is not a pentest, nor incident response, nor a legal opinion. Sign of an intrusion, a leak, or a legal question: stop and escalate."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To go further",
+      "links": [
+        {
+          "t": "Gartner (02/17/2026): AI governance spending",
+          "href": "https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2026-02-17-gartner-global-ai-regulations-fuel-billion-dollar-market-for-ai-governance-platforms",
+          "icone": "grafico"
+        },
+        {
+          "t": "Deloitte Brazil: State of AI 2026 (27% with mature governance)",
+          "href": "https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html",
+          "icone": "grafico"
+        },
+        {
+          "t": "OWASP GenAI Security Project",
+          "href": "https://genai.owasp.org/",
+          "icone": "escudo"
+        },
+        {
+          "t": "NIST AI Risk Management Framework",
+          "href": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "icone": "camadas"
+        },
+        {
+          "t": "Lab company: Horizonte Distribuidora",
+          "href": "https://inematds.github.io/prof2030-lab/",
+          "icone": "pasta"
+        },
+        {
+          "t": "BSI: what ISO/IEC 42001 is (AI management system)",
+          "href": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-42001-ai-management-system/",
+          "icone": "arquivo"
+        }
+      ]
+    }
+  ]
+}

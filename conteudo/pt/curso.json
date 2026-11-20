@@ -1,0 +1,192 @@
+{
+  "id": "prof2030-auditor",
+  "lang": "pt-BR",
+  "url": "https://inematds.github.io/prof2030-auditor/",
+  "nome": "Auditor de IA",
+  "sub": "Profissional 2030 · formação",
+  "icone": "escudo",
+  "volta": {
+    "t": "Área Profissional 2030",
+    "href": "https://inematds.github.io/profissional-2030/"
+  },
+  "lado_card": {
+    "rot": "Prática desta formação",
+    "t": "Empresa-laboratório com 12 falhas plantadas",
+    "texto": "A Horizonte Distribuidora é fictícia e segura: tudo é HTML e JSON de exemplo, sem chave real. Cada aula manda achar algumas falhas.",
+    "link": "Abrir o laboratório",
+    "href": "https://inematds.github.io/prof2030-lab/"
+  },
+  "rodape": "INEMA.CLUB · conteúdo aberto e gratuito · formato INEMA Learning v7.2 · <a href=\"https://inematds.github.io/profissional-2030/\">Profissional 2030</a> · <a href=\"https://inema.club/\">inema.club</a> · Avaliação e triagem de riscos de IA: não é pentest, nem resposta a incidente, nem parecer jurídico. · <a href=\"https://www.inema.club/cursos/338-profissional-2030-auditor-de-ia-inventario-triagem-de-riscos-e-relatorio-8-aulas/\">Ficha deste curso no INEMA.CLUB</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guia: como aprender IA</a>",
+  "videos": {},
+  "inicio": {
+    "kicker": "Profissional 2030 · formação Auditor de IA · 8 aulas",
+    "titulo": "Auditor de IA: achar, classificar e explicar os riscos da IA que a empresa já usa",
+    "lead": "A empresa já usa IA: apps feitos por vibe coding, agentes no WhatsApp, integrações com o e-mail, planilhas com dado de cliente. Em oito aulas você aprende a pedir autorização, levantar o inventário, classificar cada risco com evidência e entregar à diretoria um relatório com plano de 30 dias.",
+    "cta": "Começar pela aula 1",
+    "cta2": {
+      "t": "Ver o programa Profissional 2030",
+      "href": "https://inematds.github.io/profissional-2030/"
+    },
+    "capa_alt": "Auditor de IA: avaliar e triar riscos de IA com método e evidência. Profissional 2030, INEMA.CLUB.",
+    "numeros": [
+      {
+        "v": "8",
+        "t": "aulas de 15 a 25 min"
+      },
+      {
+        "v": "8",
+        "t": "modelos para copiar"
+      },
+      {
+        "v": "12",
+        "t": "falhas plantadas no laboratório"
+      },
+      {
+        "v": "1",
+        "t": "relatório final com plano de 30 dias"
+      }
+    ],
+    "aulas_titulo": "As aulas",
+    "aulas_sub": "Na ordem do trabalho real: autorização, inventário, triagem, três frentes de revisão (apps, agentes, dados), governança e relatório.",
+    "blocos": [
+      {
+        "t": "Para quem é",
+        "itens": [
+          "Profissionais de TI, compliance, controladoria ou gestão que querem ajudar empresas a usar IA com segurança.",
+          "Consultores que já atendem PMEs e recebem a pergunta \"essa IA que a gente usa é segura?\".",
+          "Não precisa programar: você lê evidências, faz perguntas certas e sabe quando chamar um especialista."
+        ]
+      },
+      {
+        "t": "O que você sai fazendo",
+        "itens": [
+          "Escrever o termo de escopo e autorização antes de olhar qualquer coisa.",
+          "Montar o inventário de IA da empresa, incluindo a \"IA na sombra\".",
+          "Classificar riscos com uma matriz baseada no OWASP (LLM e Agentic) e registrar a evidência.",
+          "Revisar app feito por IA, agente que age e fornecedor que recebe dado de cliente.",
+          "Entregar relatório executivo de uma página e plano de 30 dias."
+        ]
+      },
+      {
+        "t": "O que este curso NÃO é",
+        "itens": [
+          "Avaliação e triagem de riscos de IA. <b>Não é pentest</b> (teste de invasão), <b>nem resposta a incidente</b>, <b>nem parecer jurídico</b>.",
+          "Quando o caso pede isso, você escala para um profissional habilitado: a aula 1 mostra como.",
+          "A certificação INEMA é de <b>qualificação</b>, não de profissão regulada, e não substitui auditoria ISO certificada."
+        ]
+      },
+      {
+        "t": "Faz parte do Profissional 2030",
+        "itens": [
+          "Formação do programa <a href=\"https://inematds.github.io/profissional-2030/\">Profissional 2030</a>. Cada formação terá certificação INEMA; detalhes em breve.",
+          "Pré-requisito recomendado (não obrigatório): <a href=\"https://inematds.github.io/prof2030-base/\">Base comum</a>.",
+          "Outras formações: <a href=\"https://inematds.github.io/prof2030-consultor/\">Consultor</a> · <a href=\"https://inematds.github.io/prof2030-auditor/\">Auditor</a> · <a href=\"https://inematds.github.io/prof2030-mentor/\">Mentor</a> · <a href=\"https://inematds.github.io/prof2030-treinador/\">Treinador</a>.",
+          "Prática: <a href=\"https://inematds.github.io/prof2030-lab/\">empresa-laboratório Horizonte Distribuidora</a>."
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "pular": "Pular para o conteúdo",
+    "aulas": "Aulas",
+    "concluido": "concluído",
+    "aula": "Aula",
+    "nesta_aula": "Nesta aula, você vai aprender:",
+    "objetivo": "Objetivo:",
+    "proxima_aula": "Próxima aula",
+    "aula_anterior": "Aula anterior",
+    "voltar_inicio": "Voltar ao início do curso",
+    "marcar_concluida": "Marcar aula como concluída",
+    "dg_dica": "Clique em cada bloco do diagrama para ver o que ele faz.",
+    "copiar": "Copiar",
+    "copiado": "Copiado",
+    "selo_simulacao": "Simulação: exemplo ilustrativo",
+    "selo_real": "Exemplo do repositório",
+    "pronto_quando": "Pronto quando:",
+    "fiz": "Fiz este exercício",
+    "video_pagina": "Página do vídeo com roteiro",
+    "pergunta": "Pergunta",
+    "de": "de",
+    "cert_tag": "competência",
+    "correto": "Correto",
+    "errado": "Não é essa",
+    "quiz_aguarda": "Escolha uma alternativa. A explicação aparece depois da sua tentativa.",
+    "proxima_pergunta": "Próxima pergunta",
+    "quiz_ver": "Ver resultado",
+    "quiz_fim": "Teste concluído",
+    "quiz_total": "Você acertou {a} de {n}. Acertando todas, a aula é marcada como concluída.",
+    "aparencia": "Aparência",
+    "tamanho_texto": "Tamanho do texto",
+    "tema": "Tema",
+    "tema_escuro": "Escuro",
+    "tema_papel": "Papel claro",
+    "role_dica": "Role a página: cada etapa abaixo acende a sua parte do diagrama.",
+    "pre_requisito": "requer",
+    "ver_aula": "Ver a aula",
+    "mapa_dica": "Clique num exercício para ver o que fazer e o \"pronto quando\".",
+    "etapas": "Etapas",
+    "exercicios": "exercícios",
+    "rever": "Rever:",
+    "revisar_erradas": "Revisar as erradas",
+    "refazer": "Refazer o teste",
+    "h_semana": "h por semana",
+    "data_inicio": "Data de início",
+    "ritmo": "Tempo disponível",
+    "gerar_plano": "Gerar meu plano",
+    "baixar_md": "Baixar plano.md",
+    "baixar_ics": "Baixar para o calendário (.ics)",
+    "ind_estudo": "Estudo (aulas)",
+    "ind_pratica": "Prática declarada",
+    "ind_nota": "Prática = exercícios que você marcou como feitos. A comprovação vem na prova da certificação.",
+    "estudo": {
+      "titulo": "Seu estudo",
+      "continuar": "Continuar de onde parei",
+      "comecar": "Começar pela aula 1",
+      "cta_continuar": "Continuar a aula {n}",
+      "hoje": "hoje",
+      "ontem": "ontem",
+      "ha_dias": "há {n} dias",
+      "desempenho": "Desempenho nos testes",
+      "notas": "Minhas anotações",
+      "dados": "Copiar meus dados",
+      "sem_testes": "Nenhum teste feito ainda. O teste fica no fim de cada aula.",
+      "nao_fez": "teste ainda não feito",
+      "ultimo": "Último",
+      "melhor": "Melhor",
+      "tentativas": "tentativas",
+      "tentativa": "tentativa",
+      "tudo_certo": "Acertou tudo no último teste.",
+      "rever": "Para rever",
+      "resposta": "Resposta certa:",
+      "ir_teste": "Refazer o teste",
+      "sem_notas": "Nenhuma anotação ainda. Na aula, selecione um trecho do texto e toque em Marcar ou Anotar.",
+      "so_marcado": "(só marcado)",
+      "marcar": "Marcar",
+      "anotar": "Anotar",
+      "salvar": "Salvar",
+      "apagar": "Apagar marca",
+      "fechar": "Fechar",
+      "nota_ph": "Escreva sua anotação sobre este trecho…",
+      "um_bloco": "Marque dentro de um parágrafo só.",
+      "nao_marca": "Este trecho não pode ser marcado.",
+      "dados_exp": "Seu progresso, suas anotações e as notas dos testes ficam só neste navegador. Baixe uma cópia (.json) para guardar ou para continuar em outro computador ou navegador; lá, carregue a cópia. Carregar soma com o que já existe e não apaga nada.",
+      "exportar": "Baixar cópia",
+      "importar": "Carregar cópia",
+      "import_ok": "Cópia carregada ({n} itens). Atualizando a página…",
+      "import_erro": "Arquivo não reconhecido. Nada foi alterado.",
+      "import_outro": "Esta cópia é de outro curso. Nada foi alterado.",
+      "export_ok": "Cópia baixada."
+    },
+    "conv_dica": "Leia o item e a evidência. Escolha a nota de risco; o comentário aparece logo depois e o próximo item entra.",
+    "conv_voce": "Sua nota",
+    "conv_escolha": "Sua classificação",
+    "conv_boa": "Nota certa",
+    "conv_meio": "Perto: reveja a evidência",
+    "conv_ruim": "Nota errada",
+    "conv_fim": "Fim da triagem",
+    "conv_placar": "Você fez {p} de {m} pontos possíveis.",
+    "conv_licao": "Lição:",
+    "conv_recomecar": "Refazer a triagem",
+    "conv_feita": "Seu melhor placar: {p} de {m} pontos."
+  }
+}

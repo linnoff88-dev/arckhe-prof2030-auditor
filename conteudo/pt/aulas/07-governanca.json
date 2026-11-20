@@ -1,0 +1,308 @@
+{
+  "slug": "governanca",
+  "num": 7,
+  "menu": "Governança",
+  "titulo": "Governança leve: o checklist que fica quando você sai",
+  "titulo_curto": "Governança leve",
+  "minutos": 22,
+  "lead": "Corrigir as falhas de hoje não basta: amanhã chega uma ferramenta nova. Governança é o conjunto pequeno de regras e rotinas que a empresa mantém sozinha. Para uma PME, ela cabe em 20 itens, tirados das referências que o mercado usa: NIST AI RMF, ISO/IEC 42001, AI Act e LGPD. Sem comitê, sem burocracia.",
+  "objetivo": "montar o checklist de governança de 20 itens da empresa, com status, evidência, dono e prazo, ligado às referências NIST, ISO 42001, AI Act e LGPD.",
+  "competencias": [
+    "montar-checklist-governanca",
+    "aplicar-referenciais-nist-iso",
+    "dimensionar-governanca-proporcional"
+  ],
+  "aprende": [
+    {
+      "t": "O que cada referência traz para uma PME"
+    },
+    {
+      "t": "Governança proporcional ao risco"
+    },
+    {
+      "t": "Linha de base e política de uso, as duas ausências mais comuns"
+    },
+    {
+      "t": "O checklist de 20 itens, pronto para copiar"
+    }
+  ],
+  "hero_alt": "Três pessoas numa sala de reunião revisam uma folha de checklist; atrás, um quadro com caixas e setas.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Quatro referências, um checklist",
+      "sub": "Você não precisa implantar as quatro. Usa o que cada uma ensina. Clique em cada bloco.",
+      "nos": [
+        {
+          "icone": "camadas",
+          "titulo": "NIST AI RMF",
+          "sub": "4 funções",
+          "detalhe": "Guia gratuito do instituto de padrões dos EUA. Organiza o trabalho em Governar, Mapear, Medir e Gerenciar. Tem um perfil específico para IA generativa. É a espinha do checklist."
+        },
+        {
+          "icone": "portao",
+          "titulo": "ISO/IEC 42001",
+          "sub": "sistema de gestão",
+          "detalhe": "Norma de 2023 para sistema de gestão de IA, no ciclo planejar, fazer, checar, agir. Empresas podem se certificar com organismo credenciado. Para PME, use os princípios; certificar é decisão à parte e não é o que você entrega."
+        },
+        {
+          "icone": "escudo",
+          "titulo": "EU AI Act",
+          "sub": "por nível de risco",
+          "detalhe": "Lei europeia que classifica usos de IA por risco (proibido, alto, transparência, mínimo). Vale para quem oferece IA ou usa resultados no mercado europeu. Com o Digital Omnibus (Reg. 2026/1744), as regras de alto risco do Anexo III passam a valer em 02/12/2027. Fora da UE, serve de régua."
+        },
+        {
+          "icone": "cadeado",
+          "titulo": "LGPD e PL 2338",
+          "sub": "Brasil",
+          "detalhe": "A LGPD já vale para todo dado pessoal que a IA toca. O PL 2338/2023, que regula IA no Brasil, foi aprovado no Senado em dezembro de 2024 e segue em análise na Câmara: ainda não é lei. Acompanhe pelo link da Câmara."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Checklist de 20",
+          "sub": "o que fica",
+          "forte": true,
+          "detalhe": "Vinte itens agrupados pelas 4 funções do NIST, cada um com status (sim, parcial, não, não verificado), evidência, dono e prazo. É o que a diretoria revisa a cada trimestre."
+        }
+      ],
+      "legenda": "Escopo: você recomenda a governança e mostra a evidência. Não emite certificado ISO nem diz se a empresa cumpre a lei.",
+      "dica": "O Gartner prevê que a regulação de IA alcance 75% das economias do mundo até 2030. Um checklist simples hoje evita correria depois."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Proporcional ao risco",
+      "sub": "Governança demais trava; de menos, não protege. O tamanho segue a matriz da aula 3.",
+      "passos": [
+        {
+          "titulo": "Uso de baixo risco",
+          "sub": "o mínimo",
+          "texto": [
+            "Política de uso escrita, revisão humana do que sai para fora e registro de incidentes.",
+            "Ex.: corretor de texto em comunicado interno."
+          ],
+          "exemplo": {
+            "rot": "Política em 3 linhas",
+            "texto": "O que pode. O que não pode (dado de cliente em conta pessoal, por exemplo). A quem pedir ferramenta nova."
+          }
+        },
+        {
+          "titulo": "Médio risco",
+          "sub": "+ dono e medida",
+          "texto": [
+            "Tudo do baixo, mais dono nomeado, monitoramento com indicador e linha de base, e revisão do registro.",
+            "Ex.: painel que decide se o agente amplia para a cobrança."
+          ],
+          "exemplo": {
+            "rot": "Na Horizonte",
+            "texto": "F11: o painel começou no mesmo dia do agente. Sem o \"antes\", ninguém prova que ajudou."
+          }
+        },
+        {
+          "titulo": "Alto risco",
+          "sub": "+ aprovação e trilha",
+          "texto": [
+            "Tudo do médio, mais aprovação humana obrigatória nas ações sensíveis, trilha de auditoria, casos de teste antes de mudar e avaliação jurídica.",
+            "Ex.: agente que cria pedido e dá desconto; integração que envia e-mail."
+          ],
+          "exemplo": {
+            "rot": "Na Horizonte",
+            "texto": "Agente Hora e assistente de e-mail: aprovação acima de R$ 5 mil, apagar nunca, registro revisado toda semana."
+          }
+        },
+        {
+          "titulo": "A sombra",
+          "sub": "sem punir",
+          "texto": [
+            "IA na sombra não se resolve proibindo: levante, avalie cada ferramenta, ofereça alternativa aprovada e publique a política.",
+            "Repita a pesquisa interna a cada trimestre."
+          ],
+          "exemplo": {
+            "rot": "Na Horizonte",
+            "texto": "F12: a extensão que lê e-mails e o app que grava visitas sem aviso entram no inventário e na política, com alternativa."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelo para copiar: checklist de governança de 20 itens",
+      "sub": "Status: sim · parcial · não · não verificado. Cada linha com evidência, dono e prazo.",
+      "blocos": [
+        {
+          "rot": "Checklist de governança de IA (20 itens)",
+          "icone": "lista",
+          "conteudo": "CHECKLIST DE GOVERNANÇA DE IA · <empresa> · <data> · revisão: trimestral\nn;função NIST;item;referência;status;evidência;dono;prazo\n\nGOVERNAR\n01;Governar;Política de uso de IA publicada (pode / não pode / a quem pedir);NIST Govern · ISO 42001 (política);;;;\n02;Governar;Responsável por IA nomeado, com tempo reservado;NIST Govern · ISO 42001 (papéis);;;;\n03;Governar;Todo item do inventário tem dono com nome;NIST Govern;;;;\n04;Governar;Equipe recebeu letramento básico em IA (o que pode, riscos, como pedir ajuda);AI Act art. 4 (letramento);;;;\n05;Governar;Ferramenta nova só entra depois de ficha de fornecedor e triagem;NIST Govern · ISO 42001;;;;\n06;Governar;Revisão trimestral marcada na agenda da diretoria;ISO 42001 (análise crítica);;;;\n\nMAPEAR\n07;Mapear;Inventário de IA atualizado, incluindo IA na sombra;NIST Map;;;;\n08;Mapear;Mapa do dado para cada fluxo com dado pessoal;LGPD arts. 6º, 7º, 37;;;;\n09;Mapear;Ficha de fornecedor para cada fornecedor e modelo;NIST Map · LGPD arts. 33-36;;;;\n10;Mapear;Matriz de risco feita e com prazo por item;NIST Map · OWASP LLM/Agentic;;;;\n\nMEDIR\n11;Medir;Linha de base registrada antes de ligar cada agente;NIST Measure;;;;\n12;Medir;Indicador de resultado de negócio (não só volume);NIST Measure;;;;\n13;Medir;Casos de teste rodados antes de mudar regras de agente;NIST Measure · OWASP Agentic;;;;\n14;Medir;Registro de ações dos agentes revisado (frequência definida);NIST Measure · OWASP Agentic;;;;\n15;Medir;Registro de falhas e incidentes de IA, com a menor correção;NIST Manage · ISO 42001;;;;\n\nGERENCIAR\n16;Gerenciar;Dinheiro, exclusão e publicação exigem aprovação humana;OWASP LLM03 · ASI02;;;;\n17;Gerenciar;Cada agente pode ser desligado em 1 minuto (testado);NIST Manage;;;;\n18;Gerenciar;Segredos fora do código e limite de gasto nos provedores;OWASP LLM06;;;;\n19;Gerenciar;Achados críticos e altos com dono e prazo, conferidos depois;NIST Manage;;;;\n20;Gerenciar;Plano de quem chamar: segurança (incidente), jurídico (LGPD), fornecedor;NIST Manage · LGPD art. 48;;;;"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Como conferir",
+            "html": "<ol><li>São 20 linhas, cada uma com status.</li><li>\"Sim\" sempre tem evidência (documento, print, agenda).</li><li>Todo \"não\" e \"parcial\" tem dono e prazo.</li><li>A referência está na linha, para quem quiser se aprofundar.</li></ol>"
+          },
+          {
+            "rot": "Erros comuns",
+            "html": "<ul><li><b>Copiar uma norma inteira</b>: a PME não mantém 200 controles. Mantém 20.</li><li><b>\"Sim\" sem evidência</b>: vira \"não verificado\".</li><li><b>Prometer conformidade</b>: o checklist mostra práticas; conformidade legal é com o jurídico, certificação ISO é com organismo credenciado.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática",
+      "sub": "Na empresa-laboratório. Falhas desta aula: F11 (painel sem linha de base) e F12 (IA na sombra, agora como política).",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Checklist da Horizonte",
+          "min": "35 min",
+          "texto": "Com tudo o que você levantou nas aulas 2 a 6, preencha o checklist de 20 itens para a Horizonte Distribuidora. Use o <a href=\"https://inematds.github.io/prof2030-lab/pecas/painel/\" target=\"_blank\" rel=\"noopener\">painel de indicadores</a> (<code>indicadores.json</code>) para os itens 11 e 12.",
+          "pronto": "os 20 itens têm status; todo \"sim\" tem evidência; todo \"não\" e \"parcial\" tem dono e prazo; F11 e F12 aparecem nos itens certos (11-12 e 01, 07)."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Política de uso em uma página",
+          "min": "20 min",
+          "texto": "Escreva a política de uso de IA da Horizonte: o que pode, o que não pode, a quem pedir ferramenta nova. Inclua as 4 ferramentas da sombra (F12) com a decisão para cada uma.",
+          "pronto": "a política cabe em uma página, não pune quem respondeu à pesquisa e diz o que fazer com cada uma das 4 ferramentas."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "Uma PME brasileira que só vende no Brasil precisa cumprir o AI Act?",
+          "opcoes": [
+            "Sim, sempre.",
+            "Em regra não, mas o AI Act serve de régua de boas práticas; a LGPD já vale hoje.",
+            "Não, e nenhuma regra vale para IA no Brasil.",
+            "Só depois de 02/12/2027."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "O AI Act vale para quem oferece IA ou usa resultados no mercado europeu. No Brasil, a LGPD já cobre todo dado pessoal que a IA toca. A resposta jurídica para cada caso é do advogado."
+        },
+        {
+          "p": "A empresa quer a \"certificação ISO 42001\" no seu relatório. O que você responde?",
+          "opcoes": [
+            "Emito junto com o relatório.",
+            "Explico que certificação é com organismo credenciado; meu trabalho mostra práticas e lacunas que ajudam a chegar lá.",
+            "Digo que a ISO 42001 não existe.",
+            "Cobro à parte e emito."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "A certificação INEMA é de qualificação de quem avalia, não certifica empresa. Prometer certificado ISO é má-fé e motivo de revogação."
+        },
+        {
+          "p": "O painel mostra pedidos subindo desde que o agente entrou. Isso prova que o agente ajudou?",
+          "opcoes": [
+            "Sim, os números sobem.",
+            "Não: sem linha de base de antes e sem comparar períodos iguais, pode ser sazonalidade, preço ou o desconto sem teto.",
+            "Sim, se a satisfação também subiu.",
+            "Não dá para medir agente."
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "É a F11. A linha de base vem antes de ligar. Sem ela, a decisão de ampliar o agente vira achismo."
+        },
+        {
+          "p": "Quantos itens o checklist da PME deve ter?",
+          "opcoes": [
+            "Todos os controles de todas as normas.",
+            "Poucos e mantidos: 20, com status, evidência, dono e prazo.",
+            "Um só: \"usar IA com cuidado\".",
+            "Depende do fornecedor."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Governança que ninguém mantém não protege. Vinte itens revisados a cada trimestre valem mais que um manual que fica na gaveta."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumo",
+      "itens": [
+        {
+          "t": "Quatro referências",
+          "texto": "NIST AI RMF dá as 4 funções, ISO/IEC 42001 o sistema de gestão, o AI Act a régua por risco (alto risco do Anexo III em 02/12/2027) e a LGPD a regra que já vale."
+        },
+        {
+          "t": "Proporcional",
+          "texto": "Baixo risco: política, revisão e registro. Médio: mais dono e medida. Alto: mais aprovação, trilha, testes e jurídico."
+        },
+        {
+          "t": "Vinte itens",
+          "texto": "Governar 6, mapear 4, medir 5, gerenciar 5. Status, evidência, dono e prazo. Revisão trimestral."
+        },
+        {
+          "t": "Escopo",
+          "texto": "Avaliação e triagem de riscos de IA. Não é pentest, nem resposta a incidente, nem parecer jurídico. Sinal de invasão, vazamento ou dúvida legal: pare e escale."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {
+          "t": "NIST AI Risk Management Framework",
+          "href": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "icone": "camadas"
+        },
+        {
+          "t": "NIST: perfil de IA generativa do AI RMF (NIST AI 600-1)",
+          "href": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+          "icone": "camadas"
+        },
+        {
+          "t": "EU AI Act (Reg. 2024/1689): textos e explorador",
+          "href": "https://artificialintelligenceact.eu/the-act/",
+          "icone": "escudo"
+        },
+        {
+          "t": "AI Act, art. 4: letramento em IA",
+          "href": "https://artificialintelligenceact.eu/article/4/",
+          "icone": "usuario"
+        },
+        {
+          "t": "Gibson Dunn: Digital Omnibus adia o alto risco (Anexo III → 02/12/2027)",
+          "href": "https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/",
+          "icone": "calendario"
+        },
+        {
+          "t": "Câmara: tramitação do PL 2338/2023",
+          "href": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Gartner (17/02/2026): regulação de IA e plataformas de governança",
+          "href": "https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2026-02-17-gartner-global-ai-regulations-fuel-billion-dollar-market-for-ai-governance-platforms",
+          "icone": "grafico"
+        },
+        {
+          "t": "BSI: o que é a ISO/IEC 42001 (sistema de gestão de IA)",
+          "href": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-42001-ai-management-system/",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Laboratório Horizonte: Painel de indicadores (F11)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/painel/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Laboratório Horizonte: Inventário e IA na sombra (F12)",
+          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "icone": "lupa"
+        }
+      ]
+    }
+  ]
+}

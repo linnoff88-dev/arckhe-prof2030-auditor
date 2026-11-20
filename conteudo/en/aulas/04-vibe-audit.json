@@ -1,0 +1,278 @@
+{
+  "slug": "vibe-audit",
+  "num": 4,
+  "menu": "Vibe Audit",
+  "titulo": "Vibe Audit: reviewing the app the AI built",
+  "titulo_curto": "Vibe Audit",
+  "minutos": 25,
+  "lead": "Building an app with AI has become easy: the manager describes it, and the tool delivers a website with a database in one afternoon. What the AI doesn't do on its own is close the doors. In this lesson you review one of these apps just by reading it: exposed secret, missing login, open database, and an old part. You diagnose; the team fixes.",
+  "objetivo": "find an exposed secret, a route without login, a database without RLS, and a vulnerable dependency in an AI-built app, just by reading the project.",
+  "competencias": [
+    "revisar-app-vibe-coding",
+    "identificar-segredo-exposto",
+    "verificar-controle-de-acesso",
+    "checar-dependencias"
+  ],
+  "aprende": [
+    {
+      "t": "The 4 layers that fail most in AI-built apps"
+    },
+    {
+      "t": "Where the auditor stops: diagnosis, report, and plan"
+    },
+    {
+      "t": "Using an AI agent to read the project without changing anything"
+    },
+    {
+      "t": "The Vibe Audit checklist, ready to copy"
+    }
+  ],
+  "hero_alt": "Hands on a laptop keyboard, with blurred code blocks on the screen and a magnifying glass on the desk.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "The 4 layers of the vibe audit",
+      "sub": "Vibe coding is building an app by describing it to the AI in plain language. Review in this order. Click each layer.",
+      "nos": [
+        {
+          "icone": "cadeado",
+          "titulo": "Secrets",
+          "sub": "keys and passwords",
+          "forte": true,
+          "detalhe": "An API key, database password, or token in code that goes to the browser, in a .env file sent to GitHub, or in the history. Everything the browser downloads is public. At Horizonte: F1."
+        },
+        {
+          "icone": "usuario",
+          "titulo": "Login",
+          "sub": "who gets in where",
+          "detalhe": "An admin page, API route, or internal screen that opens without login, or that only checks the login on screen (and not on the server). Hiding the address does not protect it. At Horizonte: F3."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "Database",
+          "sub": "who sees what",
+          "detalhe": "On platforms like Supabase, the key that goes in the browser is public on purpose. What protects the data is RLS (Row Level Security, a rule per row: \"a customer only sees their own orders\"). A table without RLS = anyone reads everything. At Horizonte: F2."
+        },
+        {
+          "icone": "camadas",
+          "titulo": "Dependencies",
+          "sub": "third-party parts",
+          "detalhe": "Libraries listed in package.json (or equivalent). A version with a known public flaw (CVE) is a public recipe for attack. At Horizonte: F4."
+        }
+      ],
+      "legenda": "You only read the project (a copy or a repository released in the agreement). You do not test attacks on the live site.",
+      "dica": "A fifth layer, the site's security headers, comes in if the scope allows and there is time. For small and mid-size businesses, the 4 above cover most of it."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Where the auditor stops",
+      "sub": "The full method has 7 steps. The first 3 are yours; the others belong to the team that fixes, and you check at the end.",
+      "passos": [
+        {
+          "titulo": "1 · Diagnose",
+          "sub": "read-only",
+          "texto": [
+            "Read the project across the 4 layers. Nothing is changed. Whatever you could not see becomes \"not verified\".",
+            "Secret found: note the file, line, and first 4 characters. Never copy the whole key."
+          ],
+          "exemplo": {
+            "rot": "Finding",
+            "texto": "app.js, CONFIG.openaiApiKey: AI key in the browser (starts with FAKE…)."
+          }
+        },
+        {
+          "titulo": "2 · Report",
+          "sub": "finding with proof",
+          "texto": [
+            "For each finding: layer, file and line, proof, severity (the scale from lesson 3), and \"not verified\" when it applies.",
+            "Write so the owner understands: what happens if nobody does anything."
+          ],
+          "exemplo": {
+            "rot": "For Carlos",
+            "texto": "Anyone who opens the app can copy the key and use the AI on Horizonte's account."
+          }
+        },
+        {
+          "titulo": "3 · Plan",
+          "sub": "fix + risk of the fix",
+          "texto": [
+            "For each finding, the suggested fix and its risk: safe, moderate, or risky (could it break the app?).",
+            "Critical with a safe fix goes first. A risky fix only with the owner's OK and a test beforehand."
+          ],
+          "exemplo": {
+            "rot": "Example",
+            "texto": "Replace the key: critical, moderate fix (the app stops suggesting products until the new key is on the server)."
+          }
+        },
+        {
+          "titulo": "4 to 7 · The team fixes, you check",
+          "sub": "backup, simulate, apply, verify",
+          "texto": [
+            "The team or the vendor does the fixing: they make a backup, test on a copy, and apply one item at a time.",
+            "At the end, you repeat the diagnosis and deliver the \"before × after\" table. Without that check, the fix is not proven."
+          ],
+          "exemplo": {
+            "rot": "Table",
+            "texto": "F2 · before: RLS off · after: RLS on, tested with two users · status: resolved."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Templates to copy: checklist and request to the agent",
+      "sub": "The checklist guides you. The request is for an AI agent (Claude Code, Codex) to read the project without changing anything.",
+      "blocos": [
+        {
+          "rot": "Vibe audit checklist",
+          "icone": "lista",
+          "conteudo": "VIBE AUDIT CHECKLIST · <app> · <date> · reviewer: <name>\nMark: [ok] [finding] [not verified] — always with evidence\n\nSECRETS\n[ ] No key/password/token in any file that goes to the browser (.js, .html)\n[ ] .env is NOT in the repository (nor in its history)\n[ ] .gitignore lists .env and key files\n[ ] Public variables (e.g., NEXT_PUBLIC_, VITE_) do not hold secrets\n[ ] \"service_role\" or admin key is never in the front end\n[ ] There is a spending limit at the AI provider\n\nLOGIN AND ACCESS\n[ ] Admin pages require login\n[ ] Login is checked on the server, not just by hiding the button\n[ ] API routes check the session and the role (admin vs. customer)\n[ ] Admin has 2-step verification\n\nDATABASE\n[ ] RLS turned on for ALL tables with customer or order data\n[ ] There is an \"everyone sees only their own\" policy\n[ ] Anonymous user (anon) does not have permission to read/change everything\n[ ] Tested with 2 different users (one does not see the other's data)\n\nDEPENDENCIES\n[ ] Dependency list checked (npm audit or equivalent)\n[ ] No version with a known high-severity flaw (CVE)\n[ ] The framework still receives fixes\n[ ] Someone owns the updates\n\nPUBLISHING\n[ ] The app is public on purpose (the platform did not leave it open by default)\n[ ] Test data is not real customer data\n\nNOT VERIFIED (with reason): <...>"
+        },
+        {
+          "rot": "Request to the agent: read-only review",
+          "icone": "chat",
+          "conteudo": "You will review the security of this project READ-ONLY.\nRules:\n- Do not change, create, or delete any file.\n- Do not run any command that accesses the internet, installs a package, or starts a server.\n- Never show a full secret: only the file, line, and the first 4 characters.\n- Anything you cannot confirm, mark as \"not verified\".\n\nReview 4 layers and deliver a table\n(layer | file:line | what you found | why it is a risk | severity critical/high/medium/low):\n1. Secrets: keys, passwords, tokens in files sent to the browser or to the repository.\n2. Login: admin or internal pages and routes without a server-side login check.\n3. Database: tables without RLS, broad permissions for the anonymous user.\n4. Dependencies: versions with a known vulnerability (cite the CVE if you know it; if you are not sure, say so).\nAt the end, list what stayed \"not verified\" and why."
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "How to check",
+            "html": "<ol><li>Every finding has a file and line that you opened yourself (don't rely only on the agent).</li><li>No secret appears in full.</li><li>RLS was checked table by table.</li><li>The \"not verified\" list exists, even if short.</li></ol>"
+          },
+          {
+            "rot": "Common mistakes",
+            "html": "<ul><li><b>Thinking the Supabase anon key is the problem</b>: it is public by nature. The problem is the table without RLS.</li><li><b>Copying the agent's report without opening the files</b>: agents also make mistakes and sometimes invent CVEs.</li><li><b>\"Quick fix\"</b>: you don't change anything. Fixing is the team's job, with backup and testing.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "At the lab company. Flaws in this lesson: F1, F2, F3, and F4, all in the orders app.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · The 4 flaws in the orders app",
+          "min": "35 min",
+          "texto": "Open the <a href=\"https://inematds.github.io/prof2030-lab/pecas/app-pedidos/\" target=\"_blank\" rel=\"noopener\">lab's orders app</a> and its files (<code>app.js</code>, <code>supabase-config.json</code>, <code>schema.sql</code>, <code>admin.html</code>, <code>package.json</code>). Go through the whole checklist.",
+          "pronto": "you found the 4 planted flaws (F1 to F4), each with a file, proof, severity from the lesson 3 scale, and a suggested fix with the fix's risk."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · One sentence for the owner",
+          "min": "10 min",
+          "texto": "For each of the 4 flaws, write one sentence for Carlos (the owner, not technical) saying what happens if nobody does anything.",
+          "pronto": "the 4 sentences have at most 25 words each and none uses an acronym without explaining it."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "The app uses Supabase and the \"anon\" key is in the browser code. Is that, by itself, the finding?",
+          "opcoes": [
+            "Yes, every key in the browser is critical.",
+            "No. That key is public by nature; the finding is a table without RLS or with broad permission for the anonymous user.",
+            "No, Supabase is always safe.",
+            "Only if the key is old."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "The anon key was made to go to the browser. RLS is what protects. But an AI API key (F1) or the service_role must never be in the front end."
+        },
+        {
+          "p": "The admin panel opens without login, but \"nobody knows the address\". How do you classify it?",
+          "opcoes": [
+            "Low, it is hidden.",
+            "Critical: the address leaks and whoever finds it becomes an administrator.",
+            "Not verified.",
+            "Medium, because someone has to guess it."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "passos",
+          "explica": "Hiding is not access control. Addresses show up in history, screenshots, and search engines. Login must be checked on the server."
+        },
+        {
+          "p": "You found a dependency with a known flaw. Do you update the version?",
+          "opcoes": [
+            "Yes, it's quick.",
+            "No. You record it, suggest the fix with its risk, and the team applies it with backup and testing. You check afterward.",
+            "Yes, but only on the weekend.",
+            "No, dependencies are not the auditor's problem."
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "The auditor diagnoses, reports, and plans (steps 1 to 3). Changing the project goes beyond the scope and can break the app without anyone knowing why."
+        },
+        {
+          "p": "What is the point of asking an AI agent to read the project?",
+          "opcoes": [
+            "Replace the auditor.",
+            "Speed up the reading; you check each finding by opening the file.",
+            "Fix everything automatically.",
+            "Test attacks on the site."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "The agent reads fast, but it makes mistakes and can invent things. The evidence in the report is the file you opened."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "Four layers",
+          "texto": "Secrets, login, database (RLS), and dependencies. This is where AI-built apps fail the most."
+        },
+        {
+          "t": "Your role",
+          "texto": "Diagnosis, report, and plan. The team fixes with backup and testing; you check with the before × after table."
+        },
+        {
+          "t": "Why it matters",
+          "texto": "In May 2026, researchers found about 380 thousand public apps built on vibe coding platforms, some 5 thousand with sensitive corporate data. Some of the platforms left the app public by default."
+        },
+        {
+          "t": "Scope",
+          "texto": "Assessment and triage of AI risks. This is not a pentest, nor incident response, nor a legal opinion. Sign of an intrusion, a leak, or a legal question: stop and escalate."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To go further",
+      "links": [
+        {
+          "t": "OECD.AI: vibe coding apps exposing data (05/07/2026)",
+          "href": "https://oecd.ai/en/incidents/2026-05-07-1210",
+          "icone": "lupa"
+        },
+        {
+          "t": "IANS Research: vibe coding and new data risks (05/15/2026)",
+          "href": "https://www.iansresearch.com/resources/all-blogs/post/security-blog/2026/05/15/easy-to-build--easy-to-expose--how-vibe-coding-is-creating-new-data-risks",
+          "icone": "lupa"
+        },
+        {
+          "t": "blinda-site: the 7-step method to protect a site by looking from the inside",
+          "href": "https://inematds.github.io/blinda-site/guia/",
+          "icone": "escudo"
+        },
+        {
+          "t": "Lab order app (F1 to F4)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/app-pedidos/",
+          "icone": "pasta"
+        }
+      ]
+    }
+  ]
+}

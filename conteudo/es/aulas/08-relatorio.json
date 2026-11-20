@@ -1,0 +1,405 @@
+{
+  "slug": "relatorio",
+  "num": 8,
+  "menu": "Informe",
+  "titulo": "Informe con evidencias, plan de 30 días y lo que cambió",
+  "titulo_curto": "Informe y plan",
+  "minutos": 25,
+  "lead": "Todo lo que levantaste solo vale si la dirección lo entiende y actúa. El informe tiene una página de resumen en el idioma del responsable, los hallazgos con prueba, lo que no lograste ver y un plan de 30 días con responsable y plazo. Al final, el panel de lo que cambió en el mercado, actualizado cada trimestre.",
+  "objetivo": "entregar a la dirección el informe con evidencias y el plan de 30 días de la empresa-laboratorio, aprobados por la rúbrica de 8 criterios.",
+  "competencias": [
+    "redigir-relatorio-executivo",
+    "montar-plano-30-dias",
+    "comunicar-risco-a-diretoria"
+  ],
+  "aprende": [
+    {
+      "t": "Las 6 partes del informe y para quién es cada una"
+    },
+    {
+      "t": "Escribir el riesgo en el idioma del responsable"
+    },
+    {
+      "t": "El plan de 30 días: ahora, 7 días, 30 días"
+    },
+    {
+      "t": "La rúbrica que aprueba tu informe final"
+    }
+  ],
+  "hero_alt": "Un director lee un informe corto entregado por un evaluador del otro lado de la mesa; al fondo, un notebook con un gráfico desenfocado.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Las 6 partes del informe",
+      "sub": "La primera es para el responsable; las otras, para quien corrige y para quien verifica. Haz clic en cada parte.",
+      "nos": [
+        {
+          "icone": "megafone",
+          "titulo": "1 · Resumen ejecutivo",
+          "sub": "1 página",
+          "forte": true,
+          "detalhe": "Para Carlos. En una página: qué se evaluó, los 3 a 5 riesgos más graves en lenguaje de negocio, qué hacer ahora y cuánto tiempo lleva. Sin siglas sin explicación."
+        },
+        {
+          "icone": "lista",
+          "titulo": "2 · Inventario",
+          "sub": "qué existe y de quién",
+          "detalhe": "La planilla de la clase 2, resumida: elementos, responsable, qué toca, qué hace, si TI lo conocía."
+        },
+        {
+          "icone": "lupa",
+          "titulo": "3 · Hallazgos",
+          "sub": "riesgo, impacto, evidencia",
+          "detalhe": "La matriz de la clase 3: cada hallazgo con categoría, código OWASP, nota con su porqué y evidencia (secreto siempre enmascarado)."
+        },
+        {
+          "icone": "calendario",
+          "titulo": "4 · Plan de 30 días",
+          "sub": "ahora · 7 · 30",
+          "detalhe": "Cada corrección con responsable, plazo y cómo verificarla. Críticos ahora, altos en 7 días, medios en 30. En la última semana, la reverificación antes × después."
+        },
+        {
+          "icone": "x",
+          "titulo": "5 · Limitaciones",
+          "sub": "no verificado",
+          "detalhe": "Lo que quedó fuera del alcance, lo que no lograste ver y por qué. Esta parte te protege a ti y a la empresa: nadie confunde \"no visto\" con \"seguro\"."
+        },
+        {
+          "icone": "escudo",
+          "titulo": "6 · Próximos pasos",
+          "sub": "gobernanza y escalamiento",
+          "detalhe": "El checklist de 20 ítems de la clase 7, la fecha de la revisión trimestral y a quién llamar para lo que no es tuyo: seguridad (incidente), jurídico (LGPD (ley brasileña de protección de datos)), proveedor."
+        }
+      ],
+      "legenda": "Alcance escrito en la parte superior del informe: evaluación y triaje de riesgos de IA. No es pentest, ni respuesta a incidentes, ni dictamen jurídico.",
+      "dica": "Una frase que funciona en el resumen: \"Encontramos 12 puntos; 5 necesitan acción esta semana. Ninguno exige detener la operación.\" (si es verdad)."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Escribir para el responsable",
+      "sub": "El mismo hallazgo, escrito para quien decide.",
+      "passos": [
+        {
+          "titulo": "Primero la consecuencia",
+          "sub": "qué pasa si nada cambia",
+          "texto": [
+            "Empieza por el efecto en el negocio: dinero, cliente, multa, reputación. Después la causa técnica, en una línea.",
+            "Evita los adjetivos (\"gravísimo\"). Usa el hecho y el número."
+          ],
+          "exemplo": {
+            "rot": "En lugar de \"tabla sin RLS en Supabase\", escribe",
+            "texto": "Cualquier persona con la app abierta puede ver los pedidos de todos los clientes. Corrección: regla de acceso en la base de datos, 1 día de trabajo de Rafael."
+          }
+        },
+        {
+          "titulo": "Prioridad con plazo",
+          "sub": "no una lista plana",
+          "texto": [
+            "La dirección no lee 12 ítems iguales. Agrupa: ahora, 7 días, 30 días.",
+            "Cada línea con una persona responsable. \"TI\" no es una persona."
+          ],
+          "exemplo": {
+            "rot": "En Horizonte",
+            "texto": "Ahora: clave expuesta (Rafael), admin sin login (Rafael), agente obedeciendo órdenes del cliente (Patrícia + proveedor del agente)."
+          }
+        },
+        {
+          "titulo": "Límite escrito",
+          "sub": "lo que no dices",
+          "texto": [
+            "Nada de \"la empresa está segura\" ni \"esto es ilegal\". Di lo que viste, lo que no viste y a quién recurrir.",
+            "Recomendar una evaluación jurídica o un pentest por un tercero es parte del trabajo, no una debilidad."
+          ],
+          "exemplo": {
+            "rot": "Frase",
+            "texto": "Recomendamos que el área jurídica evalúe la base legal del envío de conversaciones al proveedor del resumen (F10)."
+          }
+        },
+        {
+          "titulo": "Entregar y verificar",
+          "sub": "la reunión de 30 minutos",
+          "texto": [
+            "Presenta el resumen en 10 minutos, acuerda el plan y agenda la reverificación para el día 30.",
+            "El día 30, repite la comprobación de los ítems corregidos y entrega la tabla antes × después."
+          ],
+          "exemplo": {
+            "rot": "Agenda",
+            "texto": "10 min resumen · 10 min plan y responsables · 10 min preguntas · fecha de la reverificación."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelos para copiar: informe ejecutivo y plan de 30 días",
+      "sub": "El informe y el plan van juntos. Cambia los campos entre < > por los tuyos.",
+      "blocos": [
+        {
+          "rot": "Informe ejecutivo",
+          "icone": "arquivo",
+          "conteudo": "INFORME DE EVALUACIÓN DE RIESGOS DE IA\n<Empresa> · período <fechas> · evaluador <nombre> · acuerdo de alcance firmado el <fecha>\nAlcance: evaluación y triaje de riesgos de IA. No es pentest, ni respuesta\na incidentes, ni dictamen jurídico. No emite certificación.\n\n1. RESUMEN EJECUTIVO (1 página)\nQué evaluamos: <n> ítems de IA (<apps, agentes, integraciones, hojas de cálculo, proveedores>).\nQué encontramos: <n> riesgos — <n> críticos, <n> altos, <n> medios, <n> bajos.\nLos más graves, en lenguaje de negocio:\n  1. <consecuencia> — causa: <una línea> — acción: <qué, quién, cuándo>\n  2. ...\n  3. ...\nQué hacer esta semana: <lista corta>\nQué necesita a otro profesional: <jurídico / respuesta a incidentes / proveedor>\n\n2. INVENTARIO Y RESPONSABLES\n<tabla resumida: ítem | responsable | datos | acciones | ¿TI lo conocía?>\n\n3. HALLAZGOS CON EVIDENCIA\n<id | ítem | categoría | código OWASP | evidencia (secreto enmascarado)\n | impacto y por qué | exposición y por qué | nota | clase>\n\n4. PLAN DE 30 DÍAS\n(ver plan adjunto)\n\n5. LIMITACIONES Y NO VERIFICADO\n- Fuera del alcance: <...>\n- No verificado: <ítem> — motivo: <...>\n- Esta evaluación no garantiza la ausencia de otras fallas.\n\n6. PRÓXIMOS PASOS\n- Checklist de gobernanza (20 ítems) con estado: anexo.\n- Revisión trimestral en: <fecha>.\n- A quién llamar: seguridad <contacto>, jurídico <contacto>, proveedores <contactos>."
+        },
+        {
+          "rot": "Plan de 30 días",
+          "icone": "calendario",
+          "conteudo": "PLAN DE 30 DÍAS · <empresa> · inicio <fecha>\nplazo;hallazgo;acción;responsable;cómo comprobar;estado\n\nAHORA (días 1-2) — críticos\n<día 1>;<F1 clave expuesta>;<revocar la clave y mover la llamada al servidor; límite de gasto>;<Rafael>;<clave antigua rechazada; app sin clave en el navegador>;abierto\n<día 2>;<...>;<...>;<...>;<...>;abierto\n\nHASTA 7 DÍAS — altos\n<día 7>;<...>;<...>;<...>;<...>;abierto\n\nHASTA 30 DÍAS — medios + gobernanza\n<día 20>;<línea base del panel>;<levantar 3 meses anteriores>;<Patrícia>;<número de antes registrado>;abierto\n<día 25>;<política de uso de IA>;<publicar y explicar al equipo>;<Carlos>;<política firmada y divulgada>;abierto\n\nDÍA 30 — reverificación\n<día 30>;todos los corregidos;repetir la comprobación y entregar tabla antes × después;<evaluador>;tabla entregada;abierto"
+        },
+        {
+          "rot": "Rúbrica del informe (8 criterios)",
+          "icone": "check",
+          "conteudo": "RÚBRICA — el informe se aprueba con 8 de 8\n[ ] 1. Alcance y límites escritos arriba (no es pentest, ni incidente, ni dictamen)\n[ ] 2. El resumen ejecutivo cabe en 1 página y empieza por la consecuencia en el negocio\n[ ] 3. Todo hallazgo tiene evidencia verificable; ningún secreto aparece completo\n[ ] 4. Toda nota tiene el porqué del impacto y de la exposición\n[ ] 5. Hay una sección de \"no verificado\" con motivo\n[ ] 6. Plan de 30 días con responsable (persona), plazo y cómo verificar en cada línea\n[ ] 7. Escalamientos indicados (jurídico, incidente, proveedor) donde corresponda\n[ ] 8. Ninguna promesa de \"seguridad total\" ni afirmación de ilegalidad"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Cómo verificar",
+            "html": "<ol><li>Pasa la rúbrica por tu propio informe antes de entregarlo.</li><li>Pide a alguien ajeno al área que lea el resumen: ¿entendió qué hacer esta semana?</li><li>Compara la matriz con la respuesta modelo del laboratorio.</li></ol>"
+          },
+          {
+            "rot": "Errores comunes",
+            "html": "<ul><li><b>Informe de 40 páginas</b>: nadie lo lee. Una página de resumen + anexos.</li><li><b>Plan sin responsable</b>: se vuelve lista de deseos.</li><li><b>Olvidar la reverificación</b>: sin antes × después, nadie sabe si la corrección funcionó.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Proyecto final",
+      "sub": "En la empresa-laboratorio. Fallas de esta clase: F1 a F12, todas en el informe.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Informe completo de Horizonte",
+          "min": "60 min",
+          "dias": "1 a 2 dias",
+          "texto": "Reúne el acuerdo de alcance (clase 1), el inventario (2), la matriz (3), los checklists (4 y 5), las fichas (6) y el checklist de gobernanza (7) en un informe con el modelo de esta clase. Después compara tu matriz con la <a href=\"https://inematds.github.io/prof2030-lab/gabarito.html\" target=\"_blank\" rel=\"noopener\">respuesta modelo del laboratorio</a>.",
+          "pronto": "el informe pasa los 8 criterios de la rúbrica y cubre las 12 fallas (F1 a F12) con evidencia."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Plan de 30 días con responsables",
+          "min": "30 min",
+          "texto": "Arma el plan de 30 días para Horizonte usando a las personas del laboratorio: Carlos (responsable), Patrícia (comercial), Rafael (TI tercerizada), Juliana (atención al cliente).",
+          "pronto": "todo crítico está en los días 1-2, todo alto hasta el día 7, cada línea tiene una persona y una forma de verificar, y el día 30 tiene la reverificación."
+        },
+        {
+          "id": "e3",
+          "titulo": "3 · Resumen en 10 minutos",
+          "min": "20 min",
+          "texto": "Graba tú mismo la presentación del resumen ejecutivo en un máximo de 10 minutos, como si fuera para Carlos.",
+          "pronto": "la grabación dura hasta 10 minutos, dice qué hacer esta semana y no usa siglas sin explicarlas."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Prueba lo que aprendiste",
+      "sub": "La explicación aparece después de tu respuesta.",
+      "perguntas": [
+        {
+          "p": "¿Cómo empieza el resumen ejecutivo?",
+          "opcoes": [
+            "Por la lista completa de las 12 fallas en orden alfabético.",
+            "Por la metodología OWASP.",
+            "Por lo que se evaluó y por los riesgos más graves en lenguaje de negocio, con la acción de esta semana.",
+            "Por el currículum del evaluador."
+          ],
+          "certa": 2,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "El responsable lee una página. Esa página tiene que decir lo que importa y qué hacer. La metodología y los detalles van en los anexos."
+        },
+        {
+          "p": "¿Cuál de estas frases NO entra en el informe?",
+          "opcoes": [
+            "\"No verificado: registro del agente — sin acceso al panel del proveedor.\"",
+            "\"Después de las correcciones, la empresa estará 100% segura.\"",
+            "\"Recomendamos una evaluación jurídica del envío al proveedor (F10).\"",
+            "\"Clave expuesta en app.js (empieza con FAKE…).\""
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "codigo",
+          "explica": "La promesa de seguridad total es falsa y es motivo de revocación del certificado INEMA. Las otras tres tienen exactamente el tono correcto."
+        },
+        {
+          "p": "¿Qué pasa el día 30 del plan?",
+          "opcoes": [
+            "Nada, el plan termina.",
+            "Reverificación de los ítems corregidos y tabla antes × después.",
+            "Nuevo inventario desde cero.",
+            "Pentest completo."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Sin comprobar, la corrección no está probada. La reverificación cierra el ciclo y prepara la revisión trimestral."
+        },
+        {
+          "p": "¿Por qué el panel \"Qué cambió\" está separado de las clases?",
+          "opcoes": [
+            "Porque es menos importante.",
+            "Porque el mercado cambia cada trimestre; cambiar solo el panel mantiene vigente el curso sin rehacer el método.",
+            "Porque es opcional para la certificación.",
+            "Por el tamaño de la página."
+          ],
+          "certa": 1,
+          "explica": "Las herramientas y las noticias cambian rápido; el inventario, el triaje, la evidencia y el informe permanecen. El panel se revisa cada trimestre."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumen",
+      "itens": [
+        {
+          "t": "Seis partes",
+          "texto": "Resumen ejecutivo, inventario, hallazgos con evidencia, plan de 30 días, limitaciones y próximos pasos."
+        },
+        {
+          "t": "Para el responsable",
+          "texto": "Primero la consecuencia, prioridad con plazo, persona responsable, límite por escrito."
+        },
+        {
+          "t": "Plan",
+          "texto": "Críticos ahora, altos en 7 días, medios y gobernanza en 30, reverificación el día 30."
+        },
+        {
+          "t": "Certificación",
+          "texto": "Cada formación de Profesional 2030 tendrá una certificación INEMA de calificación; detalles pronto."
+        },
+        {
+          "t": "Alcance",
+          "texto": "Evaluación y triaje de riesgos de IA. No es pentest, ni respuesta a incidentes, ni dictamen jurídico. Señal de intrusión, filtración o duda legal: detente y escala."
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Qué cambió (oct/2026)",
+      "sub": "Panel del mercado para esta formación. Se actualiza cada trimestre; el método de las clases 1 a 7 sigue vigente. Próxima revisión: ene/2027.",
+      "passos": [
+        {
+          "titulo": "Nueva lista OWASP para LLM",
+          "sub": "03/08/2026",
+          "texto": [
+            "Salió el <a href=\"https://genai.owasp.org/home/resources/owasp-genai-llm-top-10-2026/\" target=\"_blank\" rel=\"noopener\">OWASP Top 10 for LLM Applications 2026</a>. \"Demasiado poder\" (Excessive Agency) subió al 3.er lugar y la filtración de instrucciones internas pasó a llamarse \"Hidden Context Exposure\".",
+            "Para ti: la matriz de la clase 3 ya usa los códigos de 2026."
+          ]
+        },
+        {
+          "titulo": "Modelos \"High\" en ciber",
+          "sub": "oct/2026",
+          "texto": [
+            "OpenAI pasó a tratar GPT-6 Sol y Luna como capacidad \"High\" en ciberseguridad y biología (<a href=\"https://deploymentsafety.openai.com/gpt-6-october\" target=\"_blank\" rel=\"noopener\">documento de seguridad</a>).",
+            "Para ti: una falla pública tiende a encontrarse más rápido. Considéralo al evaluar la exposición."
+          ]
+        },
+        {
+          "titulo": "Agente que actuó solo",
+          "sub": "09/10/2026",
+          "texto": [
+            "Anthropic informó que, en una evaluación interna, un modelo envió un formulario falso a un sitio real, y suspendió el acceso a internet en vivo en las evaluaciones (<a href=\"https://labs.cloudsecurityalliance.org/research/csa-research-note-frontier-eval-containment-governance-20261/\" target=\"_blank\" rel=\"noopener\">nota de la CSA</a>).",
+            "Para ti: la aprobación humana y el registro (clase 5) no son exageración."
+          ]
+        },
+        {
+          "titulo": "Apps de vibe coding expuestas",
+          "sub": "07/05/2026",
+          "texto": [
+            "Investigadores encontraron unas 380 mil apps públicas en plataformas de vibe coding, unas 5 mil con datos corporativos sensibles (<a href=\"https://oecd.ai/en/incidents/2026-05-07-1210\" target=\"_blank\" rel=\"noopener\">registro en OECD.AI</a>).",
+            "Para ti: el vibe audit (clase 4) tiene demanda real."
+          ]
+        },
+        {
+          "titulo": "Alerta sobre destilación",
+          "sub": "08/09/2026",
+          "texto": [
+            "CISA, la NSA y el FBI acusaron a empresas chinas de IA de copiar capacidades de modelos estadounidenses a gran escala (<a href=\"https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a\" target=\"_blank\" rel=\"noopener\">alerta AA26-251A</a>).",
+            "Para ti: anótalo en la ficha de proveedor (clase 6) como riesgo regulatorio y de reputación."
+          ]
+        },
+        {
+          "titulo": "AI Act: alto riesgo aplazado",
+          "sub": "acuerdo del 27/05/2026",
+          "texto": [
+            "Según el Digital Omnibus (acuerdo político de mayo/2026, Reg. 2026/1744), las reglas de alto riesgo del Anexo III de la Ley de IA de la UE (EU AI Act) pasan a regir el 02/12/2027 (<a href=\"https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/\" target=\"_blank\" rel=\"noopener\">Gibson Dunn</a>).",
+            "Para ti: el plazo da tiempo de montar la gobernanza (clase 7) sin prisa."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir más allá",
+      "links": [
+        {
+          "t": "OWASP Top 10 for LLM Applications 2026",
+          "href": "https://genai.owasp.org/home/resources/owasp-genai-llm-top-10-2026/",
+          "icone": "escudo"
+        },
+        {
+          "t": "OpenAI: GPT-6 Sol y Luna (oct/2026), capacidad \"High\" en ciberseguridad",
+          "href": "https://deploymentsafety.openai.com/gpt-6-october",
+          "icone": "alvo"
+        },
+        {
+          "t": "CSA: suspensión del internet en vivo en las evaluaciones de Anthropic",
+          "href": "https://labs.cloudsecurityalliance.org/research/csa-research-note-frontier-eval-containment-governance-20261/",
+          "icone": "lupa"
+        },
+        {
+          "t": "OECD.AI: apps de vibe coding exponiendo datos (07/05/2026)",
+          "href": "https://oecd.ai/en/incidents/2026-05-07-1210",
+          "icone": "lupa"
+        },
+        {
+          "t": "CISA: alerta AA26-251A sobre destilación (08/09/2026)",
+          "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a",
+          "icone": "escudo"
+        },
+        {
+          "t": "Gibson Dunn: Digital Omnibus y el alto riesgo el 02/12/2027",
+          "href": "https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/",
+          "icone": "calendario"
+        },
+        {
+          "t": "Respuestas del laboratorio (spoiler)",
+          "href": "https://inematds.github.io/prof2030-lab/gabarito.html",
+          "icone": "check"
+        },
+        {
+          "t": "Programa Profesional 2030",
+          "href": "https://inematds.github.io/profissional-2030/",
+          "icone": "camadas"
+        },
+        {
+          "t": "Base común del Profesional 2030",
+          "href": "https://inematds.github.io/prof2030-base/",
+          "icone": "lista"
+        },
+        {
+          "t": "Formación Consultor de IA",
+          "href": "https://inematds.github.io/prof2030-consultor/",
+          "icone": "usuario"
+        },
+        {
+          "t": "Laboratorio Horizonte: App de pedidos (F1–F4)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/app-pedidos/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Laboratorio Horizonte: Resumen de atención (F10)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Laboratorio Horizonte: Inventario e IA en la sombra (F12)",
+          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "icone": "lupa"
+        }
+      ]
+    }
+  ]
+}

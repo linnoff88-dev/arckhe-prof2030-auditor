@@ -1,0 +1,294 @@
+{
+  "slug": "inventario",
+  "num": 2,
+  "menu": "Inventory",
+  "titulo": "AI inventory: everything the company uses, with an owner",
+  "titulo_curto": "AI inventory",
+  "minutos": 20,
+  "lead": "No one protects what they don't know exists. The inventory is the list of everything that uses AI in the company: apps, agents, integrations, spreadsheets that feed the AI, and the tools employees use on their own. Every row has an owner. Without an inventory, the triage in lesson 3 becomes a guess.",
+  "objetivo": "list apps, agents, integrations, MCP connectors, and the company's shadow AI, with one owner per item, in a single spreadsheet.",
+  "competencias": [
+    "levantar-inventario-ia",
+    "identificar-ia-na-sombra",
+    "atribuir-dono-por-item"
+  ],
+  "aprende": [
+    {
+      "t": "The 6 places where AI shows up in a small business"
+    },
+    {
+      "t": "How to find \"shadow AI\" without breaking into anything"
+    },
+    {
+      "t": "The columns triage will need later"
+    },
+    {
+      "t": "The inventory spreadsheet, ready to copy"
+    }
+  ],
+  "hero_alt": "A person seen from behind fills in a large sheet with columns, pinned to the wall and covered in colorful sticky notes.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Where AI shows up in an SMB",
+      "sub": "Six places. Each one becomes rows in the inventory. Tap to see what to look for.",
+      "nos": [
+        {
+          "icone": "nuvem",
+          "titulo": "Apps built by AI",
+          "sub": "vibe coding",
+          "detalhe": "Websites and apps that someone put together with AI tools (Lovable, Replit, Bolt and similar). At Horizonte: the order app. Ask who built it, where it is published, and what database it uses."
+        },
+        {
+          "icone": "robo",
+          "titulo": "Agents",
+          "sub": "AI that acts",
+          "detalhe": "AI that answers and does things on its own: it handles WhatsApp chats, creates orders, sends emails. At Horizonte: the sales agent on WhatsApp. Write down what it can do, not just what it answers."
+        },
+        {
+          "icone": "camadas",
+          "titulo": "Integrations and MCP",
+          "sub": "connectors",
+          "detalhe": "Links between the AI and other systems: automations, MCP connectors (the standard that connects the assistant to email, calendar, and Drive). At Horizonte: the MCP integration with email. Write down the permissions for each one.",
+          "forte": true
+        },
+        {
+          "icone": "usuario",
+          "titulo": "Shadow AI",
+          "sub": "use on their own",
+          "detalhe": "Tools that employees use without IT knowing: an AI chat on a personal account, a browser extension that reads the screen, a meeting transcriber. It is usually the biggest part of the inventory."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "Databases and spreadsheets",
+          "sub": "what feeds the AI",
+          "detalhe": "Spreadsheets, folders, and databases that the AI reads or that get pasted into it. At Horizonte: the customer spreadsheet with CPF and phone numbers. Write down who has access and how it is shared."
+        },
+        {
+          "icone": "enviar",
+          "titulo": "Vendors",
+          "sub": "where the data goes",
+          "detalhe": "Whoever processes the data: the API that writes the support summary, the model behind the agent. Write down the country and whether a contract exists. This feeds lesson 6."
+        }
+      ],
+      "legenda": "Old integrations count too: a connector nobody updates keeps its access until someone turns it off.",
+      "dica": "Scope: you collect information and ask questions. You do not install spy software, and you do not read anyone's email."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "How to collect it, in four moves",
+      "sub": "Nothing here requires breaking in. It is all asking questions and looking at dashboards with the access owner next to you.",
+      "passos": [
+        {
+          "titulo": "Ask",
+          "sub": "short questionnaire",
+          "texto": [
+            "Send a 5-question questionnaire to everyone, with no witch hunt: \"what AI do you use at work, for what, with what data, on which account?\".",
+            "Say that the goal is to protect, not to punish. Without that, shadow AI stays hidden."
+          ],
+          "exemplo": {
+            "rot": "At Horizonte",
+            "texto": "In the survey, someone in Sales says they paste the customer spreadsheet into a free chatbot, on a personal account, to write proposals. IT did not know."
+          }
+        },
+        {
+          "titulo": "Check accounts",
+          "sub": "with the owner next to you",
+          "texto": [
+            "In the company's Google or Microsoft account, the administrator shows the \"connected apps\": every AI app that asked for access to email or Drive appears there.",
+            "Also ask for the corporate card statement for the last 3 months: an AI subscription shows up as a charge."
+          ],
+          "exemplo": {
+            "rot": "Request",
+            "texto": "Rafael, can you open the connected apps screen of the company account while I take notes?"
+          }
+        },
+        {
+          "titulo": "Check connectors",
+          "sub": "permissions",
+          "texto": [
+            "For each agent and integration, open the settings screen with the person who administers it and write down what it can do: read, create, send, delete, pay.",
+            "This also applies to browser extensions: what they ask for has to match what they promise."
+          ],
+          "exemplo": {
+            "rot": "At Horizonte",
+            "texto": "The MCP integration with email has permission to send and delete messages. This goes in the \"actions\" column."
+          }
+        },
+        {
+          "titulo": "Confirm the owner",
+          "sub": "one person per row",
+          "texto": [
+            "Every item needs an owner: the person who answers if something goes wrong and who can turn it off.",
+            "An item without an owner is a finding in itself. Write down \"no owner\" and take it to the report."
+          ],
+          "exemplo": {
+            "rot": "Rule",
+            "texto": "The owner is a person with a name, not \"sales\" or \"IT.\""
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Template to copy: AI inventory spreadsheet",
+      "sub": "Paste this into a spreadsheet (semicolon separator). The first row is the columns; the rest are examples from Horizonte.",
+      "blocos": [
+        {
+          "rot": "Inventory spreadsheet (CSV)",
+          "icone": "lista",
+          "conteudo": "id;item;type;what it is for;owner;who uses it;data it touches;personal data?;actions it can take;human approval?;action log?;vendor/model;where it runs (country);IT knows?;how to turn it off;information source\nI01;Ordering app;app built with AI;customers place orders;<owner>;customers, sales;orders, name, address;yes;read, create order;no;<check>;<platform>;<country>;yes;<how>;conversation with Patrícia\nI02;WhatsApp sales agent;agent;answers and closes orders;Patrícia Lima;customers;conversations, orders;yes;answer, give discount, create order;<check>;<check>;<model>;<country>;yes;<how>;settings screen\nI03;Email MCP integration;integration/MCP;assistant reads and answers emails;<owner>;sales;emails;yes;read, send, delete;<check>;<check>;<vendor>;<country>;<yes/no>;<how>;connector dashboard\nI04;Customer spreadsheet;database/spreadsheet;customer records;<owner>;sales, customer service;CPF (tax ID), phone;yes;—;—;—;<online spreadsheets>;<country>;yes;<how>;sharing screen\nI05;<shadow tool>;shadow AI;<use>;<who uses it>;<who>;<data>;<yes/no>;<actions>;no;no;<vendor>;<country>;no;<how>;questionnaire"
+        },
+        {
+          "rot": "Questionnaire for employees (5 questions)",
+          "icone": "chat",
+          "conteudo": "We are mapping the company's AI tools so we can use them safely.\nNo one will be punished for answering. It takes 3 minutes.\n\n1. What AI tools do you use at work? (chat, extension,\n   meeting transcription, image generator, other)\n2. What for? Give an example of a task.\n3. Do you put customer, employee, or financial data into them?\n   [ ] no  [ ] sometimes  [ ] always  — what type?\n4. Is the account the company's or personal? Paid or free?\n5. Does any of them have access to your email, calendar, Drive, or WhatsApp?"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "How to check",
+            "html": "<ol><li>Every item has an owner with a person's name (or the finding \"no owner\").</li><li>The \"actions\" column uses verbs: read, create, send, delete, pay.</li><li>Each row says where the information came from.</li><li>There is at least one item with \"IT knows? no\".</li></ol>"
+          },
+          {
+            "rot": "Common mistakes",
+            "html": "<ul><li><b>Only what IT knows</b>: the inventory comes out neat and incomplete. Shadow AI shows up in the questionnaire and in the invoice.</li><li><b>Writing down what the AI says, not what it does</b>: the risk is in the actions (send, delete, give a discount).</li><li><b>A \"verify\" that is never verified</b>: in the report it becomes \"not verified,\" with the reason.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "In the lab company. Failures in this lesson: F12 (shadow AI) and, in passing, F9 (MCP permissions).",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Horizonte inventory with at least 10 items",
+          "min": "30 min",
+          "texto": "Open the <a href=\"https://inematds.github.io/prof2030-lab/inventario.html\" target=\"_blank\" rel=\"noopener\">lab IT inventory</a>: Rafael's official list and, below it, the 22 answers from the internal survey. Build your spreadsheet with the AI tools from the official list and the 4 that show up only in the answers (F12). Fill in owner, data, actions, and \"IT knows?\".",
+          "pronto": "the spreadsheet has at least 10 rows, each with an owner (or \"no owner\"), and the 4 shadow tools are marked \"IT knows? no\"."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · The email connector's actions",
+          "min": "10 min",
+          "texto": "In the piece <a href=\"https://inematds.github.io/prof2030-lab/pecas/mcp-email/\" target=\"_blank\" rel=\"noopener\">pecas/mcp-email/</a> (file <code>mcp.json</code>), write down in the \"actions\" column everything the integration can do and whether there is human approval (F9).",
+          "pronto": "the MCP row says \"read, send, delete\" and \"human approval: no\"."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "What is the best way to find shadow AI in a small or midsize business?",
+          "opcoes": [
+            "Install a program that monitors the computers.",
+            "Read the employees' emails.",
+            "Questionnaire with no punishment + connected apps from the company account + credit card statement.",
+            "Ask only IT."
+          ],
+          "certa": 2,
+          "cert": true,
+          "ref": "passos",
+          "explica": "These are three sources that don't intrude on anything. Monitoring or reading email is out of scope. Asking only IT is the common mistake: shadow AI is exactly what IT doesn't know about."
+        },
+        {
+          "p": "What is an MCP connector in the inventory?",
+          "opcoes": [
+            "An AI model.",
+            "A link that gives the assistant access to another system (email, calendar, Drive), with its own permissions.",
+            "A type of password.",
+            "An antivirus."
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "MCP is the standard that connects the assistant to other systems. What matters to the auditor is the permissions: read, send, delete."
+        },
+        {
+          "p": "An inventory item has no owner. What do you do?",
+          "opcoes": [
+            "Put \"IT\" as the owner.",
+            "Remove it from the list.",
+            "Write \"no owner\" and treat it as a finding in the report.",
+            "Put your own name."
+          ],
+          "certa": 2,
+          "cert": true,
+          "ref": "passos",
+          "explica": "With no owner, no one answers for it or shuts it off. That is a risk in itself. \"IT\" is not a person, and the owner can't be the auditor."
+        },
+        {
+          "p": "In the \"actions\" column for the WhatsApp agent, what goes in?",
+          "opcoes": [
+            "\"Answers questions.\"",
+            "The verbs for what it can do: reply, give a discount, create an order.",
+            "The color of the button.",
+            "The name of the model."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "The risk is in what the agent does, not in what it says. Discounts and orders involve money: they will weigh in the triage."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "Six places",
+          "texto": "Apps built by AI, agents, integrations and MCP, shadow AI, databases and spreadsheets, vendors."
+        },
+        {
+          "t": "Four moves",
+          "texto": "Ask, check accounts, check connectors, confirm the owner."
+        },
+        {
+          "t": "Why shadow AI matters",
+          "texto": "In May 2026, researchers studying shadow AI found about 380,000 public apps built on vibe coding platforms, around 5,000 of them with sensitive corporate data (recorded on OECD.AI, based on Axios)."
+        },
+        {
+          "t": "Scope",
+          "texto": "Assessment and triage of AI risks. This is not a pentest, nor incident response, nor a legal opinion. Sign of an intrusion, a leak, or a legal question: stop and escalate."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To go further",
+      "links": [
+        {
+          "t": "OECD.AI: vibe coding apps exposing data (05/07/2026)",
+          "href": "https://oecd.ai/en/incidents/2026-05-07-1210",
+          "icone": "lupa"
+        },
+        {
+          "t": "Agent under control course: access inventory (lesson 1)",
+          "href": "https://inematds.github.io/curso-agente-sob-controle/",
+          "icone": "cadeado"
+        },
+        {
+          "t": "Lab company: Horizonte Distribuidora",
+          "href": "https://inematds.github.io/prof2030-lab/",
+          "icone": "pasta"
+        },
+        {
+          "t": "Horizonte Distribuidora Lab: MCP Integration with email (F9)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/mcp-email/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Horizonte Distribuidora Lab: Inventory and shadow AI (F12)",
+          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "icone": "lupa"
+        }
+      ]
+    }
+  ]
+}

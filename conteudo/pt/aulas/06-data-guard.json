@@ -1,0 +1,298 @@
+{
+  "slug": "data-guard",
+  "num": 6,
+  "menu": "Data guard",
+  "titulo": "Data guard: dados, fornecedores e modelos",
+  "titulo_curto": "Data guard",
+  "minutos": 25,
+  "lead": "Toda vez que alguém cola uma conversa de cliente numa IA, um dado pessoal viaja: sai da empresa, passa por um fornecedor, às vezes cruza a fronteira e às vezes vira material de treino. Nesta aula você segue o caminho do dado, confere a base legal e o contrato e preenche a ficha do fornecedor, inclusive de modelos abertos.",
+  "objetivo": "mapear para onde vai o dado pessoal, conferir base legal, contrato e transferência internacional e preencher a ficha de cada fornecedor de IA.",
+  "competencias": [
+    "mapear-fluxo-de-dados",
+    "avaliar-lgpd-ia",
+    "avaliar-fornecedor-e-licenca"
+  ],
+  "aprende": [
+    {
+      "t": "O caminho do dado em 5 paradas"
+    },
+    {
+      "t": "Os artigos da LGPD que o auditor precisa reconhecer"
+    },
+    {
+      "t": "Fechado ou aberto, na nuvem ou local: o que muda"
+    },
+    {
+      "t": "A ficha de fornecedor, pronta para copiar"
+    }
+  ],
+  "hero_alt": "Pessoa revisa um contrato impresso com marca-texto ao lado de um notebook e de um pequeno globo sobre a mesa.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "O caminho do dado",
+      "sub": "Cinco paradas. Em cada uma há uma pergunta. Clique para ver.",
+      "nos": [
+        {
+          "icone": "usuario",
+          "titulo": "Que dado",
+          "sub": "pessoal? sensível?",
+          "detalhe": "Dado pessoal identifica alguém (nome, CPF, telefone, conversa). Dado sensível inclui saúde, religião, biometria, entre outros (LGPD, art. 5º). Sensível pede cuidado redobrado (art. 11)."
+        },
+        {
+          "icone": "check",
+          "titulo": "Base legal",
+          "sub": "por que pode",
+          "detalhe": "Todo uso de dado pessoal precisa de uma das hipóteses do art. 7º (contrato, consentimento, legítimo interesse...). E só o necessário para a finalidade (art. 6º, necessidade). Você aponta a ausência; quem decide a base é o jurídico."
+        },
+        {
+          "icone": "enviar",
+          "titulo": "Para onde vai",
+          "sub": "fornecedor e país",
+          "forte": true,
+          "detalhe": "Qual fornecedor recebe e em que país o servidor está. Dado indo para fora do Brasil é transferência internacional (arts. 33 a 36). Um caminho comum são as cláusulas-padrão da Resolução CD/ANPD nº 19/2024."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "Contrato",
+          "sub": "o que o fornecedor promete",
+          "detalhe": "Existe contrato ou termo de tratamento de dados (DPA)? Ele diz retenção, subprocessadores, segurança e se usa os dados para treinar? Plano gratuito pessoal costuma não ter nada disso."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "Fica guardado",
+          "sub": "retenção e treino",
+          "detalhe": "Quanto tempo o dado fica no fornecedor, se vira treino de modelo e como apagar. Se a empresa não sabe responder, perdeu o controle do dado."
+        }
+      ],
+      "legenda": "Você aponta o risco com evidência. Dizer se o uso é ilegal é parecer jurídico: fica com o advogado da empresa.",
+      "dica": "Vazou dado pessoal? A LGPD prevê comunicar a ANPD e os titulares quando houver risco relevante (art. 48). Isso é resposta a incidente: avise o dono no mesmo dia e indique o jurídico."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Fornecedor fechado, modelo aberto, nuvem ou local",
+      "sub": "O tipo de modelo muda as perguntas da ficha.",
+      "passos": [
+        {
+          "titulo": "Fechado por API",
+          "sub": "o dado viaja",
+          "texto": [
+            "Modelo de empresa (por API ou app): o dado sai da empresa a cada uso. As perguntas centrais são contrato, país, retenção e uso para treino.",
+            "Plano empresarial costuma ter termo de dados; plano gratuito em conta pessoal, quase nunca."
+          ],
+          "exemplo": {
+            "rot": "Na Horizonte",
+            "texto": "F10: o resumo de atendimento manda conversas a um servidor fora do Brasil, sem contrato, com termos que permitem treinar com os dados."
+          }
+        },
+        {
+          "titulo": "Aberto e local",
+          "sub": "o dado fica",
+          "texto": [
+            "Modelo de pesos abertos rodando num computador da empresa: o dado não sai. Em 2026 já há modelos abertos que rodam num notebook bem equipado.",
+            "As perguntas mudam: qual a licença, de onde veio o arquivo do modelo e quem mantém a máquina atualizada."
+          ],
+          "exemplo": {
+            "rot": "Exemplo",
+            "texto": "Qwen3.8-27B (Alibaba): pesos publicados sob licença Apache 2.0; versão comprimida de cerca de 17 GB (TNW, 19/08/2026)."
+          }
+        },
+        {
+          "titulo": "Licença",
+          "sub": "leia antes de usar",
+          "texto": [
+            "Categorias para a ficha: permissiva (MIT, Apache 2.0), licença própria com restrições, limite por receita ou número de usuários, só pesquisa ou não comercial.",
+            "Não suponha: abra o arquivo de licença do modelo e anote a categoria e o trecho que importa."
+          ],
+          "exemplo": {
+            "rot": "Na ficha",
+            "texto": "Licença: Apache 2.0 (arquivo LICENSE no repositório oficial, conferido em <data>)."
+          }
+        },
+        {
+          "titulo": "Procedência",
+          "sub": "de onde veio",
+          "texto": [
+            "Baixe só do repositório oficial do fabricante e anote versão e data. Arquivo de origem desconhecida pode estar alterado.",
+            "Registre também o contexto: em 08/09/2026, NSA, CISA e FBI acusaram empresas chinesas de IA de \"destilação em escala\" de modelos americanos. É risco de reputação e de regra futura a anotar, não proibição."
+          ],
+          "exemplo": {
+            "rot": "Na ficha",
+            "texto": "Procedência: repositório oficial; alerta AA26-251A citado como risco regulatório a acompanhar."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelos para copiar: ficha de fornecedor e mapa do dado",
+      "sub": "Uma ficha por fornecedor ou modelo. O mapa do dado vai junto, uma linha por fluxo.",
+      "blocos": [
+        {
+          "rot": "Ficha de fornecedor de IA",
+          "icone": "arquivo",
+          "conteudo": "FICHA DE FORNECEDOR DE IA · <data> · avaliador: <nome>\n\n1. IDENTIFICAÇÃO\nFornecedor / modelo: <nome e versão>\nTipo: [ ] fechado por API/app  [ ] aberto rodando local  [ ] aberto hospedado por terceiro\nUsado em: <itens do inventário>          Dono interno: <pessoa>\nPlano: [ ] gratuito  [ ] pago pessoal  [ ] empresarial\n\n2. DADOS\nQue dados recebe: <...>   Pessoal? [ ] sim [ ] não   Sensível? [ ] sim [ ] não\nMinimização: os dados são anonimizados/reduzidos antes de enviar? <...>\nBase legal indicada pela empresa (art. 7º / 11): <...> (a confirmar pelo jurídico)\n\n3. PARA ONDE VAI\nPaís do processamento/servidor: <...>\nTransferência internacional? [ ] sim [ ] não  Instrumento (arts. 33-36, Res. ANPD 19/2024): <...>\n\n4. CONTRATO\nContrato/termo de dados (DPA) assinado? [ ] sim [ ] não   Evidência: <...>\nUsa os dados para treinar? [ ] não [ ] sim [ ] não diz\nRetenção: <prazo>     Como apagar: <...>\nSubprocessadores listados? [ ] sim [ ] não\n\n5. MODELO ABERTO (se for o caso)\nLicença: [ ] permissiva (MIT/Apache) [ ] própria com restrições\n         [ ] limite por receita/usuários [ ] só pesquisa/não comercial\nTrecho da licença que importa: <...>\nProcedência: <repositório oficial, versão, data do download>\nQuem atualiza a máquina/modelo: <pessoa>\n\n6. RISCO DO FORNECEDOR\nDependência (dá para trocar?): <...>\nAlertas públicos (regulatório, segurança, reputação) com fonte: <...>\nTransparência sobre o modelo (documento de segurança/system card)? <link>\n\n7. CONCLUSÃO DA TRIAGEM\nCategoria/nota (aula 3): <...>   Prazo: <...>\nRecomendação: <manter / manter com condições / trocar / parar de usar>\nNão verificado (com motivo): <...>"
+        },
+        {
+          "rot": "Mapa do dado (CSV)",
+          "icone": "lista",
+          "conteudo": "fluxo;origem;dado;pessoal/sensível;destino (fornecedor);país;contrato?;treina com o dado?;retenção;base legal indicada;minimização;evidência;achado\nresumo de atendimento;conversas do WhatsApp;nome, telefone, texto da conversa;pessoal;<API do resumo>;fora do Brasil;não;sim (termos);<?>;não indicada;não;fluxo.json passo 2;F10\nplanilha de clientes;cadastro comercial;CPF, telefone;pessoal;planilhas na nuvem;<?>;<?>;—;—;<?>;não (CPF sem necessidade);compartilhamento.json;F8"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Como conferir",
+            "html": "<ol><li>Cada fornecedor do inventário tem uma ficha.</li><li>País, contrato, treino e retenção têm resposta ou \"não verificado\".</li><li>Licença de modelo aberto foi lida no arquivo oficial, com data.</li><li>Base legal aparece como \"indicada pela empresa, a confirmar pelo jurídico\".</li></ol>"
+          },
+          {
+            "rot": "Erros comuns",
+            "html": "<ul><li><b>\"Aberto = sem regra\"</b>: licença aberta também tem condições, e a procedência importa.</li><li><b>Dar parecer</b>: \"isso é ilegal\" não é frase do auditor. \"Não achamos base legal nem contrato\" é.</li><li><b>Esquecer a sombra</b>: o chatbot gratuito com a planilha de clientes (F12) também precisa de ficha.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática",
+      "sub": "Na empresa-laboratório. Falhas desta aula: F8 (planilha pública) e F10 (resumo por API estrangeira).",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Mapa do dado da Horizonte",
+          "min": "25 min",
+          "texto": "Abra a <a href=\"https://inematds.github.io/prof2030-lab/pecas/planilha-clientes/\" target=\"_blank\" rel=\"noopener\">planilha de clientes</a> (<code>compartilhamento.json</code>, <code>clientes.csv</code>) e o <a href=\"https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/\" target=\"_blank\" rel=\"noopener\">resumo de atendimento</a> (<code>fluxo.json</code>). Preencha o mapa do dado para os dois fluxos.",
+          "pronto": "o mapa tem as duas linhas completas, F8 e F10 aparecem como achados com evidência e cada um tem uma correção sugerida (restringir e minimizar; contrato, anonimização e cláusulas de transferência)."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Ficha de dois modelos",
+          "min": "30 min",
+          "texto": "Preencha a ficha para dois casos: (a) a API do resumo de atendimento do laboratório (fechado, fora do Brasil); (b) um modelo aberto chinês rodando local, como o Qwen3.8-27B. Leia a licença no repositório oficial do modelo.",
+          "pronto": "as duas fichas têm as 7 partes preenchidas (ou \"não verificado\" com motivo) e a ficha (b) cita a licença com o trecho e a data da leitura."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "O resumo de atendimento envia conversas de clientes a um servidor fora do Brasil, sem contrato. Como você escreve no relatório?",
+          "opcoes": [
+            "\"A empresa está cometendo crime.\"",
+            "\"Dado pessoal vai para fora do Brasil sem contrato nem instrumento de transferência identificado (arts. 33-36). Recomendo validação pelo jurídico.\"",
+            "\"Tudo certo, o fornecedor é conhecido.\"",
+            "Não escreve: é assunto do jurídico."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "Você aponta o fato, a evidência e o artigo de referência, e escala a conclusão. Afirmar ilegalidade é parecer jurídico; omitir é falha do auditor."
+        },
+        {
+          "p": "Um modelo aberto rodando num computador da empresa. Qual pergunta perde força e qual ganha?",
+          "opcoes": [
+            "Perde: licença. Ganha: país do servidor.",
+            "Perde: transferência do dado para fora. Ganham: licença, procedência e quem atualiza.",
+            "Nenhuma muda.",
+            "Perde tudo: modelo local não tem risco."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "passos",
+          "explica": "Local, o dado não viaja. Mas a licença pode ter condições, o arquivo precisa vir da fonte oficial e alguém tem de manter a máquina."
+        },
+        {
+          "p": "A planilha com CPF e telefone está aberta a \"qualquer pessoa com o link\". Além de restringir o acesso, o que você sugere?",
+          "opcoes": [
+            "Nada mais.",
+            "Tirar o CPF de onde ele não é necessário (minimização) e bloquear download.",
+            "Apagar a planilha.",
+            "Trocar de fornecedor de planilha."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Necessidade (art. 6º, III): só o dado preciso para a finalidade. Menos dado guardado = menos dado para vazar."
+        },
+        {
+          "p": "Você descobre que a planilha aberta já foi baixada por gente de fora. O que faz?",
+          "opcoes": [
+            "Anota para o relatório final.",
+            "Avisa o dono no mesmo dia: é possível incidente com dado pessoal, que pede resposta a incidente e avaliação jurídica sobre comunicar a ANPD.",
+            "Fecha o link você mesmo.",
+            "Liga para os clientes."
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "Vazamento confirmado sai do escopo de triagem. Você registra, não mexe, avisa e indica quem trata. A comunicação à ANPD (art. 48) é decisão da empresa com o jurídico."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumo",
+      "itens": [
+        {
+          "t": "Cinco paradas",
+          "texto": "Que dado, base legal, para onde vai, contrato, fica guardado."
+        },
+        {
+          "t": "LGPD para reconhecer",
+          "texto": "Arts. 5º (definições), 6º (necessidade), 7º e 11 (bases legais), 33 a 36 (transferência internacional), 46 (segurança), 48 (comunicar incidente)."
+        },
+        {
+          "t": "Tipo de modelo",
+          "texto": "Fechado por API: contrato, país, retenção, treino. Aberto local: licença, procedência, manutenção."
+        },
+        {
+          "t": "Escopo",
+          "texto": "Avaliação e triagem de riscos de IA. Não é pentest, nem resposta a incidente, nem parecer jurídico. Sinal de invasão, vazamento ou dúvida legal: pare e escale."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {
+          "t": "LGPD (Lei 13.709/2018), texto oficial",
+          "href": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+          "icone": "arquivo"
+        },
+        {
+          "t": "ANPD: Resolução CD/ANPD nº 19/2024 (transferência internacional)",
+          "href": "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-19-de-23-de-agosto-de-2024",
+          "icone": "escudo"
+        },
+        {
+          "t": "CISA, NSA e FBI: alerta AA26-251A sobre destilação de modelos (08/09/2026)",
+          "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a",
+          "icone": "lupa"
+        },
+        {
+          "t": "TNW: Qwen3.8-27B, Apache 2.0, roda em notebook (19/08/2026)",
+          "href": "https://thenextweb.com/news/alibaba-qwen3-8-27b-local-frontier-model",
+          "icone": "chip"
+        },
+        {
+          "t": "Resumo de atendimento do laboratório (F10)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/",
+          "icone": "pasta"
+        },
+        {
+          "t": "Laboratório Horizonte: Planilha de clientes (F8)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/planilha-clientes/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Laboratório Horizonte: Inventário e IA na sombra (F12)",
+          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "icone": "lupa"
+        }
+      ]
+    }
+  ]
+}

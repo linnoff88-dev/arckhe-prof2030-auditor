@@ -1,0 +1,308 @@
+{
+  "slug": "governanca",
+  "num": 7,
+  "menu": "Governance",
+  "titulo": "Lightweight governance: the checklist that stays when you leave",
+  "titulo_curto": "Lightweight governance",
+  "minutos": 22,
+  "lead": "Fixing today's failures isn't enough: tomorrow a new tool arrives. Governance is the small set of rules and routines the company maintains on its own. For an SMB, it fits in 20 items, drawn from the references the market uses: NIST AI RMF, ISO/IEC 42001, EU AI Act, and LGPD. No committee, no bureaucracy.",
+  "objetivo": "build the company's 20-item governance checklist, with status, evidence, owner, and deadline, tied to the NIST, ISO 42001, EU AI Act, and LGPD references.",
+  "competencias": [
+    "montar-checklist-governanca",
+    "aplicar-referenciais-nist-iso",
+    "dimensionar-governanca-proporcional"
+  ],
+  "aprende": [
+    {
+      "t": "What each reference brings to an SMB"
+    },
+    {
+      "t": "Governance proportional to risk"
+    },
+    {
+      "t": "Baseline and usage policy, the two most common gaps"
+    },
+    {
+      "t": "The 20-item checklist, ready to copy"
+    }
+  ],
+  "hero_alt": "Three people in a meeting room review a checklist sheet; behind them, a board with boxes and arrows.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Four references, one checklist",
+      "sub": "You don't need to roll out all four. Use what each one teaches. Tap each block.",
+      "nos": [
+        {
+          "icone": "camadas",
+          "titulo": "NIST AI RMF",
+          "sub": "4 functions",
+          "detalhe": "Free guide from the US standards institute. It organizes the work into Govern, Map, Measure, and Manage. It has a specific profile for generative AI. It is the backbone of the checklist."
+        },
+        {
+          "icone": "portao",
+          "titulo": "ISO/IEC 42001",
+          "sub": "management system",
+          "detalhe": "2023 standard for an AI management system, in the plan, do, check, act cycle. Companies can get certified by an accredited body. For small and mid-sized businesses, use the principles; certifying is a separate decision and is not what you deliver."
+        },
+        {
+          "icone": "escudo",
+          "titulo": "EU AI Act",
+          "sub": "by risk level",
+          "detalhe": "European law that classifies AI uses by risk (prohibited, high, transparency, minimal). It applies to anyone who offers AI or uses its results in the European market. With the Digital Omnibus (Reg. 2026/1744), the high-risk rules in Annex III take effect on 12/02/2027. Outside the EU, it works as a yardstick."
+        },
+        {
+          "icone": "cadeado",
+          "titulo": "LGPD and PL 2338",
+          "sub": "Brazil",
+          "detalhe": "The LGPD (Brazil's data protection law) already applies to all personal data that AI touches. PL 2338/2023, the bill that regulates AI in Brazil, passed the Senate in December 2024 and is still under review in the Chamber of Deputies: it is not law yet. Follow it through the Chamber link."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Checklist of 20",
+          "sub": "what stays",
+          "forte": true,
+          "detalhe": "Twenty items grouped by the 4 NIST functions, each with a status (yes, partial, no, not verified), evidence, owner, and deadline. It is what leadership reviews every quarter."
+        }
+      ],
+      "legenda": "Scope: you recommend the governance and show the evidence. You do not issue an ISO certificate or say whether the company complies with the law.",
+      "dica": "Gartner predicts that AI regulation will reach 75% of the world's economies by 2030. A simple checklist today avoids a rush later."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Proportional to risk",
+      "sub": "Too much governance blocks work; too little does not protect. The size follows the matrix from lesson 3.",
+      "passos": [
+        {
+          "titulo": "Low-risk use",
+          "sub": "the minimum",
+          "texto": [
+            "Written usage policy, human review of anything that goes outside, and an incident log.",
+            "E.g., a text proofreader on an internal announcement."
+          ],
+          "exemplo": {
+            "rot": "Policy in 3 lines",
+            "texto": "What is allowed. What is not (customer data on a personal account, for example). Who to ask for a new tool."
+          }
+        },
+        {
+          "titulo": "Medium risk",
+          "sub": "+ owner and measure",
+          "texto": [
+            "Everything from low, plus a named owner, monitoring with an indicator and baseline, and a review of the log.",
+            "E.g., a dashboard that decides whether the agent expands to collections."
+          ],
+          "exemplo": {
+            "rot": "At Horizonte",
+            "texto": "F11: the dashboard started on the same day as the agent. Without the \"before,\" no one can prove it helped."
+          }
+        },
+        {
+          "titulo": "High risk",
+          "sub": "+ approval and trail",
+          "texto": [
+            "Everything from medium, plus mandatory human approval on sensitive actions, an audit trail, test cases before any change, and a legal review.",
+            "E.g., an agent that creates orders and gives discounts; an integration that sends email."
+          ],
+          "exemplo": {
+            "rot": "At Horizonte",
+            "texto": "Hora agent and email assistant: approval above R$ 5 mil, never delete, log reviewed every week."
+          }
+        },
+        {
+          "titulo": "The shadow",
+          "sub": "without punishing",
+          "texto": [
+            "Shadow AI is not solved by banning it: take stock, assess each tool, offer an approved alternative, and publish the policy.",
+            "Repeat the internal survey every quarter."
+          ],
+          "exemplo": {
+            "rot": "At Horizonte",
+            "texto": "F12: the extension that reads emails and the app that records visits without notice go into the inventory and the policy, with an alternative."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Template to copy: 20-item governance checklist",
+      "sub": "Status: yes · partial · no · not verified. Each line with evidence, owner, and deadline.",
+      "blocos": [
+        {
+          "rot": "AI governance checklist (20 items)",
+          "icone": "lista",
+          "conteudo": "AI GOVERNANCE CHECKLIST · <company> · <date> · review: quarterly\nn;NIST function;item;reference;status;evidence;owner;due date\n\nGOVERN\n01;Govern;AI use policy published (what you can / cannot do / who to ask);NIST Govern · ISO 42001 (policy);;;;\n02;Govern;AI lead named, with time set aside;NIST Govern · ISO 42001 (roles);;;;\n03;Govern;Every inventory item has a named owner;NIST Govern;;;;\n04;Govern;Team received basic AI literacy (what it can do, risks, how to ask for help);AI Act art. 4 (literacy);;;;\n05;Govern;A new tool only comes in after a vendor sheet and triage;NIST Govern · ISO 42001;;;;\n06;Govern;Quarterly review scheduled on the leadership calendar;ISO 42001 (management review);;;;\n\nMAP\n07;Map;AI inventory up to date, including shadow AI;NIST Map;;;;\n08;Map;Data map for every flow with personal data;LGPD arts. 6, 7, 37;;;;\n09;Map;Vendor sheet for every vendor and model;NIST Map · LGPD arts. 33-36;;;;\n10;Map;Risk matrix done, with a due date per item;NIST Map · OWASP LLM/Agentic;;;;\n\nMEASURE\n11;Measure;Baseline recorded before turning on each agent;NIST Measure;;;;\n12;Measure;Business outcome indicator (not just volume);NIST Measure;;;;\n13;Measure;Test cases run before changing agent rules;NIST Measure · OWASP Agentic;;;;\n14;Measure;Agent action log reviewed (frequency defined);NIST Measure · OWASP Agentic;;;;\n15;Measure;Log of AI failures and incidents, with the smallest fix;NIST Manage · ISO 42001;;;;\n\nMANAGE\n16;Manage;Money, deletion and publishing require human approval;OWASP LLM03 · ASI02;;;;\n17;Manage;Each agent can be shut off in 1 minute (tested);NIST Manage;;;;\n18;Manage;Secrets kept out of the code and spending limit set at the providers;OWASP LLM06;;;;\n19;Manage;Critical and high findings have an owner and a due date, checked afterward;NIST Manage;;;;\n20;Manage;Plan for who to call: security (incident), legal (LGPD), vendor;NIST Manage · LGPD art. 48;;;;"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "How to check",
+            "html": "<ol><li>There are 20 lines, each with a status.</li><li>A \"yes\" always has evidence (document, screenshot, calendar entry).</li><li>Every \"no\" and \"partial\" has an owner and a due date.</li><li>The reference is on the line, for anyone who wants to go deeper.</li></ol>"
+          },
+          {
+            "rot": "Common mistakes",
+            "html": "<ul><li><b>Copying a whole standard</b>: a small business doesn't maintain 200 controls. It maintains 20.</li><li><b>A \"yes\" without evidence</b>: becomes \"not verified\".</li><li><b>Promising compliance</b>: the checklist shows practices; legal compliance is a matter for legal, and ISO certification is a matter for an accredited body.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "In the lab company. Failures from this lesson: F11 (dashboard without a baseline) and F12 (shadow AI, now as policy).",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · The Horizonte checklist",
+          "min": "35 min",
+          "texto": "With everything you gathered in lessons 2 to 6, fill in the 20-item checklist for Horizonte Distribuidora. Use the <a href=\"https://inematds.github.io/prof2030-lab/pecas/painel/\" target=\"_blank\" rel=\"noopener\">indicator dashboard</a> (<code>indicadores.json</code>) for items 11 and 12.",
+          "pronto": "all 20 items have a status; every \"yes\" has evidence; every \"no\" and \"partial\" has an owner and a due date; F11 and F12 show up in the right items (11-12 and 01, 07)."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · One-page use policy",
+          "min": "20 min",
+          "texto": "Write Horizonte's AI use policy: what you can do, what you cannot do, and who to ask for a new tool. Include the 4 shadow tools (F12) with a decision for each.",
+          "pronto": "the policy fits on one page, does not punish people who answered the survey, and says what to do with each of the 4 tools."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "Does a Brazilian small business that only sells in Brazil have to comply with the AI Act?",
+          "opcoes": [
+            "Yes, always.",
+            "Usually not, but the AI Act works as a yardstick for good practice; LGPD (Brazil's data protection law) already applies today.",
+            "No, and no rule applies to AI in Brazil.",
+            "Only after 02/12/2027."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "The AI Act applies to those who offer AI or use its results in the European market. In Brazil, LGPD (Brazil's data protection law) already covers all personal data that AI touches. The legal answer for each case belongs to the lawyer."
+        },
+        {
+          "p": "The company wants \"ISO 42001 certification\" in your report. What do you answer?",
+          "opcoes": [
+            "I issue it together with the report.",
+            "I explain that certification comes from an accredited body; my work shows practices and gaps that help get there.",
+            "I say that ISO 42001 does not exist.",
+            "I charge extra and issue it."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "The INEMA certification qualifies the person who evaluates; it does not certify a company. Promising an ISO certificate is bad faith and grounds for revocation."
+        },
+        {
+          "p": "The dashboard shows orders rising since the agent came in. Does that prove the agent helped?",
+          "opcoes": [
+            "Yes, the numbers are going up.",
+            "No: without a baseline from before and without comparing equal periods, it could be seasonality, price, or the uncapped discount.",
+            "Yes, if satisfaction went up too.",
+            "You can't measure an agent."
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "That's F11. The baseline comes before you turn it on. Without it, the decision to expand the agent becomes guesswork."
+        },
+        {
+          "p": "How many items should the small-business checklist have?",
+          "opcoes": [
+            "All the controls of all the standards.",
+            "Few, and kept up: 20, with status, evidence, owner and due date.",
+            "Just one: \"use AI carefully\".",
+            "It depends on the vendor."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Governance that nobody maintains does not protect. Twenty items reviewed every quarter are worth more than a manual that stays in a drawer."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "Four references",
+          "texto": "NIST AI RMF gives the 4 functions, ISO/IEC 42001 the management system, the AI Act the risk-based yardstick (Annex III high risk on 02/12/2027), and LGPD (Brazil's data protection law) the rule that already applies."
+        },
+        {
+          "t": "Proportional",
+          "texto": "Low risk: policy, review and log. Medium: more owners and measures. High: more approval, audit trail, tests and legal."
+        },
+        {
+          "t": "Twenty items",
+          "texto": "Govern 6, map 4, measure 5, manage 5. Status, evidence, owner and due date. Quarterly review."
+        },
+        {
+          "t": "Scope",
+          "texto": "Assessment and triage of AI risks. This is not a pentest, nor incident response, nor a legal opinion. Sign of an intrusion, a leak, or a legal question: stop and escalate."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To go further",
+      "links": [
+        {
+          "t": "NIST AI Risk Management Framework",
+          "href": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "icone": "camadas"
+        },
+        {
+          "t": "NIST: Generative AI Profile of the AI RMF (NIST AI 600-1)",
+          "href": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+          "icone": "camadas"
+        },
+        {
+          "t": "EU AI Act (Reg. 2024/1689): texts and explorer",
+          "href": "https://artificialintelligenceact.eu/the-act/",
+          "icone": "escudo"
+        },
+        {
+          "t": "AI Act, art. 4: AI literacy",
+          "href": "https://artificialintelligenceact.eu/article/4/",
+          "icone": "usuario"
+        },
+        {
+          "t": "Gibson Dunn: Digital Omnibus delays high risk (Annex III → 02/12/2027)",
+          "href": "https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/",
+          "icone": "calendario"
+        },
+        {
+          "t": "Chamber of Deputies: progress of Bill PL 2338/2023",
+          "href": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Gartner (Feb. 17, 2026): AI regulation and governance platforms",
+          "href": "https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2026-02-17-gartner-global-ai-regulations-fuel-billion-dollar-market-for-ai-governance-platforms",
+          "icone": "grafico"
+        },
+        {
+          "t": "BSI: what ISO/IEC 42001 is (AI management system)",
+          "href": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-42001-ai-management-system/",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Horizonte Lab: Indicators dashboard (F11)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/painel/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Horizonte Distribuidora Lab: Inventory and shadow AI (F12)",
+          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "icone": "lupa"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "slug": "inventario",
+  "num": 2,
+  "menu": "Inventario",
+  "titulo": "Inventario de IA: todo lo que la empresa usa, con responsable",
+  "titulo_curto": "Inventario de IA",
+  "minutos": 20,
+  "lead": "Nadie protege lo que no sabe que existe. El inventario es la lista de todo lo que usa IA en la empresa: apps, agentes, integraciones, hojas de cálculo que alimentan la IA y las herramientas que los empleados usan por su cuenta. Cada línea tiene un responsable. Sin inventario, el triaje de la clase 3 se vuelve una adivinanza.",
+  "objetivo": "levantar apps, agentes, integraciones, conectores MCP y IA en la sombra de la empresa, con un responsable por ítem, en una única hoja de cálculo.",
+  "competencias": [
+    "levantar-inventario-ia",
+    "identificar-ia-na-sombra",
+    "atribuir-dono-por-item"
+  ],
+  "aprende": [
+    {
+      "t": "Los 6 lugares donde aparece la IA en una pyme"
+    },
+    {
+      "t": "Cómo encontrar la \"IA en la sombra\" sin invadir nada"
+    },
+    {
+      "t": "Las columnas que el triaje va a necesitar después"
+    },
+    {
+      "t": "La hoja de inventario, lista para copiar"
+    }
+  ],
+  "hero_alt": "Una persona de espaldas llena una hoja grande con columnas, pegada en la pared y cubierta de notas adhesivas de colores.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Dónde aparece la IA en una PYME",
+      "sub": "Seis lugares. Cada uno se convierte en líneas del inventario. Haz clic para ver qué buscar.",
+      "nos": [
+        {
+          "icone": "nuvem",
+          "titulo": "Apps hechas con IA",
+          "sub": "vibe coding",
+          "detalhe": "Sitios y apps que alguien armó con herramientas de IA (Lovable, Replit, Bolt y similares). En Horizonte Distribuidora: la app de pedidos. Pregunta quién la hizo, dónde está publicada y qué base de datos usa."
+        },
+        {
+          "icone": "robo",
+          "titulo": "Agentes",
+          "sub": "IA que actúa",
+          "detalhe": "IA que responde y hace cosas por sí sola: atiende por WhatsApp, crea pedidos, envía correos. En Horizonte Distribuidora: el agente de ventas en WhatsApp. Anota lo que puede hacer, no solo lo que responde."
+        },
+        {
+          "icone": "camadas",
+          "titulo": "Integraciones y MCP",
+          "sub": "conectores",
+          "detalhe": "Conexiones entre la IA y otros sistemas: automatizaciones, conectores MCP (el estándar que conecta al asistente con el correo, la agenda, el Drive). En Horizonte Distribuidora: la integración MCP con el correo. Anota los permisos de cada una.",
+          "forte": true
+        },
+        {
+          "icone": "usuario",
+          "titulo": "IA en la sombra",
+          "sub": "uso por cuenta propia",
+          "detalhe": "Herramientas que los empleados usan sin que TI lo sepa: chat de IA en la cuenta personal, extensión de navegador que lee la pantalla, transcriptor de reuniones. Suele ser la parte más grande del inventario."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "Bases y hojas de cálculo",
+          "sub": "lo que alimenta a la IA",
+          "detalhe": "Hojas de cálculo, carpetas y bases que la IA lee o que se pegan en ella. En Horizonte Distribuidora: la hoja de clientes con CPF y teléfono. Anota quién tiene acceso y cómo está compartida."
+        },
+        {
+          "icone": "enviar",
+          "titulo": "Proveedores",
+          "sub": "adónde van los datos",
+          "detalhe": "Quien procesa los datos: la API que hace el resumen de atención, el modelo detrás del agente. Anota el país y si existe contrato. Esto alimenta la clase 6."
+        }
+      ],
+      "legenda": "Una integración antigua también cuenta: un conector que nadie actualiza sigue con acceso hasta que alguien lo apague.",
+      "dica": "Alcance: tú levantas la información y preguntas. No instalas programas espía ni lees el correo de nadie."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Cómo levantar el inventario, en cuatro movimientos",
+      "sub": "Nada de esto exige invadir. Todo es preguntar y mirar paneles con el responsable del acceso al lado.",
+      "passos": [
+        {
+          "titulo": "Preguntar",
+          "sub": "cuestionario corto",
+          "texto": [
+            "Envía un cuestionario de 5 preguntas a todos, sin cacería de brujas: \"¿qué IA usas en el trabajo, para qué, con qué datos, en qué cuenta?\".",
+            "Explica que el objetivo es proteger, no castigar. Sin eso, la IA en la sombra queda escondida."
+          ],
+          "exemplo": {
+            "rot": "En Horizonte",
+            "texto": "En la encuesta, alguien de Ventas cuenta que pega la hoja de clientes en un chatbot gratuito, en su cuenta personal, para escribir propuestas. TI no lo sabía."
+          }
+        },
+        {
+          "titulo": "Mirar cuentas",
+          "sub": "con el responsable al lado",
+          "texto": [
+            "En la cuenta de Google o Microsoft de la empresa, el administrador muestra las \"apps conectadas\": cada app de IA que pidió acceso al correo o al Drive aparece ahí.",
+            "Pide también el estado de cuenta de la tarjeta corporativa de los últimos 3 meses: una suscripción de IA aparece como cobro."
+          ],
+          "exemplo": {
+            "rot": "Pedido",
+            "texto": "Rafael, ¿puedes abrir la pantalla de apps conectadas de la cuenta de la empresa mientras yo anoto?"
+          }
+        },
+        {
+          "titulo": "Mirar conectores",
+          "sub": "permisos",
+          "texto": [
+            "Para cada agente e integración, abre la pantalla de configuración con quien la administra y anota lo que puede hacer: leer, crear, enviar, borrar, pagar.",
+            "Vale también para las extensiones de navegador: lo que piden debe coincidir con lo que prometen."
+          ],
+          "exemplo": {
+            "rot": "En Horizonte",
+            "texto": "La integración MCP con el correo tiene permiso para enviar y borrar mensajes. Eso va en la columna \"acciones\"."
+          }
+        },
+        {
+          "titulo": "Confirmar al responsable",
+          "sub": "una persona por línea",
+          "texto": [
+            "Cada elemento necesita un responsable: la persona que responde si hay un problema y que puede apagarlo.",
+            "Un elemento sin responsable es un hallazgo en sí mismo. Anota \"sin responsable\" y llévalo al informe."
+          ],
+          "exemplo": {
+            "rot": "Regla",
+            "texto": "El responsable es una persona con nombre, no \"el área comercial\" ni \"TI\"."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelo para copiar: hoja de inventario de IA",
+      "sub": "Pégalo en una hoja de cálculo (separador punto y coma). La primera línea son las columnas; las demás son ejemplos de Horizonte.",
+      "blocos": [
+        {
+          "rot": "Hoja de inventario (CSV)",
+          "icone": "lista",
+          "conteudo": "id;ítem;tipo;para qué sirve;responsable;quién lo usa;datos que toca;¿dato personal?;acciones que puede hacer;¿aprobación humana?;¿registro de las acciones?;proveedor/modelo;dónde corre (país);¿TI lo conoce?;cómo apagarlo;fuente de la información\nI01;App de pedidos;app hecha con IA;los clientes hacen pedidos;<responsable>;clientes, ventas;pedidos, nombre, dirección;sí;leer, crear pedido;no;<verificar>;<plataforma>;<país>;sí;<cómo>;conversación con Patrícia\nI02;Agente de ventas WhatsApp;agente;responde y cierra pedidos;Patrícia Lima;clientes;conversaciones, pedidos;sí;responder, dar descuento, crear pedido;<verificar>;<verificar>;<modelo>;<país>;sí;<cómo>;pantalla de configuración\nI03;Integración MCP de correo;integración/MCP;el asistente lee y responde correos;<responsable>;ventas;correos;sí;leer, enviar, borrar;<verificar>;<verificar>;<proveedor>;<país>;<sí/no>;<cómo>;panel del conector\nI04;Hoja de cálculo de clientes;base/hoja de cálculo;registro de clientes;<responsable>;ventas, atención;CPF (documento fiscal), teléfono;sí;—;—;—;<hojas de cálculo en línea>;<país>;sí;<cómo>;pantalla de compartir\nI05;<herramienta en la sombra>;IA en la sombra;<uso>;<quién la usa>;<quién>;<datos>;<sí/no>;<acciones>;no;no;<proveedor>;<país>;no;<cómo>;cuestionario"
+        },
+        {
+          "rot": "Cuestionario para los empleados (5 preguntas)",
+          "icone": "chat",
+          "conteudo": "Estamos mapeando las herramientas de IA de la empresa para usarlas con seguridad.\nNadie va a ser sancionado por responder. Toma 3 minutos.\n\n1. ¿Qué herramientas de IA usas en el trabajo? (chat, extensión,\n   transcripción de reuniones, generador de imágenes, otra)\n2. ¿Para qué? Da un ejemplo de tarea.\n3. ¿Colocas en ellas datos de clientes, de empleados o financieros?\n   [ ] no  [ ] a veces  [ ] siempre  — ¿de qué tipo?\n4. ¿La cuenta es de la empresa o personal? ¿De pago o gratuita?\n5. ¿Alguna de ellas tiene acceso a tu correo, calendario, Drive o WhatsApp?"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Cómo verificar",
+            "html": "<ol><li>Todo ítem tiene un responsable con nombre de persona (o el hallazgo \"sin responsable\").</li><li>La columna \"acciones\" usa verbos: leer, crear, enviar, borrar, pagar.</li><li>Cada línea dice de dónde vino la información.</li><li>Hay al menos un ítem con \"¿TI lo conoce? no\".</li></ol>"
+          },
+          {
+            "rot": "Errores comunes",
+            "html": "<ul><li><b>Solo lo que TI conoce</b>: el inventario sale bonito e incompleto. La sombra aparece en el cuestionario y en la factura.</li><li><b>Anotar lo que la IA responde, no lo que hace</b>: el riesgo está en las acciones (enviar, borrar, dar descuento).</li><li><b>Un \"verificar\" que nunca se verifica</b>: en el informe pasa a \"no verificado\", con el motivo.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "En la empresa-laboratorio. Fallas de esta clase: F12 (IA en la sombra) y, de pasada, F9 (permisos del MCP).",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Inventario de Horizonte con al menos 10 ítems",
+          "min": "30 min",
+          "texto": "Abre el <a href=\"https://inematds.github.io/prof2030-lab/inventario.html\" target=\"_blank\" rel=\"noopener\">inventario de TI del laboratorio</a>: la lista oficial de Rafael y, abajo, las 22 respuestas de la encuesta interna. Arma tu hoja con las herramientas de IA de la lista oficial y las 4 que aparecen solo en las respuestas (F12). Completa responsable, datos, acciones y \"¿TI lo conoce?\".",
+          "pronto": "la hoja tiene al menos 10 líneas, cada una con responsable (o \"sin responsable\"), y las 4 herramientas de la sombra están marcadas con \"¿TI lo conoce? no\"."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Las acciones del conector de correo",
+          "min": "10 min",
+          "texto": "En la pieza <a href=\"https://inematds.github.io/prof2030-lab/pecas/mcp-email/\" target=\"_blank\" rel=\"noopener\">pecas/mcp-email/</a> (archivo <code>mcp.json</code>), anota en la columna \"acciones\" todo lo que la integración puede hacer y si existe aprobación humana (F9).",
+          "pronto": "la línea del MCP dice \"leer, enviar, borrar\" y \"aprobación humana: no\"."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Prueba lo que aprendiste",
+      "sub": "La explicación aparece después de tu respuesta.",
+      "perguntas": [
+        {
+          "p": "¿Cuál es la mejor forma de encontrar la IA en la sombra en una pyme?",
+          "opcoes": [
+            "Instalar un programa que monitoree los computadores.",
+            "Leer los correos de los empleados.",
+            "Cuestionario sin sanción + apps conectadas de la cuenta de la empresa + factura de la tarjeta.",
+            "Preguntar solo a TI."
+          ],
+          "certa": 2,
+          "cert": true,
+          "ref": "passos",
+          "explica": "Son tres fuentes que no invaden nada. Monitorear o leer correos está fuera del alcance. Preguntar solo a TI es el error común: la sombra es justamente lo que TI no conoce."
+        },
+        {
+          "p": "¿Qué es un conector MCP en el inventario?",
+          "opcoes": [
+            "Un modelo de IA.",
+            "Una conexión que le da al asistente acceso a otro sistema (correo, calendario, Drive), con permisos propios.",
+            "Un tipo de contraseña.",
+            "Un antivirus."
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "MCP es el estándar que conecta al asistente con otros sistemas. Lo que importa para el auditor son los permisos: leer, enviar, borrar."
+        },
+        {
+          "p": "Un ítem del inventario no tiene responsable. ¿Qué haces?",
+          "opcoes": [
+            "Pones \"TI\" como responsable.",
+            "Lo quitas de la lista.",
+            "Anotas \"sin responsable\" y lo tratas como hallazgo del informe.",
+            "Pones tu nombre."
+          ],
+          "certa": 2,
+          "cert": true,
+          "ref": "passos",
+          "explica": "Sin responsable, nadie responde ni apaga. Eso es un riesgo en sí mismo. \"TI\" no es una persona, y el responsable no puede ser el auditor."
+        },
+        {
+          "p": "En la columna \"acciones\" del agente de WhatsApp, ¿qué se anota?",
+          "opcoes": [
+            "\"Responde dudas\".",
+            "Los verbos de lo que puede hacer: responder, dar descuento, crear pedido.",
+            "El color del botón.",
+            "El nombre del modelo."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "El riesgo está en lo que el agente hace, no en lo que dice. Descuento y pedido mueven dinero: van a pesar en el triaje."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumen",
+      "itens": [
+        {
+          "t": "Seis lugares",
+          "texto": "Apps hechas por IA, agentes, integraciones y MCP, IA en la sombra, bases y hojas de cálculo, proveedores."
+        },
+        {
+          "t": "Cuatro movimientos",
+          "texto": "Preguntar, revisar cuentas, revisar conectores, confirmar al responsable."
+        },
+        {
+          "t": "Por qué importa la sombra",
+          "texto": "En mayo de 2026, investigadores que estudiaban la IA en las sombras encontraron cerca de 380 mil apps públicas hechas en plataformas de vibe coding, unas 5 mil con datos corporativos sensibles (registro en OECD.AI, a partir de Axios)."
+        },
+        {
+          "t": "Alcance",
+          "texto": "Evaluación y triaje de riesgos de IA. No es pentest, ni respuesta a incidentes, ni dictamen jurídico. Señal de intrusión, filtración o duda legal: detente y escala."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir más allá",
+      "links": [
+        {
+          "t": "OECD.AI: apps de vibe coding exponiendo datos (07/05/2026)",
+          "href": "https://oecd.ai/en/incidents/2026-05-07-1210",
+          "icone": "lupa"
+        },
+        {
+          "t": "Curso Agente sob controle: inventario de accesos (clase 1)",
+          "href": "https://inematds.github.io/curso-agente-sob-controle/",
+          "icone": "cadeado"
+        },
+        {
+          "t": "Empresa-laboratorio: Horizonte Distribuidora",
+          "href": "https://inematds.github.io/prof2030-lab/",
+          "icone": "pasta"
+        },
+        {
+          "t": "Laboratorio Horizonte: Integración MCP con el correo electrónico (F9)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/mcp-email/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Laboratorio Horizonte: Inventario e IA en la sombra (F12)",
+          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "icone": "lupa"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "slug": "data-guard",
+  "num": 6,
+  "menu": "Data Guard",
+  "titulo": "Data Guard: data, vendors, and models",
+  "titulo_curto": "Data Guard",
+  "minutos": 25,
+  "lead": "Every time someone pastes a customer conversation into an AI, personal data travels: it leaves the company, passes through a vendor, sometimes crosses a border, and sometimes becomes training material. In this lesson, you follow the data's path, check the legal basis and the contract, and fill out the vendor sheet, including for open models.",
+  "objetivo": "map where personal data goes, check the legal basis, contract, and international transfer, and fill out the sheet for each AI vendor.",
+  "competencias": [
+    "mapear-fluxo-de-dados",
+    "avaliar-lgpd-ia",
+    "avaliar-fornecedor-e-licenca"
+  ],
+  "aprende": [
+    {
+      "t": "The data's path in 5 stops"
+    },
+    {
+      "t": "The LGPD articles the auditor needs to recognize"
+    },
+    {
+      "t": "Closed or open, in the cloud or local: what changes"
+    },
+    {
+      "t": "The vendor sheet, ready to copy"
+    }
+  ],
+  "hero_alt": "A person reviews a printed contract with a highlighter next to a laptop and a small globe on the desk.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "The data's path",
+      "sub": "Five stops. At each one there is a question. Click to see.",
+      "nos": [
+        {
+          "icone": "usuario",
+          "titulo": "What data",
+          "sub": "personal? sensitive?",
+          "detalhe": "Personal data identifies someone (name, CPF, phone number, conversation). Sensitive data includes health, religion, biometrics, among others (LGPD, art. 5). Sensitive data calls for extra care (art. 11)."
+        },
+        {
+          "icone": "check",
+          "titulo": "Legal basis",
+          "sub": "why it's allowed",
+          "detalhe": "Any use of personal data needs one of the grounds in art. 7 (contract, consent, legitimate interest...). And only what is necessary for the purpose (art. 6, necessity). You point out the absence; the legal team decides the basis."
+        },
+        {
+          "icone": "enviar",
+          "titulo": "Where it goes",
+          "sub": "vendor and country",
+          "forte": true,
+          "detalhe": "Which vendor receives it and in which country the server is located. Data going outside Brazil is an international transfer (arts. 33 to 36). A common route is the standard clauses of ANPD Resolution CD/ANPD No. 19/2024."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "Contract",
+          "sub": "what the vendor promises",
+          "detalhe": "Is there a contract or data handling agreement (DPA)? Does it state retention, subprocessors, security, and whether the data is used for training? A free personal plan usually has none of this."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "Is kept",
+          "sub": "retention and training",
+          "detalhe": "How long the data stays with the vendor, whether it becomes model training, and how to delete it. If the company can't answer, it has lost control of the data."
+        }
+      ],
+      "legenda": "You point out the risk with evidence. Saying whether the use is illegal is a legal opinion: that stays with the company's lawyer.",
+      "dica": "Was personal data leaked? The LGPD (Brazil's data protection law) requires notifying the ANPD and the data subjects when there is relevant risk (art. 48). This is incident response: tell the owner the same day and point to the legal team."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Closed vendor, open model, cloud or local",
+      "sub": "The type of model changes the questions on the form.",
+      "passos": [
+        {
+          "titulo": "Closed, via API",
+          "sub": "the data travels",
+          "texto": [
+            "Company model (via API or app): the data leaves the company with every use. The core questions are contract, country, retention, and use for training.",
+            "An enterprise plan usually has a data agreement; a free plan on a personal account almost never does."
+          ],
+          "exemplo": {
+            "rot": "At Horizonte",
+            "texto": "F10: the customer service summary sends conversations to a server outside Brazil, with no contract, under terms that allow training on the data."
+          }
+        },
+        {
+          "titulo": "Open and local",
+          "sub": "the data stays",
+          "texto": [
+            "Open-weights model running on a company computer: the data doesn't leave. In 2026 there are already open models that run on a well-equipped laptop.",
+            "The questions change: what is the license, where did the model file come from, and who keeps the machine up to date."
+          ],
+          "exemplo": {
+            "rot": "Example",
+            "texto": "Qwen3.8-27B (Alibaba): weights published under the Apache 2.0 license; compressed version of about 17 GB (TNW, 08/19/2026)."
+          }
+        },
+        {
+          "titulo": "License",
+          "sub": "read before using",
+          "texto": [
+            "Categories for the form: permissive (MIT, Apache 2.0), own license with restrictions, limit by revenue or number of users, research-only or non-commercial.",
+            "Don't assume: open the model's license file and note the category and the passage that matters."
+          ],
+          "exemplo": {
+            "rot": "On the form",
+            "texto": "License: Apache 2.0 (LICENSE file in the official repository, checked on <data>)."
+          }
+        },
+        {
+          "titulo": "Provenance",
+          "sub": "where it came from",
+          "texto": [
+            "Download only from the maker's official repository and note the version and date. A file of unknown origin may have been altered.",
+            "Record the context too: on 09/08/2026, the NSA, CISA, and FBI accused Chinese AI companies of \"distillation at scale\" of American models. This is a reputation risk and a possible future rule to note, not a ban."
+          ],
+          "exemplo": {
+            "rot": "On the form",
+            "texto": "Provenance: official repository; alert AA26-251A cited as a regulatory risk to monitor."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Templates to copy: vendor form and data map",
+      "sub": "One form per vendor or model. The data map goes with it, one line per flow.",
+      "blocos": [
+        {
+          "rot": "AI vendor form",
+          "icone": "arquivo",
+          "conteudo": "AI VENDOR FORM · <date> · assessor: <name>\n\n1. IDENTIFICATION\nVendor / model: <name and version>\nType: [ ] closed via API/app  [ ] open running local  [ ] open hosted by a third party\nUsed in: <inventory items>          Internal owner: <person>\nPlan: [ ] free  [ ] paid personal  [ ] enterprise\n\n2. DATA\nWhat data it receives: <...>   Personal? [ ] yes [ ] no   Sensitive? [ ] yes [ ] no\nMinimization: is the data anonymized/reduced before sending? <...>\nLegal basis indicated by the company (art. 7 / 11): <...> (to be confirmed by legal)\n\n3. WHERE IT GOES\nCountry of processing/server: <...>\nInternational transfer? [ ] yes [ ] no  Instrument (arts. 33-36, Res. ANPD 19/2024): <...>\n\n4. CONTRACT\nContract/data handling agreement (DPA) signed? [ ] yes [ ] no   Evidence: <...>\nUses the data for training? [ ] no [ ] yes [ ] doesn't say\nRetention: <period>     How to delete: <...>\nSubprocessors listed? [ ] yes [ ] no\n\n5. OPEN MODEL (if applicable)\nLicense: [ ] permissive (MIT/Apache) [ ] own with restrictions\n         [ ] limit by revenue/users [ ] research-only/non-commercial\nPassage of the license that matters: <...>\nProvenance: <official repository, version, download date>\nWho updates the machine/model: <person>\n\n6. VENDOR RISK\nDependency (can it be replaced?): <...>\nPublic alerts (regulatory, security, reputation) with source: <...>\nTransparency about the model (safety document/system card)? <link>\n\n7. TRIAGE CONCLUSION\nCategory/rating (lesson 3): <...>   Deadline: <...>\nRecommendation: <keep / keep with conditions / replace / stop using>\nNot verified (with reason): <...>"
+        },
+        {
+          "rot": "Data map (CSV)",
+          "icone": "lista",
+          "conteudo": "flow;source;data;personal/sensitive;destination (vendor);country;contract?;trains on the data?;retention;stated legal basis;minimization;evidence;finding\nservice summary;WhatsApp conversations;name, phone, conversation text;personal;<summary API>;outside Brazil;no;yes (terms);<?>;not stated;no;fluxo.json step 2;F10\ncustomer spreadsheet;sales records;CPF (tax ID), phone;personal;cloud spreadsheets;<?>;<?>;—;—;<?>;no (CPF without need);compartilhamento.json;F8"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "How to check",
+            "html": "<ol><li>Each vendor in the inventory has a form.</li><li>Country, contract, training, and retention have an answer or \"not verified\".</li><li>The open model license was read from the official file, with a date.</li><li>The legal basis appears as \"indicated by the company, to be confirmed by legal\".</li></ol>"
+          },
+          {
+            "rot": "Common mistakes",
+            "html": "<ul><li><b>\"Open = no rules\"</b>: an open license also has conditions, and provenance matters.</li><li><b>Giving a legal opinion</b>: \"this is illegal\" is not an auditor's sentence. \"We found no legal basis or contract\" is.</li><li><b>Forgetting the shadow</b>: the free chatbot with the customer spreadsheet (F12) also needs a form.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "In the lab company. Failures in this lesson: F8 (public spreadsheet) and F10 (summary via foreign API).",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Horizonte's data map",
+          "min": "25 min",
+          "texto": "Open the <a href=\"https://inematds.github.io/prof2030-lab/pecas/planilha-clientes/\" target=\"_blank\" rel=\"noopener\">customer spreadsheet</a> (<code>compartilhamento.json</code>, <code>clientes.csv</code>) and the <a href=\"https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/\" target=\"_blank\" rel=\"noopener\">customer service summary</a> (<code>fluxo.json</code>). Fill in the data map for both flows.",
+          "pronto": "the map has both lines complete, F8 and F10 appear as findings with evidence, and each has a suggested fix (restrict and minimize; contract, anonymization, and transfer clauses)."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Form for two models",
+          "min": "30 min",
+          "texto": "Fill in the form for two cases: (a) the lab's customer service summary API (closed, outside Brazil); (b) an open Chinese model running local, like Qwen3.8-27B. Read the license in the model's official repository.",
+          "pronto": "both forms have all 7 parts filled in (or \"not verified\" with a reason), and form (b) cites the license with the passage and the date it was read."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "The customer service summary sends customer conversations to a server outside Brazil, with no contract. How do you write it in the report?",
+          "opcoes": [
+            "\"The company is committing a crime.\"",
+            "\"Personal data is going outside Brazil with no contract or transfer instrument identified (arts. 33-36). I recommend validation by the legal team.\"",
+            "\"All good, the vendor is a known one.\"",
+            "Don't write it: it's a matter for legal."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "You point out the fact, the evidence, and the reference article, and you escalate the conclusion. Stating that something is illegal is a legal opinion; leaving it out is an auditor's failure."
+        },
+        {
+          "p": "An open model running on a company computer. Which question loses weight and which gains it?",
+          "opcoes": [
+            "Loses: license. Gains: server country.",
+            "Loses: transfer of data outside the country. Gain: license, provenance, and who updates it.",
+            "None changes.",
+            "Loses everything: a local model has no risk."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "passos",
+          "explica": "Locally, the data doesn't travel. But the license may have conditions, the file must come from the official source, and someone has to maintain the machine."
+        },
+        {
+          "p": "The spreadsheet with SSNs and phone numbers is open to \"anyone with the link.\" Besides restricting access, what do you suggest?",
+          "opcoes": [
+            "Nothing else.",
+            "Remove the ID numbers (CPF) where they aren't needed (minimization) and block downloads.",
+            "Delete the spreadsheet.",
+            "Switch spreadsheet vendors."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Necessity (art. 6, III): only the data needed for the purpose. Less data stored = less data to leak."
+        },
+        {
+          "p": "You find out the open spreadsheet has already been downloaded by outsiders. What do you do?",
+          "opcoes": [
+            "Note it down for the final report.",
+            "You notify the owner the same day: it may be a personal data incident, which calls for incident response and a legal assessment on notifying the ANPD.",
+            "You close the link yourself.",
+            "You call the customers."
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "A confirmed leak is outside the scope of triage. You record it, don't touch it, notify, and point to who handles it. Notifying the ANPD (art. 48) is the company's decision, made with legal."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "Five stops",
+          "texto": "What data, legal basis, where it goes, contract, what is kept."
+        },
+        {
+          "t": "LGPD to recognize",
+          "texto": "Arts. 5 (definitions), 6 (necessity), 7 and 11 (legal bases), 33 to 36 (international transfer), 46 (security), 48 (reporting an incident)."
+        },
+        {
+          "t": "Model type",
+          "texto": "Closed via API: contract, country, retention, training. Open local: license, provenance, maintenance."
+        },
+        {
+          "t": "Scope",
+          "texto": "Assessment and triage of AI risks. This is not a pentest, nor incident response, nor a legal opinion. Sign of an intrusion, a leak, or a legal question: stop and escalate."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To go further",
+      "links": [
+        {
+          "t": "LGPD (Law 13.709/2018), official text",
+          "href": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+          "icone": "arquivo"
+        },
+        {
+          "t": "ANPD: Resolution CD/ANPD No. 19/2024 (international transfer)",
+          "href": "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-19-de-23-de-agosto-de-2024",
+          "icone": "escudo"
+        },
+        {
+          "t": "CISA, NSA, and FBI: alert AA26-251A on model distillation (09/08/2026)",
+          "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a",
+          "icone": "lupa"
+        },
+        {
+          "t": "TNW: Qwen3.8-27B, Apache 2.0, runs on a laptop (08/19/2026)",
+          "href": "https://thenextweb.com/news/alibaba-qwen3-8-27b-local-frontier-model",
+          "icone": "chip"
+        },
+        {
+          "t": "Lab support summary (F10)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/",
+          "icone": "pasta"
+        },
+        {
+          "t": "Horizonte Lab: Customer spreadsheet (F8)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/planilha-clientes/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Horizonte Distribuidora Lab: Inventory and shadow AI (F12)",
+          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "icone": "lupa"
+        }
+      ]
+    }
+  ]
+}

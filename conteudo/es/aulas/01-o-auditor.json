@@ -1,0 +1,294 @@
+{
+  "slug": "o-auditor",
+  "num": 1,
+  "menu": "El auditor",
+  "titulo": "El auditor de IA: qué evalúas, qué no evalúas y la autorización escrita",
+  "titulo_curto": "El auditor de IA",
+  "minutos": 18,
+  "lead": "La empresa ya usa IA en lugares que la dirección ni siquiera conoce. Alguien necesita mirar con método, mostrar la evidencia y decir qué hacer primero. Ese es el auditor de IA. Antes de abrir cualquier sistema, acuerdas por escrito qué vas a revisar, qué no vas a revisar y quién lo autorizó.",
+  "objetivo": "definir el alcance de la evaluación, decir qué no haces y conseguir la autorización escrita del responsable antes de revisar cualquier sistema.",
+  "competencias": [
+    "delimitar-escopo-auditoria",
+    "obter-autorizacao-escrita",
+    "reconhecer-quando-escalar"
+  ],
+  "aprende": [
+    {
+      "t": "Qué entrega un auditor de IA (y qué no entrega)"
+    },
+    {
+      "t": "Las 6 etapas del trabajo, de la autorización al informe"
+    },
+    {
+      "t": "Cuándo parar y llamar a otro profesional"
+    },
+    {
+      "t": "El acuerdo de alcance y autorización, listo para copiar"
+    }
+  ],
+  "hero_alt": "Dos personas en una mesa de oficina; una firma un documento de una página junto a un sello.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "El trabajo del auditor, de punta a punta",
+      "sub": "Seis etapas. Nada empieza antes de la primera. Haz clic en cada una.",
+      "nos": [
+        {
+          "icone": "caneta",
+          "titulo": "Autorización",
+          "sub": "alcance por escrito",
+          "forte": true,
+          "detalhe": "El responsable (o quien responde por la empresa) firma qué vas a revisar, hasta dónde, por cuánto tiempo y qué queda fuera. Sin eso, no abres nada. Es esta clase."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Inventario",
+          "sub": "qué existe",
+          "detalhe": "Lista de apps, agentes, integraciones y herramientas que los empleados usan por su cuenta (la \"IA en la sombra\"). Cada elemento con un responsable. Clase 2."
+        },
+        {
+          "icone": "alvo",
+          "titulo": "Triaje",
+          "sub": "nota y evidencia",
+          "detalhe": "Cada elemento recibe una nota de riesgo con base en una matriz simple (OWASP LLM y Agentic) y la prueba de lo que viste. Clase 3."
+        },
+        {
+          "icone": "lupa",
+          "titulo": "Revisión",
+          "sub": "apps, agentes, datos",
+          "detalhe": "Tres frentes: app hecha por IA (clase 4), agente que actúa solo (clase 5), datos y proveedores (clase 6)."
+        },
+        {
+          "icone": "escudo",
+          "titulo": "Gobernanza",
+          "sub": "reglas que se quedan",
+          "detalhe": "Un checklist de 20 ítems que la empresa mantiene después de que te vas, con base en NIST AI RMF, ISO/IEC 42001, AI Act y LGPD (ley brasileña de protección de datos). Clase 7."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "Informe",
+          "sub": "1 página + 30 días",
+          "detalhe": "Resumen ejecutivo, hallazgos con evidencia, lo que no se verificó y plan de 30 días. Clase 8."
+        }
+      ],
+      "legenda": "Alcance de esta formación: evaluación y triaje de riesgos de IA. No es pentest, ni respuesta a incidentes, ni dictamen jurídico.",
+      "dica": "Pentest es intentar invadir de verdad; eso exige contrato y un profesional propio. Tú lees, preguntas y registras."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Qué haces y qué no haces",
+      "sub": "Dejar el límite claro es lo que da credibilidad a tu trabajo.",
+      "passos": [
+        {
+          "titulo": "Tú haces",
+          "sub": "evaluación y triaje",
+          "texto": [
+            "Levantas qué usa la empresa de IA, lees configuraciones y documentos que el responsable liberó y entrevistas a quienes los usan.",
+            "Clasificas cada riesgo con evidencia y dices qué hacer ahora, en 7 días y en 30 días."
+          ],
+          "exemplo": {
+            "rot": "En Horizonte",
+            "texto": "Abres la planilla de clientes con el acceso que te dio Patrícia y anotas que está abierta para \"cualquier persona con el enlace\"."
+          }
+        },
+        {
+          "titulo": "Tú no haces",
+          "sub": "tres límites",
+          "texto": [
+            "<b>Pentest</b>: no intentas invadir, no ejecutas herramientas de ataque, no pruebas la contraseña de nadie.",
+            "<b>Respuesta a incidentes</b>: si hay una intrusión en curso, no la investigas por tu cuenta. <b>Dictamen jurídico</b>: tú señalas el riesgo de LGPD (ley brasileña de protección de datos); quien dice si es ilegal es el abogado."
+          ],
+          "exemplo": {
+            "rot": "Frase lista",
+            "texto": "Yo señalo el riesgo y la evidencia. La conclusión jurídica queda con el abogado de ustedes."
+          }
+        },
+        {
+          "titulo": "Cuándo parar",
+          "sub": "y escalar",
+          "texto": [
+            "Detente y avisa al responsable el mismo día si encuentras: señal de intrusión en curso, dato personal ya filtrado, un delito, o algo fuera del alcance firmado.",
+            "Registra lo que viste, no toques nada e indica al profesional correcto: seguridad (incidente), abogado (LGPD), TI del proveedor."
+          ],
+          "exemplo": {
+            "rot": "En Horizonte",
+            "texto": "Ves en el registro del agente pedidos que nadie reconoce. Te detienes, avisas a Carlos y a Rafael (TI) y sugieres llamar a respuesta a incidentes."
+          }
+        },
+        {
+          "titulo": "Nunca",
+          "sub": "reglas fijas",
+          "texto": [
+            "Nunca pidas ni guardes la contraseña de nadie: quien la escribe es el responsable del acceso. Nunca copies un secreto al informe: muestra solo dónde está y los 4 primeros caracteres.",
+            "Nunca prometas \"seguridad total\". Lo que no lograste ver pasa a ser \"no verificado\", nunca \"ok\"."
+          ],
+          "exemplo": {
+            "rot": "En el informe",
+            "texto": "Clave de API expuesta en app.js, línea 12 (empieza con sk-t…). No verificado: si la clave sigue activa."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelo para copiar: acuerdo de alcance y autorización",
+      "sub": "Una página. Completa los campos entre < > y pide la firma antes de empezar.",
+      "blocos": [
+        {
+          "rot": "Acuerdo de alcance y autorización",
+          "icone": "caneta",
+          "conteudo": "ACUERDO DE ALCANCE Y AUTORIZACIÓN — EVALUACIÓN DE RIESGOS DE IA\n\nEmpresa: <razón social>            CNPJ: <número>\nResponsable que autoriza: <nombre, cargo>\nEvaluador: <tu nombre>            Contacto: <e-mail / teléfono>\nPeríodo: del <fecha> al <fecha>\n\n1. QUÉ ES ESTE TRABAJO\nEvaluación y triaje de riesgos en el uso de inteligencia artificial.\nNO es una prueba de intrusión (pentest), NO es respuesta a incidentes y\nNO es un dictamen jurídico. No emite certificación.\n\n2. QUÉ SE EVALUARÁ (alcance)\n[ ] Herramientas de IA usadas por los empleados (inventario)\n[ ] App(s): <nombre y dirección>\n[ ] Agente(s): <nombre, canal (WhatsApp, e-mail...)>\n[ ] Integraciones / conectores (MCP, automatizaciones): <cuáles>\n[ ] Planillas y bases que alimentan la IA: <cuáles>\n[ ] Proveedores de IA y contratos: <cuáles>\n\n3. QUÉ QUEDA FUERA\n- <ej.: sistemas de terceros, sitio de clientes, entorno de producción del banco>\n\n4. CÓMO TRABAJA EL EVALUADOR\n- Solo lee: configuraciones, documentos, código y registros liberados.\n- Acceso con usuario de lectura creado por la empresa; nunca recibe la contraseña de una persona.\n- No modifica, no borra, no prueba ataques, no envía nada en nombre de la empresa.\n- Los secretos encontrados aparecen en el informe solo como ubicación + 4 primeros caracteres.\n- Los datos personales vistos quedan en reserva y no salen del entorno de la empresa.\n\n5. CUÁNDO EL EVALUADOR PARA Y AVISA (el mismo día)\n- Señal de intrusión en curso o dato personal ya filtrado.\n- Indicio de delito.\n- Algo fuera del alcance indicado arriba.\nEn esos casos registra lo que vio, no toca nada e indica\nal profesional adecuado (seguridad, jurídico, proveedor).\n\n6. ENTREGA\nInforme ejecutivo de 1 página + hallazgos con evidencia +\nítems no verificados + plan de 30 días. Fecha: <fecha>.\n\n7. AUTORIZACIÓN\nAutorizo la evaluación descrita arriba, dentro del alcance y del período.\n\n_____________________________    Fecha: ___/___/______\n<nombre del responsable>, <cargo>\n\n_____________________________    Fecha: ___/___/______\n<nombre del evaluador>"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Cómo verificar",
+            "html": "<ol><li>El alcance lista cada app, agente e integración por su nombre.</li><li>\"Qué queda fuera\" tiene al menos un ítem.</li><li>Las tres negaciones (no es pentest, ni respuesta a incidentes, ni dictamen jurídico) están escritas.</li><li>Quien firma responde por la empresa (dueño o director), no solo quien te llamó.</li></ol>"
+          },
+          {
+            "rot": "Errores comunes",
+            "html": "<ul><li><b>Autorización por WhatsApp</b> (\"puedes mirar\"): no dice qué ni hasta dónde. Envía el acuerdo y pide la firma, aunque sea digital.</li><li><b>Alcance \"toda la TI\"</b>: imposible de cumplir. Lista pieza por pieza.</li><li><b>Recibir la contraseña del dueño</b>: pide un usuario de lectura a tu nombre.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "Usa la empresa-laboratorio. Los nombres son ficticios.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Acuerdo de Horizonte Distribuidora",
+          "min": "25 min",
+          "texto": "Abre la página de <a href=\"https://inematds.github.io/prof2030-lab/\" target=\"_blank\" rel=\"noopener\">Horizonte Distribuidora</a>. Completa el acuerdo con las 6 piezas del laboratorio (app de pedidos, agente de WhatsApp, planilla de clientes, integración MCP con el e-mail, resumen de atención y panel) y el inventario. Quien autoriza es el responsable, Carlos Mendes.",
+          "pronto": "el acuerdo tiene las 6 piezas en el alcance, al menos 1 ítem fuera del alcance, las tres negaciones escritas y el campo de firma de Carlos."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Tu frase de límite",
+          "min": "10 min",
+          "texto": "Escribe, con tus propias palabras, la frase que dices cuando el cliente pide algo fuera del alcance (ej.: \"entonces intenta invadir para ver si aguanta\").",
+          "pronto": "la frase cabe en dos líneas, dice lo que no haces e indica quién lo hace."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Prueba lo que aprendiste",
+      "sub": "La explicación aparece después de tu respuesta.",
+      "perguntas": [
+        {
+          "p": "Carlos dice por WhatsApp: \"puedes mirar todo\". ¿Empiezas?",
+          "opcoes": [
+            "Sí, el mensaje ya es una autorización.",
+            "No. Envías el acuerdo con el alcance pieza por pieza y esperas la firma.",
+            "Sí, pero solo el fin de semana.",
+            "Solo si Rafael (TI) también envía un mensaje."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "codigo",
+          "explica": "\"Mirar todo\" no dice qué, hasta dónde ni por cuánto tiempo. El acuerdo te protege a ti y a la empresa. El error común es creer que la buena voluntad reemplaza al alcance."
+        },
+        {
+          "p": "Durante la evaluación ves pedidos extraños en el registro del agente, que nadie reconoce. ¿Qué haces?",
+          "opcoes": [
+            "Investigas por tu cuenta hasta encontrar al intruso.",
+            "Lo anotas para el informe final.",
+            "Te detienes, registras lo que viste sin tocar nada, avisas al responsable ese mismo día y sugieres una respuesta a incidentes.",
+            "Borras los pedidos extraños."
+          ],
+          "certa": 2,
+          "cert": true,
+          "ref": "passos",
+          "explica": "Una señal de intrusión en curso está fuera del alcance y es urgente. No investigas (eso es respuesta a incidentes) ni esperas el informe. Avisas e indicas quién se encarga."
+        },
+        {
+          "p": "¿Cuál de estos es trabajo del auditor de IA en esta formación?",
+          "opcoes": [
+            "Ejecutar una herramienta de ataque contra el sitio.",
+            "Decir si el uso de datos es ilegal.",
+            "Clasificar el riesgo de una hoja de cálculo abierta y mostrar la evidencia.",
+            "Emitir un certificado ISO 42001."
+          ],
+          "certa": 2,
+          "ref": "diagrama",
+          "explica": "Evaluar y hacer triaje con evidencia es tu trabajo. Atacar es pentest, decir si algo es ilegal es dictamen jurídico y el certificado ISO lo emite un organismo certificador."
+        },
+        {
+          "p": "Encontraste una clave de API en el código. ¿Cómo aparece en el informe?",
+          "opcoes": [
+            "La clave completa, para probarlo.",
+            "Archivo, línea y los 4 primeros caracteres.",
+            "No aparece, para no asustar.",
+            "En un anexo protegido con contraseña."
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "La evidencia debe poder verificarse sin esparcir el secreto. Ubicación + 4 primeros caracteres bastan para que Rafael encuentre y cambie la clave."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumen",
+      "itens": [
+        {
+          "t": "Seis etapas",
+          "texto": "Autorización, inventario, triaje, revisión, gobernanza e informe. Nada empieza antes de la autorización."
+        },
+        {
+          "t": "Acuerdo de una página",
+          "texto": "Alcance pieza por pieza, qué queda fuera, cómo trabajas, cuándo te detienes y quién firma."
+        },
+        {
+          "t": "Por qué ahora",
+          "texto": "Gartner prevé un gasto en gobernanza de IA de US$ 492 millones en 2026 y más de US$ 1.000 millones en 2030. En Brasil, solo el 27% de las empresas dice tener una gobernanza madura (Deloitte, 2026)."
+        },
+        {
+          "t": "Alcance",
+          "texto": "Evaluación y triaje de riesgos de IA. No es pentest, ni respuesta a incidentes, ni dictamen jurídico. Señal de intrusión, filtración o duda legal: detente y escala."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir más allá",
+      "links": [
+        {
+          "t": "Gartner (17/02/2026): gasto en gobernanza de IA",
+          "href": "https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2026-02-17-gartner-global-ai-regulations-fuel-billion-dollar-market-for-ai-governance-platforms",
+          "icone": "grafico"
+        },
+        {
+          "t": "Deloitte Brasil: State of AI 2026 (27% con gobernanza madura)",
+          "href": "https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html",
+          "icone": "grafico"
+        },
+        {
+          "t": "OWASP GenAI Security Project",
+          "href": "https://genai.owasp.org/",
+          "icone": "escudo"
+        },
+        {
+          "t": "NIST AI Risk Management Framework",
+          "href": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "icone": "camadas"
+        },
+        {
+          "t": "Empresa-laboratorio: Horizonte Distribuidora",
+          "href": "https://inematds.github.io/prof2030-lab/",
+          "icone": "pasta"
+        },
+        {
+          "t": "BSI: qué es la ISO/IEC 42001 (sistema de gestión de IA)",
+          "href": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-42001-ai-management-system/",
+          "icone": "arquivo"
+        }
+      ]
+    }
+  ]
+}

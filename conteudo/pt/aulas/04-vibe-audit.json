@@ -1,0 +1,134 @@
+{
+  "slug": "vibe-audit",
+  "num": 4,
+  "menu": "Vibe audit",
+  "titulo": "Vibe audit: revisar o app que a IA construiu",
+  "titulo_curto": "Vibe audit",
+  "minutos": 25,
+  "lead": "Fazer app com IA ficou fácil: o gerente descreve, a ferramenta entrega um site com banco de dados em uma tarde. O que a IA não faz sozinha é fechar as portas. Nesta aula você revisa um app desses só lendo: segredo exposto, falta de login, banco aberto e peça velha. Você diagnostica; quem corrige é o time.",
+  "objetivo": "achar segredo exposto, rota sem login, banco sem RLS e dependência vulnerável num app feito por IA, só lendo o projeto.",
+  "competencias": ["revisar-app-vibe-coding", "identificar-segredo-exposto", "verificar-controle-de-acesso", "checar-dependencias"],
+  "aprende": [
+    {"t": "As 4 camadas que mais falham em app feito por IA"},
+    {"t": "Onde o auditor para: diagnóstico, relatório e plano"},
+    {"t": "Usar um agente de IA para ler o projeto, sem mexer em nada"},
+    {"t": "O checklist de vibe audit, pronto para copiar"}
+  ],
+  "hero_alt": "Mãos num teclado de notebook com blocos de código desfocados na tela e uma lupa sobre a mesa.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "As 4 camadas do vibe audit",
+      "sub": "Vibe coding é construir app descrevendo em linguagem comum para a IA. Revise nesta ordem. Clique em cada camada.",
+      "nos": [
+        {"icone": "cadeado", "titulo": "Segredos", "sub": "chaves e senhas", "forte": true,
+         "detalhe": "Chave de API, senha de banco ou token no código que vai para o navegador, num arquivo .env enviado ao GitHub ou no histórico. Tudo que o navegador baixa é público. Na Horizonte: F1."},
+        {"icone": "usuario", "titulo": "Login", "sub": "quem entra onde",
+         "detalhe": "Página de administração, rota de API ou tela interna que abre sem login, ou que só confere o login na tela (e não no servidor). Esconder o endereço não protege. Na Horizonte: F3."},
+        {"icone": "memoria", "titulo": "Banco de dados", "sub": "quem vê o quê",
+         "detalhe": "Em plataformas como o Supabase, a chave que vai no navegador é pública de propósito. Quem protege os dados é a RLS (Row Level Security, regra por linha: \"cliente só vê os próprios pedidos\"). Tabela sem RLS = qualquer um lê tudo. Na Horizonte: F2."},
+        {"icone": "camadas", "titulo": "Dependências", "sub": "peças de terceiros",
+         "detalhe": "Bibliotecas listadas no package.json (ou equivalente). Versão com falha pública conhecida (CVE) é receita de ataque pública. Na Horizonte: F4."}
+      ],
+      "legenda": "Você só lê o projeto (cópia ou repositório liberado no termo). Não testa ataque no site no ar.",
+      "dica": "Uma quinta camada, cabeçalhos de segurança do site, entra se o escopo permitir e houver tempo. Para PME, as 4 acima resolvem a maior parte."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Onde o auditor para",
+      "sub": "O método completo tem 7 etapas. As 3 primeiras são suas; as outras são do time que corrige, e você confere no fim.",
+      "passos": [
+        {"titulo": "1 · Diagnosticar", "sub": "só leitura",
+         "texto": ["Leia o projeto nas 4 camadas. Nada é alterado. O que não deu para ver vira \"não verificado\".",
+                   "Segredo encontrado: anote arquivo, linha e os 4 primeiros caracteres. Nunca copie a chave inteira."],
+         "exemplo": {"rot": "Achado", "texto": "app.js, CONFIG.openaiApiKey: chave de IA no navegador (começa com FAKE…)."}},
+        {"titulo": "2 · Relatório", "sub": "achado com prova",
+         "texto": ["Para cada achado: camada, arquivo e linha, prova, gravidade (régua da aula 3) e \"não verificado\" quando for o caso.",
+                   "Escreva para o dono entender: o que acontece se ninguém fizer nada."],
+         "exemplo": {"rot": "Para o Carlos", "texto": "Qualquer pessoa que abrir o app pode copiar a chave e usar a IA na conta da Horizonte."}},
+        {"titulo": "3 · Plano", "sub": "correção + risco da correção",
+         "texto": ["Para cada achado, a correção sugerida e o risco dela: segura, moderada ou arriscada (pode quebrar o app?).",
+                   "Crítico com correção segura vai primeiro. Correção arriscada só com ok do dono e teste antes."],
+         "exemplo": {"rot": "Exemplo", "texto": "Trocar a chave: crítico, correção moderada (o app para de sugerir produtos até a nova chave ir para o servidor)."}},
+        {"titulo": "4 a 7 · Time corrige, você confere", "sub": "backup, simular, aplicar, verificar",
+         "texto": ["Quem corrige é o time ou o fornecedor: faz backup, testa numa cópia, aplica um item por vez.",
+                   "No fim, você repete o diagnóstico e entrega a tabela \"antes × depois\". Sem essa conferência, a correção não está provada."],
+         "exemplo": {"rot": "Tabela", "texto": "F2 · antes: RLS desligada · depois: RLS ligada, testada com dois usuários · status: resolvido."}}
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelos para copiar: checklist e pedido ao agente",
+      "sub": "O checklist guia você. O pedido serve para um agente de IA (Claude Code, Codex) ler o projeto sem mudar nada.",
+      "blocos": [
+        {"rot": "Checklist de vibe audit", "icone": "lista",
+         "conteudo": "CHECKLIST DE VIBE AUDIT · <app> · <data> · avaliador: <nome>\nMarque: [ok] [achado] [não verificado] — sempre com evidência\n\nSEGREDOS\n[ ] Nenhuma chave/senha/token em arquivo que vai para o navegador (.js, .html)\n[ ] .env NÃO está no repositório (nem no histórico)\n[ ] .gitignore lista .env e arquivos de chave\n[ ] Variáveis públicas (ex.: NEXT_PUBLIC_, VITE_) não guardam segredo\n[ ] Chave \"service_role\" ou de administrador nunca no front\n[ ] Existe limite de gasto no provedor da IA\n\nLOGIN E ACESSO\n[ ] Páginas de admin exigem login\n[ ] O login é conferido no servidor, não só escondendo o botão\n[ ] Rotas de API conferem a sessão e o papel (admin x cliente)\n[ ] Admin tem verificação em 2 etapas\n\nBANCO DE DADOS\n[ ] RLS ligada em TODAS as tabelas com dado de cliente ou pedido\n[ ] Existe política \"cada um vê só o seu\"\n[ ] Usuário anônimo (anon) não tem permissão de ler/alterar tudo\n[ ] Testado com 2 usuários diferentes (um não vê o do outro)\n\nDEPENDÊNCIAS\n[ ] Lista de dependências conferida (npm audit ou equivalente)\n[ ] Nenhuma versão com falha conhecida (CVE) de gravidade alta\n[ ] O framework ainda recebe correções\n[ ] Alguém é dono das atualizações\n\nPUBLICAÇÃO\n[ ] O app está público de propósito (a plataforma não deixou aberto por padrão)\n[ ] Dados de teste não são dados reais de clientes\n\nNÃO VERIFICADO (com motivo): <...>"},
+        {"rot": "Pedido ao agente: revisão só leitura", "icone": "chat",
+         "conteudo": "Você vai revisar a segurança deste projeto SÓ LENDO.\nRegras:\n- Não altere, crie nem apague nenhum arquivo.\n- Não rode comando que acesse a internet, instale pacote ou suba servidor.\n- Nunca mostre um segredo inteiro: só arquivo, linha e os 4 primeiros caracteres.\n- O que você não conseguir confirmar, marque como \"não verificado\".\n\nRevise 4 camadas e entregue uma tabela\n(camada | arquivo:linha | o que achou | por que é risco | gravidade crítica/alta/média/baixa):\n1. Segredos: chaves, senhas, tokens em arquivos enviados ao navegador ou ao repositório.\n2. Login: páginas e rotas de admin ou internas sem conferência de login no servidor.\n3. Banco: tabelas sem RLS, permissões amplas para usuário anônimo.\n4. Dependências: versões com vulnerabilidade conhecida (cite o CVE se souber; se não tiver certeza, diga).\nNo fim, liste o que ficou \"não verificado\" e por quê."}
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {"rot": "Como conferir", "html": "<ol><li>Cada achado tem arquivo e linha que você mesmo abriu (não confie só no agente).</li><li>Nenhum segredo aparece inteiro.</li><li>RLS foi conferida tabela por tabela.</li><li>A lista de \"não verificado\" existe, mesmo que curta.</li></ol>"},
+          {"rot": "Erros comuns", "html": "<ul><li><b>Achar que a chave anon do Supabase é o problema</b>: ela é pública por natureza. O problema é a tabela sem RLS.</li><li><b>Copiar o relatório do agente sem abrir os arquivos</b>: agente também erra e às vezes inventa CVE.</li><li><b>\"Corrigir rapidinho\"</b>: você não altera nada. Correção é do time, com backup e teste.</li></ul>"}
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática",
+      "sub": "Na empresa-laboratório. Falhas desta aula: F1, F2, F3 e F4, todas no app de pedidos.",
+      "exercicios": [
+        {"id": "e1", "titulo": "1 · As 4 falhas do app de pedidos", "min": "35 min",
+         "texto": "Abra o <a href=\"https://inematds.github.io/prof2030-lab/pecas/app-pedidos/\" target=\"_blank\" rel=\"noopener\">app de pedidos do laboratório</a> e os arquivos dele (<code>app.js</code>, <code>supabase-config.json</code>, <code>schema.sql</code>, <code>admin.html</code>, <code>package.json</code>). Passe o checklist inteiro.",
+         "pronto": "você achou as 4 falhas plantadas (F1 a F4), cada uma com arquivo, prova, gravidade pela régua da aula 3 e correção sugerida com o risco da correção."},
+        {"id": "e2", "titulo": "2 · Uma frase para o dono", "min": "10 min",
+         "texto": "Para cada uma das 4 falhas, escreva uma frase para o Carlos (dono, não técnico) dizendo o que acontece se ninguém fizer nada.",
+         "pronto": "as 4 frases têm no máximo 25 palavras cada e nenhuma usa sigla sem explicar."}
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {"p": "O app usa Supabase e a chave \"anon\" está no código do navegador. Isso, sozinho, é o achado?",
+         "opcoes": ["Sim, toda chave no navegador é crítica.", "Não. Essa chave é pública por natureza; o achado é tabela sem RLS ou com permissão ampla para o anônimo.", "Não, Supabase é sempre seguro.", "Só se a chave for antiga."],
+         "certa": 1, "cert": true, "ref": "diagrama",
+         "explica": "A chave anon foi feita para ir ao navegador. Quem protege é a RLS. Já a chave de uma API de IA (F1) ou a service_role nunca podem estar no front."},
+        {"p": "O painel admin abre sem login, mas \"ninguém sabe o endereço\". Como classificar?",
+         "opcoes": ["Baixo, está escondido.", "Crítico: endereço vaza e quem achar vira administrador.", "Não verificado.", "Médio, porque precisa adivinhar."],
+         "certa": 1, "cert": true, "ref": "passos",
+         "explica": "Esconder não é controle de acesso. Endereços aparecem em histórico, prints e buscadores. O login tem de ser conferido no servidor."},
+        {"p": "Você achou uma dependência com falha conhecida. Você atualiza a versão?",
+         "opcoes": ["Sim, é rápido.", "Não. Registra, sugere a correção com o risco dela e o time aplica com backup e teste. Você confere depois.", "Sim, mas só no fim de semana.", "Não, dependência não é problema do auditor."],
+         "certa": 1, "ref": "passos",
+         "explica": "O auditor diagnostica, relata e planeja (etapas 1 a 3). Mexer no projeto sai do escopo e pode quebrar o app sem ninguém saber por quê."},
+        {"p": "Para que serve pedir a um agente de IA que leia o projeto?",
+         "opcoes": ["Substituir o auditor.", "Acelerar a leitura; você confere cada achado abrindo o arquivo.", "Corrigir tudo automaticamente.", "Testar ataques no site."],
+         "certa": 1, "ref": "codigo",
+         "explica": "O agente lê rápido, mas erra e pode inventar. A evidência do relatório é o arquivo que você abriu."}
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumo",
+      "itens": [
+        {"t": "Quatro camadas", "texto": "Segredos, login, banco (RLS) e dependências. É onde app feito por IA mais falha."},
+        {"t": "Seu papel", "texto": "Diagnóstico, relatório e plano. O time corrige com backup e teste; você confere com a tabela antes × depois."},
+        {"t": "Por que importa", "texto": "Em maio de 2026, pesquisadores acharam cerca de 380 mil apps públicos feitos em plataformas de vibe coding, uns 5 mil com dado corporativo sensível. Parte das plataformas deixava o app público por padrão."},
+        {"t": "Escopo", "texto": "Avaliação e triagem de riscos de IA. Não é pentest, nem resposta a incidente, nem parecer jurídico. Sinal de invasão, vazamento ou dúvida legal: pare e escale."}
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {"t": "OECD.AI: apps de vibe coding expondo dados (07/05/2026)", "href": "https://oecd.ai/en/incidents/2026-05-07-1210", "icone": "lupa"},
+        {"t": "IANS Research: vibe coding e novos riscos de dados (15/05/2026)", "href": "https://www.iansresearch.com/resources/all-blogs/post/security-blog/2026/05/15/easy-to-build--easy-to-expose--how-vibe-coding-is-creating-new-data-risks", "icone": "lupa"},
+        {"t": "blinda-site: o método de 7 etapas para proteger um site olhando por dentro", "href": "https://inematds.github.io/blinda-site/guia/", "icone": "escudo"},
+        {"t": "App de pedidos do laboratório (F1 a F4)", "href": "https://inematds.github.io/prof2030-lab/pecas/app-pedidos/", "icone": "pasta"}
+      ]
+    }
+  ]
+}

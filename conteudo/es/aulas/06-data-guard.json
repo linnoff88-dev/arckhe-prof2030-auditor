@@ -1,0 +1,298 @@
+{
+  "slug": "data-guard",
+  "num": 6,
+  "menu": "Data Guard",
+  "titulo": "Data Guard: datos, proveedores y modelos",
+  "titulo_curto": "Data Guard",
+  "minutos": 25,
+  "lead": "Cada vez que alguien pega una conversación de un cliente en una IA, viaja un dato personal: sale de la empresa, pasa por un proveedor, a veces cruza la frontera y a veces se convierte en material de entrenamiento. En esta clase sigues el camino del dato, revisas la base legal y el contrato, y completas la ficha del proveedor, incluso de modelos abiertos.",
+  "objetivo": "mapear a dónde va el dato personal, revisar la base legal, el contrato y la transferencia internacional, y completar la ficha de cada proveedor de IA.",
+  "competencias": [
+    "mapear-fluxo-de-dados",
+    "avaliar-lgpd-ia",
+    "avaliar-fornecedor-e-licenca"
+  ],
+  "aprende": [
+    {
+      "t": "El camino del dato en 5 paradas"
+    },
+    {
+      "t": "Los artículos de la LGPD (ley brasileña de protección de datos) que el auditor necesita reconocer"
+    },
+    {
+      "t": "Cerrado o abierto, en la nube o local: qué cambia"
+    },
+    {
+      "t": "La ficha de proveedor, lista para copiar"
+    }
+  ],
+  "hero_alt": "Una persona revisa un contrato impreso con un marcador junto a un notebook y un pequeño globo terráqueo sobre la mesa.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "El camino del dato",
+      "sub": "Cinco paradas. En cada una hay una pregunta. Haz clic para ver.",
+      "nos": [
+        {
+          "icone": "usuario",
+          "titulo": "Qué dato",
+          "sub": "¿personal? ¿sensible?",
+          "detalhe": "El dato personal identifica a alguien (nombre, CPF, teléfono, conversación). El dato sensible incluye salud, religión, biometría, entre otros (LGPD, art. 5º). Lo sensible exige un cuidado redoblado (art. 11)."
+        },
+        {
+          "icone": "check",
+          "titulo": "Base legal",
+          "sub": "por qué se puede",
+          "detalhe": "Todo uso de dato personal necesita una de las hipótesis del art. 7º (contrato, consentimiento, interés legítimo...). Y solo lo necesario para la finalidad (art. 6º, necesidad). Tú señalas la ausencia; quien decide la base es el área jurídica."
+        },
+        {
+          "icone": "enviar",
+          "titulo": "A dónde va",
+          "sub": "proveedor y país",
+          "forte": true,
+          "detalhe": "Qué proveedor recibe y en qué país está el servidor. Un dato que sale de Brasil es una transferencia internacional (arts. 33 a 36). Un camino común son las cláusulas estándar de la Resolución CD/ANPD nº 19/2024."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "Contrato",
+          "sub": "qué promete el proveedor",
+          "detalhe": "¿Existe un contrato o acuerdo de tratamiento de datos (DPA)? ¿Dice cuánto tiempo se retienen los datos, quiénes son los subprocesadores, cómo es la seguridad y si usa los datos para entrenar? El plan gratuito personal casi nunca tiene nada de esto."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "Queda guardado",
+          "sub": "retención y entrenamiento",
+          "detalhe": "Cuánto tiempo permanece el dato con el proveedor, si se convierte en entrenamiento de modelo y cómo borrarlo. Si la empresa no sabe responder, perdió el control del dato."
+        }
+      ],
+      "legenda": "Tú señalas el riesgo con evidencia. Decir si el uso es ilegal es un dictamen jurídico: le corresponde al abogado de la empresa.",
+      "dica": "¿Se filtraron datos personales? La LGPD (ley brasileña de protección de datos) prevé comunicar a la ANPD y a los titulares cuando haya riesgo relevante (art. 48). Eso es respuesta a incidentes: avisa al responsable el mismo día e indica al área legal."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Proveedor cerrado, modelo abierto, nube o local",
+      "sub": "El tipo de modelo cambia las preguntas de la ficha.",
+      "passos": [
+        {
+          "titulo": "Cerrado por API",
+          "sub": "el dato viaja",
+          "texto": [
+            "Modelo de una empresa (por API o app): el dato sale de la empresa en cada uso. Las preguntas centrales son contrato, país, retención y uso para entrenamiento.",
+            "El plan empresarial suele tener acuerdo de datos; el plan gratuito en una cuenta personal, casi nunca."
+          ],
+          "exemplo": {
+            "rot": "En Horizonte",
+            "texto": "F10: el resumen de atención envía conversaciones a un servidor fuera de Brasil, sin contrato, con términos que permiten entrenar con los datos."
+          }
+        },
+        {
+          "titulo": "Abierto y local",
+          "sub": "el dato se queda",
+          "texto": [
+            "Modelo de pesos abiertos que corre en un computador de la empresa: el dato no sale. En 2026 ya hay modelos abiertos que corren en una laptop bien equipada.",
+            "Las preguntas cambian: cuál es la licencia, de dónde vino el archivo del modelo y quién mantiene la máquina actualizada."
+          ],
+          "exemplo": {
+            "rot": "Ejemplo",
+            "texto": "Qwen3.8-27B (Alibaba): pesos publicados bajo licencia Apache 2.0; versión comprimida de cerca de 17 GB (TNW, 19/08/2026)."
+          }
+        },
+        {
+          "titulo": "Licencia",
+          "sub": "léela antes de usar",
+          "texto": [
+            "Categorías para la ficha: permisiva (MIT, Apache 2.0), licencia propia con restricciones, límite por ingresos o número de usuarios, solo investigación o no comercial.",
+            "No supongas: abre el archivo de licencia del modelo y anota la categoría y el fragmento que importa."
+          ],
+          "exemplo": {
+            "rot": "En la ficha",
+            "texto": "Licencia: Apache 2.0 (archivo LICENSE en el repositorio oficial, verificado el <data>)."
+          }
+        },
+        {
+          "titulo": "Procedencia",
+          "sub": "de dónde vino",
+          "texto": [
+            "Descarga solo del repositorio oficial del fabricante y anota versión y fecha. Un archivo de origen desconocido puede estar alterado.",
+            "Registra también el contexto: el 08/09/2026, NSA, CISA y FBI acusaron a empresas chinas de IA de \"destilación a escala\" de modelos estadounidenses. Es un riesgo de reputación y de regla futura que debes anotar, no una prohibición."
+          ],
+          "exemplo": {
+            "rot": "En la ficha",
+            "texto": "Procedencia: repositorio oficial; alerta AA26-251A citada como riesgo regulatorio a seguir."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelos para copiar: ficha de proveedor y mapa del dato",
+      "sub": "Una ficha por proveedor o modelo. El mapa del dato va junto, una línea por flujo.",
+      "blocos": [
+        {
+          "rot": "Ficha de proveedor de IA",
+          "icone": "arquivo",
+          "conteudo": "FICHA DE PROVEEDOR DE IA · <fecha> · evaluador: <nombre>\n\n1. IDENTIFICACIÓN\nProveedor / modelo: <nombre y versión>\nTipo: [ ] cerrado por API/app  [ ] abierto corriendo local  [ ] abierto alojado por terceros\nUsado en: <ítems del inventario>          Responsable interno: <persona>\nPlan: [ ] gratuito  [ ] pago personal  [ ] empresarial\n\n2. DATOS\nQué datos recibe: <...>   ¿Personales? [ ] sí [ ] no   ¿Sensibles? [ ] sí [ ] no\nMinimización: ¿los datos se anonimizan/reducen antes de enviarlos? <...>\nBase legal indicada por la empresa (art. 7º / 11): <...> (a confirmar por el área legal)\n\n3. A DÓNDE VA\nPaís del procesamiento/servidor: <...>\n¿Transferencia internacional? [ ] sí [ ] no  Instrumento (arts. 33-36, Res. ANPD 19/2024): <...>\n\n4. CONTRATO\n¿Contrato/acuerdo de datos (DPA) firmado? [ ] sí [ ] no   Evidencia: <...>\n¿Usa los datos para entrenar? [ ] no [ ] sí [ ] no dice\nRetención: <plazo>     Cómo borrar: <...>\n¿Subprocesadores listados? [ ] sí [ ] no\n\n5. MODELO ABIERTO (si corresponde)\nLicencia: [ ] permisiva (MIT/Apache) [ ] propia con restricciones\n         [ ] límite por ingresos/usuarios [ ] solo investigación/no comercial\nFragmento de la licencia que importa: <...>\nProcedencia: <repositorio oficial, versión, fecha de descarga>\nQuién actualiza la máquina/modelo: <persona>\n\n6. RIESGO DEL PROVEEDOR\nDependencia (¿se puede cambiar?): <...>\nAlertas públicas (regulatorio, seguridad, reputación) con fuente: <...>\n¿Transparencia sobre el modelo (documento de seguridad/system card)? <link>\n\n7. CONCLUSIÓN DEL TRIAJE\nCategoría/nota (clase 3): <...>   Plazo: <...>\nRecomendación: <mantener / mantener con condiciones / cambiar / dejar de usar>\nNo verificado (con motivo): <...>"
+        },
+        {
+          "rot": "Mapa del dato (CSV)",
+          "icone": "lista",
+          "conteudo": "flujo;origen;dato;personal/sensible;destino (proveedor);país;¿contrato?;¿entrena con el dato?;retención;base legal indicada;minimización;evidencia;hallazgo\nresumen de atención;conversaciones de WhatsApp;nombre, teléfono, texto de la conversación;personal;<API del resumen>;fuera de Brasil;no;sí (términos);<?>;no indicada;no;fluxo.json paso 2;F10\nhoja de cálculo de clientes;registro comercial;CPF, teléfono;personal;hojas de cálculo en la nube;<?>;<?>;—;—;<?>;no (CPF sin necesidad);compartilhamento.json;F8"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Cómo verificar",
+            "html": "<ol><li>Cada proveedor del inventario tiene una ficha.</li><li>País, contrato, entrenamiento y retención tienen respuesta o \"no verificado\".</li><li>La licencia del modelo abierto se leyó en el archivo oficial, con fecha.</li><li>La base legal aparece como \"indicada por la empresa, a confirmar por el área legal\".</li></ol>"
+          },
+          {
+            "rot": "Errores comunes",
+            "html": "<ul><li><b>\"Abierto = sin reglas\"</b>: una licencia abierta también tiene condiciones, y la procedencia importa.</li><li><b>Dar dictamen</b>: \"esto es ilegal\" no es una frase del auditor. \"No encontramos base legal ni contrato\" sí lo es.</li><li><b>Olvidar la IA en la sombra</b>: el chatbot gratuito con la hoja de cálculo de clientes (F12) también necesita una ficha.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "En la empresa-laboratorio. Fallas de esta clase: F8 (hoja de cálculo pública) y F10 (resumen por API extranjera).",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Mapa del dato de Horizonte",
+          "min": "25 min",
+          "texto": "Abre la <a href=\"https://inematds.github.io/prof2030-lab/pecas/planilha-clientes/\" target=\"_blank\" rel=\"noopener\">hoja de cálculo de clientes</a> (<code>compartilhamento.json</code>, <code>clientes.csv</code>) y el <a href=\"https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/\" target=\"_blank\" rel=\"noopener\">resumen de atención</a> (<code>fluxo.json</code>). Completa el mapa del dato para los dos flujos.",
+          "pronto": "el mapa tiene las dos líneas completas, F8 y F10 aparecen como hallazgos con evidencia y cada uno tiene una corrección sugerida (restringir y minimizar; contrato, anonimización y cláusulas de transferencia)."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Ficha de dos modelos",
+          "min": "30 min",
+          "texto": "Completa la ficha para dos casos: (a) la API del resumen de atención del laboratorio (cerrado, fuera de Brasil); (b) un modelo abierto chino corriendo local, como el Qwen3.8-27B. Lee la licencia en el repositorio oficial del modelo.",
+          "pronto": "las dos fichas tienen las 7 partes completas (o \"no verificado\" con motivo) y la ficha (b) cita la licencia con el fragmento y la fecha de lectura."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Prueba lo que aprendiste",
+      "sub": "La explicación aparece después de tu respuesta.",
+      "perguntas": [
+        {
+          "p": "El resumen de atención envía conversaciones de clientes a un servidor fuera de Brasil, sin contrato. ¿Cómo lo escribes en el informe?",
+          "opcoes": [
+            "\"La empresa está cometiendo un delito.\"",
+            "\"Hay datos personales que salen de Brasil sin contrato ni instrumento de transferencia identificado (arts. 33-36). Recomiendo validación por parte del área jurídica.\"",
+            "\"Todo en orden, el proveedor es conocido.\"",
+            "No lo escribas: es asunto del área jurídica."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "diagrama",
+          "explica": "Tú señalas el hecho, la evidencia y el artículo de referencia, y escalas la conclusión. Afirmar ilegalidad es dictamen jurídico; omitirlo es una falla del auditor."
+        },
+        {
+          "p": "Un modelo abierto que corre en una computadora de la empresa. ¿Qué pregunta pierde fuerza y cuál gana?",
+          "opcoes": [
+            "Pierde: licencia. Gana: país del servidor.",
+            "Pierde: transferencia del dato hacia afuera. Ganan: licencia, procedencia y quién lo actualiza.",
+            "Ninguna cambia.",
+            "Pierde todo: un modelo local no tiene riesgo."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "passos",
+          "explica": "En local, el dato no viaja. Pero la licencia puede tener condiciones, el archivo debe venir de la fuente oficial y alguien tiene que mantener la máquina."
+        },
+        {
+          "p": "La planilla con CPF y teléfono está abierta a \"cualquier persona con el enlace\". Además de restringir el acceso, ¿qué sugieres?",
+          "opcoes": [
+            "Nada más.",
+            "Quitar el CPF de donde no es necesario (minimización) y bloquear la descarga.",
+            "Borrar la planilla.",
+            "Cambiar de proveedor de planillas."
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Necesidad (art. 6º, III): solo el dato preciso para la finalidad. Menos datos guardados = menos datos que pueden filtrarse."
+        },
+        {
+          "p": "Descubres que la planilla abierta ya fue descargada por personas externas. ¿Qué haces?",
+          "opcoes": [
+            "Lo anotas para el informe final.",
+            "Avisas al responsable el mismo día: es posible un incidente con datos personales, que requiere respuesta a incidentes y una evaluación jurídica sobre si comunicarlo a la ANPD.",
+            "Cierras tú mismo el enlace.",
+            "Llamas a los clientes."
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "Una filtración confirmada sale del alcance del triaje. Tú la registras, no tocas nada, avisas e indicas quién se encarga. La comunicación a la ANPD (art. 48) es decisión de la empresa junto con el área jurídica."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumen",
+      "itens": [
+        {
+          "t": "Cinco paradas",
+          "texto": "Qué dato, base legal, a dónde va, contrato, si queda guardado."
+        },
+        {
+          "t": "LGPD (ley brasileña de protección de datos) para reconocer",
+          "texto": "Arts. 5º (definiciones), 6º (necesidad), 7º y 11 (bases legales), 33 a 36 (transferencia internacional), 46 (seguridad), 48 (comunicar incidente)."
+        },
+        {
+          "t": "Tipo de modelo",
+          "texto": "Cerrado por API: contrato, país, retención, entrenamiento. Abierto local: licencia, procedencia, mantenimiento."
+        },
+        {
+          "t": "Alcance",
+          "texto": "Evaluación y triaje de riesgos de IA. No es pentest, ni respuesta a incidentes, ni dictamen jurídico. Señal de intrusión, filtración o duda legal: detente y escala."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir más allá",
+      "links": [
+        {
+          "t": "LGPD (Ley 13.709/2018), texto oficial",
+          "href": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+          "icone": "arquivo"
+        },
+        {
+          "t": "ANPD: Resolución CD/ANPD nº 19/2024 (transferencia internacional)",
+          "href": "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-19-de-23-de-agosto-de-2024",
+          "icone": "escudo"
+        },
+        {
+          "t": "CISA, NSA y FBI: alerta AA26-251A sobre destilación de modelos (08/09/2026)",
+          "href": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a",
+          "icone": "lupa"
+        },
+        {
+          "t": "TNW: Qwen3.8-27B, Apache 2.0, corre en una laptop (19/08/2026)",
+          "href": "https://thenextweb.com/news/alibaba-qwen3-8-27b-local-frontier-model",
+          "icone": "chip"
+        },
+        {
+          "t": "Resumen de atención del laboratorio (F10)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/",
+          "icone": "pasta"
+        },
+        {
+          "t": "Laboratorio Horizonte: Planilla de clientes (F8)",
+          "href": "https://inematds.github.io/prof2030-lab/pecas/planilha-clientes/",
+          "icone": "lupa"
+        },
+        {
+          "t": "Laboratorio Horizonte: Inventario e IA en la sombra (F12)",
+          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "icone": "lupa"
+        }
+      ]
+    }
+  ]
+}

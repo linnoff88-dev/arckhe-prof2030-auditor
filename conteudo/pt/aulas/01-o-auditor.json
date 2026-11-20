@@ -1,0 +1,294 @@
+{
+  "slug": "o-auditor",
+  "num": 1,
+  "menu": "O auditor",
+  "titulo": "O auditor de IA: o que você avalia, o que não avalia e a autorização escrita",
+  "titulo_curto": "O auditor de IA",
+  "minutos": 18,
+  "lead": "A empresa já usa IA em lugares que a diretoria nem sabe. Alguém precisa olhar com método, mostrar a evidência e dizer o que fazer primeiro. Esse é o auditor de IA. Antes de abrir qualquer sistema, você combina por escrito o que vai olhar, o que não vai e quem autorizou.",
+  "objetivo": "definir o escopo da avaliação, dizer o que não faz e conseguir a autorização escrita do dono antes de olhar qualquer sistema.",
+  "competencias": [
+    "delimitar-escopo-auditoria",
+    "obter-autorizacao-escrita",
+    "reconhecer-quando-escalar"
+  ],
+  "aprende": [
+    {
+      "t": "O que um auditor de IA entrega (e o que não entrega)"
+    },
+    {
+      "t": "As 6 etapas do trabalho, da autorização ao relatório"
+    },
+    {
+      "t": "Quando parar e chamar outro profissional"
+    },
+    {
+      "t": "O termo de escopo e autorização, pronto para copiar"
+    }
+  ],
+  "hero_alt": "Duas pessoas numa mesa de escritório; uma assina um documento de uma página ao lado de um carimbo.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "O trabalho do auditor, de ponta a ponta",
+      "sub": "Seis etapas. Nada começa antes da primeira. Clique em cada uma.",
+      "nos": [
+        {
+          "icone": "caneta",
+          "titulo": "Autorização",
+          "sub": "escopo por escrito",
+          "forte": true,
+          "detalhe": "O dono (ou quem responde pela empresa) assina o que você vai olhar, até onde, por quanto tempo e o que fica de fora. Sem isso, você não abre nada. É esta aula."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Inventário",
+          "sub": "o que existe",
+          "detalhe": "Lista de apps, agentes, integrações e ferramentas que os funcionários usam por conta própria (a \"IA na sombra\"). Cada item com um dono. Aula 2."
+        },
+        {
+          "icone": "alvo",
+          "titulo": "Triagem",
+          "sub": "nota e evidência",
+          "detalhe": "Cada item recebe uma nota de risco com base numa matriz simples (OWASP LLM e Agentic) e a prova do que você viu. Aula 3."
+        },
+        {
+          "icone": "lupa",
+          "titulo": "Revisão",
+          "sub": "apps, agentes, dados",
+          "detalhe": "Três frentes: app feito por IA (aula 4), agente que age sozinho (aula 5), dados e fornecedores (aula 6)."
+        },
+        {
+          "icone": "escudo",
+          "titulo": "Governança",
+          "sub": "regras que ficam",
+          "detalhe": "Um checklist de 20 itens que a empresa mantém depois que você sai, com base em NIST AI RMF, ISO/IEC 42001, AI Act e LGPD. Aula 7."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "Relatório",
+          "sub": "1 página + 30 dias",
+          "detalhe": "Resumo executivo, achados com evidência, o que não foi verificado e plano de 30 dias. Aula 8."
+        }
+      ],
+      "legenda": "Escopo desta formação: avaliação e triagem de riscos de IA. Não é pentest, nem resposta a incidente, nem parecer jurídico.",
+      "dica": "Pentest é tentar invadir de verdade; isso exige contrato e profissional próprio. Você lê, pergunta e registra."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "O que você faz e o que não faz",
+      "sub": "Deixar o limite claro é o que dá credibilidade ao seu trabalho.",
+      "passos": [
+        {
+          "titulo": "Você faz",
+          "sub": "avaliação e triagem",
+          "texto": [
+            "Levanta o que a empresa usa de IA, lê configurações e documentos que o dono liberou e entrevista quem usa.",
+            "Classifica cada risco com evidência e diz o que fazer agora, em 7 dias e em 30 dias."
+          ],
+          "exemplo": {
+            "rot": "Na Horizonte",
+            "texto": "Você abre a planilha de clientes com o login que a Patrícia te deu e anota que ela está aberta para \"qualquer pessoa com o link\"."
+          }
+        },
+        {
+          "titulo": "Você não faz",
+          "sub": "três limites",
+          "texto": [
+            "<b>Pentest</b>: não tenta invadir, não roda ferramenta de ataque, não testa senha de ninguém.",
+            "<b>Resposta a incidente</b>: se há invasão acontecendo, você não investiga sozinho. <b>Parecer jurídico</b>: você aponta o risco de LGPD; quem diz se é ilegal é advogado."
+          ],
+          "exemplo": {
+            "rot": "Frase pronta",
+            "texto": "Eu aponto o risco e a evidência. A conclusão jurídica fica com o advogado de vocês."
+          }
+        },
+        {
+          "titulo": "Quando parar",
+          "sub": "e escalar",
+          "texto": [
+            "Pare e avise o dono no mesmo dia se achar: sinal de invasão em curso, dado pessoal já vazado, crime, ou algo fora do escopo assinado.",
+            "Registre o que viu, não mexa em nada e indique o profissional certo: segurança (incidente), advogado (LGPD), TI do fornecedor."
+          ],
+          "exemplo": {
+            "rot": "Na Horizonte",
+            "texto": "Você vê no registro do agente pedidos que ninguém reconhece. Para, avisa o Carlos e o Rafael (TI) e sugere chamar resposta a incidente."
+          }
+        },
+        {
+          "titulo": "Nunca",
+          "sub": "regras fixas",
+          "texto": [
+            "Nunca peça nem guarde senha de ninguém: quem digita é o dono do acesso. Nunca copie segredo para o relatório: mostre só onde está e os 4 primeiros caracteres.",
+            "Nunca prometa \"segurança total\". O que você não conseguiu ver vira \"não verificado\", nunca \"ok\"."
+          ],
+          "exemplo": {
+            "rot": "No relatório",
+            "texto": "Chave de API exposta em app.js, linha 12 (começa com sk-t…). Não verificado: se a chave ainda está ativa."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelo para copiar: termo de escopo e autorização",
+      "sub": "Uma página. Preencha os campos entre < > e peça a assinatura antes de começar.",
+      "blocos": [
+        {
+          "rot": "Termo de escopo e autorização",
+          "icone": "caneta",
+          "conteudo": "TERMO DE ESCOPO E AUTORIZAÇÃO — AVALIAÇÃO DE RISCOS DE IA\n\nEmpresa: <razão social>            CNPJ: <número>\nResponsável que autoriza: <nome, cargo>\nAvaliador: <seu nome>            Contato: <e-mail / telefone>\nPeríodo: de <data> a <data>\n\n1. O QUE É ESTE TRABALHO\nAvaliação e triagem de riscos no uso de inteligência artificial.\nNÃO é teste de invasão (pentest), NÃO é resposta a incidente e\nNÃO é parecer jurídico. Não emite certificação.\n\n2. O QUE SERÁ AVALIADO (escopo)\n[ ] Ferramentas de IA usadas pelos funcionários (inventário)\n[ ] App(s): <nome e endereço>\n[ ] Agente(s): <nome, canal (WhatsApp, e-mail...)>\n[ ] Integrações / conectores (MCP, automações): <quais>\n[ ] Planilhas e bases que alimentam a IA: <quais>\n[ ] Fornecedores de IA e contratos: <quais>\n\n3. O QUE FICA DE FORA\n- <ex.: sistemas de terceiros, site de clientes, ambiente de produção do banco>\n\n4. COMO O AVALIADOR TRABALHA\n- Só lê: configurações, documentos, código e registros liberados.\n- Acesso com login de leitura criado pela empresa; nunca recebe senha de pessoa.\n- Não altera, não apaga, não testa ataque, não envia nada em nome da empresa.\n- Segredos encontrados aparecem no relatório só como local + 4 primeiros caracteres.\n- Dados pessoais vistos ficam em sigilo e não saem do ambiente da empresa.\n\n5. QUANDO O AVALIADOR PARA E AVISA (no mesmo dia)\n- Sinal de invasão em curso ou dado pessoal já vazado.\n- Indício de crime.\n- Algo fora do escopo acima.\nNesses casos ele registra o que viu, não mexe em nada e indica\no profissional adequado (segurança, jurídico, fornecedor).\n\n6. ENTREGA\nRelatório executivo de 1 página + achados com evidência +\nitens não verificados + plano de 30 dias. Data: <data>.\n\n7. AUTORIZAÇÃO\nAutorizo a avaliação descrita acima, dentro do escopo e do período.\n\n_____________________________    Data: ___/___/______\n<nome do responsável>, <cargo>\n\n_____________________________    Data: ___/___/______\n<nome do avaliador>"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Como conferir",
+            "html": "<ol><li>O escopo lista cada app, agente e integração pelo nome.</li><li>\"O que fica de fora\" tem pelo menos um item.</li><li>As três negações (não é pentest, nem resposta a incidente, nem parecer jurídico) estão escritas.</li><li>Quem assina responde pela empresa (dono ou diretor), não só quem te chamou.</li></ol>"
+          },
+          {
+            "rot": "Erros comuns",
+            "html": "<ul><li><b>Autorização por WhatsApp</b> (\"pode olhar aí\"): não diz o quê nem até onde. Mande o termo e peça assinatura, mesmo digital.</li><li><b>Escopo \"toda a TI\"</b>: impossível de cumprir. Liste peça por peça.</li><li><b>Receber a senha do dono</b>: peça um login de leitura em seu nome.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática",
+      "sub": "Use a empresa-laboratório. Os nomes são fictícios.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Termo da Horizonte Distribuidora",
+          "min": "25 min",
+          "texto": "Abra a página da <a href=\"https://inematds.github.io/prof2030-lab/\" target=\"_blank\" rel=\"noopener\">Horizonte Distribuidora</a>. Preencha o termo com as 6 peças do laboratório (app de pedidos, agente de WhatsApp, planilha de clientes, integração MCP com o e-mail, resumo de atendimento e painel) e o inventário. Quem autoriza é o dono, Carlos Mendes.",
+          "pronto": "o termo tem as 6 peças no escopo, pelo menos 1 item fora do escopo, as três negações escritas e o campo de assinatura do Carlos."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Sua frase de limite",
+          "min": "10 min",
+          "texto": "Escreva, com as suas palavras, a frase que você diz quando o cliente pede algo fora do escopo (ex.: \"então tenta invadir para ver se aguenta\").",
+          "pronto": "a frase cabe em duas linhas, diz o que você não faz e indica quem faz."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "O Carlos diz por WhatsApp: \"pode olhar tudo aí\". Você começa?",
+          "opcoes": [
+            "Sim, a mensagem já é autorização.",
+            "Não. Manda o termo com o escopo peça por peça e espera a assinatura.",
+            "Sim, mas só no fim de semana.",
+            "Só se o Rafael (TI) também mandar mensagem."
+          ],
+          "certa": 1,
+          "cert": true,
+          "ref": "codigo",
+          "explica": "\"Olhar tudo\" não diz o quê, até onde nem por quanto tempo. O termo protege você e a empresa. O erro comum é achar que boa vontade substitui escopo."
+        },
+        {
+          "p": "Durante a avaliação você vê pedidos estranhos no registro do agente, que ninguém reconhece. O que faz?",
+          "opcoes": [
+            "Investiga sozinho até achar o invasor.",
+            "Anota para o relatório final.",
+            "Para, registra o que viu sem mexer, avisa o dono no mesmo dia e sugere resposta a incidente.",
+            "Apaga os pedidos estranhos."
+          ],
+          "certa": 2,
+          "cert": true,
+          "ref": "passos",
+          "explica": "Sinal de invasão em curso está fora do escopo e é urgente. Você não investiga (é resposta a incidente) nem espera o relatório. Avisa e indica quem trata."
+        },
+        {
+          "p": "Qual destes é trabalho do auditor de IA nesta formação?",
+          "opcoes": [
+            "Rodar ferramenta de ataque contra o site.",
+            "Dizer se o uso de dados é ilegal.",
+            "Classificar o risco de uma planilha aberta e mostrar a evidência.",
+            "Emitir certificado ISO 42001."
+          ],
+          "certa": 2,
+          "ref": "diagrama",
+          "explica": "Avaliar e triar com evidência é o seu trabalho. Ataque é pentest, ilegalidade é parecer jurídico e certificado ISO é de organismo certificador."
+        },
+        {
+          "p": "Você achou uma chave de API no código. Como ela aparece no relatório?",
+          "opcoes": [
+            "A chave inteira, para provar.",
+            "Arquivo, linha e os 4 primeiros caracteres.",
+            "Não aparece, para não assustar.",
+            "Num anexo protegido por senha."
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "A evidência precisa ser verificável sem espalhar o segredo. Local + 4 primeiros caracteres bastam para o Rafael achar e trocar a chave."
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumo",
+      "itens": [
+        {
+          "t": "Seis etapas",
+          "texto": "Autorização, inventário, triagem, revisão, governança e relatório. Nada começa antes da autorização."
+        },
+        {
+          "t": "Termo de uma página",
+          "texto": "Escopo peça por peça, o que fica de fora, como você trabalha, quando para e quem assina."
+        },
+        {
+          "t": "Por que agora",
+          "texto": "O Gartner prevê gasto com governança de IA de US$ 492 milhões em 2026 e mais de US$ 1 bilhão em 2030. No Brasil, só 27% das empresas dizem ter governança madura (Deloitte, 2026)."
+        },
+        {
+          "t": "Escopo",
+          "texto": "Avaliação e triagem de riscos de IA. Não é pentest, nem resposta a incidente, nem parecer jurídico. Sinal de invasão, vazamento ou dúvida legal: pare e escale."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {
+          "t": "Gartner (17/02/2026): gasto com governança de IA",
+          "href": "https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2026-02-17-gartner-global-ai-regulations-fuel-billion-dollar-market-for-ai-governance-platforms",
+          "icone": "grafico"
+        },
+        {
+          "t": "Deloitte Brasil: State of AI 2026 (27% com governança madura)",
+          "href": "https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html",
+          "icone": "grafico"
+        },
+        {
+          "t": "OWASP GenAI Security Project",
+          "href": "https://genai.owasp.org/",
+          "icone": "escudo"
+        },
+        {
+          "t": "NIST AI Risk Management Framework",
+          "href": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "icone": "camadas"
+        },
+        {
+          "t": "Empresa-laboratório: Horizonte Distribuidora",
+          "href": "https://inematds.github.io/prof2030-lab/",
+          "icone": "pasta"
+        },
+        {
+          "t": "BSI: o que é a ISO/IEC 42001 (sistema de gestão de IA)",
+          "href": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-42001-ai-management-system/",
+          "icone": "arquivo"
+        }
+      ]
+    }
+  ]
+}
