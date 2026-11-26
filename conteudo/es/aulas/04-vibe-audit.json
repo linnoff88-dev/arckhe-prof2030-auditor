@@ -157,7 +157,7 @@
           "id": "e1",
           "titulo": "1 · Las 4 fallas de la app de pedidos",
           "min": "35 min",
-          "texto": "Abre la <a href=\"https://inematds.github.io/prof2030-lab/pecas/app-pedidos/\" target=\"_blank\" rel=\"noopener\">app de pedidos del laboratorio</a> y sus archivos (<code>app.js</code>, <code>supabase-config.json</code>, <code>schema.sql</code>, <code>admin.html</code>, <code>package.json</code>). Pasa el checklist completo.",
+          "texto": "Abre la <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/app-pedidos/\" target=\"_blank\" rel=\"noopener\">app de pedidos del laboratorio</a> y sus archivos (<code>app.js</code>, <code>supabase-config.json</code>, <code>schema.sql</code>, <code>admin.html</code>, <code>package.json</code>). Pasa el checklist completo.",
           "pronto": "encontraste las 4 fallas plantadas (F1 a F4), cada una con archivo, prueba, gravedad según la escala de la clase 3 y corrección sugerida con el riesgo de la corrección."
         },
         {
@@ -264,12 +264,12 @@
         },
         {
           "t": "blinda-site: el método de 7 etapas para proteger un sitio mirando por dentro",
-          "href": "https://inematds.github.io/blinda-site/guia/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/guia/",
           "icone": "escudo"
         },
         {
           "t": "App de pedidos del laboratorio (F1 a F4)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/app-pedidos/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/app-pedidos/",
           "icone": "pasta"
         }
       ]

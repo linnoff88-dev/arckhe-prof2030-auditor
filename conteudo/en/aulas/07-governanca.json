@@ -157,7 +157,7 @@
           "id": "e1",
           "titulo": "1 · The Horizonte checklist",
           "min": "35 min",
-          "texto": "With everything you gathered in lessons 2 to 6, fill in the 20-item checklist for Horizonte Distribuidora. Use the <a href=\"https://inematds.github.io/prof2030-lab/pecas/painel/\" target=\"_blank\" rel=\"noopener\">indicator dashboard</a> (<code>indicadores.json</code>) for items 11 and 12.",
+          "texto": "With everything you gathered in lessons 2 to 6, fill in the 20-item checklist for Horizonte Distribuidora. Use the <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/painel/\" target=\"_blank\" rel=\"noopener\">indicator dashboard</a> (<code>indicadores.json</code>) for items 11 and 12.",
           "pronto": "all 20 items have a status; every \"yes\" has evidence; every \"no\" and \"partial\" has an owner and a due date; F11 and F12 show up in the right items (11-12 and 01, 07)."
         },
         {
@@ -198,7 +198,7 @@
           "certa": 1,
           "cert": true,
           "ref": "diagrama",
-          "explica": "The INEMA certification qualifies the person who evaluates; it does not certify a company. Promising an ISO certificate is bad faith and grounds for revocation."
+          "explica": "The ARCKHÉ certification qualifies the person who evaluates; it does not certify a company. Promising an ISO certificate is bad faith and grounds for revocation."
         },
         {
           "p": "The dashboard shows orders rising since the agent came in. Does that prove the agent helped?",
@@ -294,12 +294,12 @@
         },
         {
           "t": "Horizonte Lab: Indicators dashboard (F11)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/painel/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/painel/",
           "icone": "lupa"
         },
         {
           "t": "Horizonte Distribuidora Lab: Inventory and shadow AI (F12)",
-          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "href": "https://linnoff88-dev.github.io/arckhe-/inventario.html",
           "icone": "lupa"
         }
       ]

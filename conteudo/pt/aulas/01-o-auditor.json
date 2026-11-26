@@ -163,7 +163,7 @@
           "id": "e1",
           "titulo": "1 · Termo da Horizonte Distribuidora",
           "min": "25 min",
-          "texto": "Abra a página da <a href=\"https://inematds.github.io/prof2030-lab/\" target=\"_blank\" rel=\"noopener\">Horizonte Distribuidora</a>. Preencha o termo com as 6 peças do laboratório (app de pedidos, agente de WhatsApp, planilha de clientes, integraçêo MCP com o e-mail, resumo de atendimento e painel) e o inventário. Quem autoriza é o dono, Carlos Mendes.",
+          "texto": "Abra a página da <a href=\"https://linnoff88-dev.github.io/arckhe-/\" target=\"_blank\" rel=\"noopener\">Horizonte Distribuidora</a>. Preencha o termo com as 6 peças do laboratório (app de pedidos, agente de WhatsApp, planilha de clientes, integraçêo MCP com o e-mail, resumo de atendimento e painel) e o inventário. Quem autoriza é o dono, Carlos Mendes.",
           "pronto": "o termo tem as 6 peças no escopo, pelo menos 1 item fora do escopo, as três negações escritas e o campo de assinatura do Carlos."
         },
         {
@@ -280,7 +280,7 @@
         },
         {
           "t": "Empresa-laboratório: Horizonte Distribuidora",
-          "href": "https://inematds.github.io/prof2030-lab/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "pasta"
         },
         {

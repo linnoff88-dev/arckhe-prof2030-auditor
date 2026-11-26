@@ -168,14 +168,14 @@
           "id": "e1",
           "titulo": "1 · Inventário da Horizonte com pelo menos 10 itens",
           "min": "30 min",
-          "texto": "Abra o <a href=\"https://inematds.github.io/prof2030-lab/inventario.html\" target=\"_blank\" rel=\"noopener\">inventário de TI do laboratório</a>: a lista oficial do Rafael e, embaixo, as 22 respostas da pesquisa interna. Monte a sua planilha com as ferramentas de IA da lista oficial e as 4 que aparecem só nas respostas (F12). Preencha dono, dados, ações e \"TI conhece?\".",
+          "texto": "Abra o <a href=\"https://linnoff88-dev.github.io/arckhe-/inventario.html\" target=\"_blank\" rel=\"noopener\">inventário de TI do laboratório</a>: a lista oficial do Rafael e, embaixo, as 22 respostas da pesquisa interna. Monte a sua planilha com as ferramentas de IA da lista oficial e as 4 que aparecem só nas respostas (F12). Preencha dono, dados, ações e \"TI conhece?\".",
           "pronto": "a planilha tem pelo menos 10 linhas, cada uma com dono (ou \"sem dono\"), e as 4 ferramentas da sombra estêo marcadas com \"TI conhece? nêo\"."
         },
         {
           "id": "e2",
           "titulo": "2 · As ações do conector de e-mail",
           "min": "10 min",
-          "texto": "Na peça <a href=\"https://inematds.github.io/prof2030-lab/pecas/mcp-email/\" target=\"_blank\" rel=\"noopener\">pecas/mcp-email/</a> (arquivo <code>mcp.json</code>), anote na coluna \"ações\" tudo o que a integraçêo pode fazer e se existe aprovaçêo humana (F9).",
+          "texto": "Na peça <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/mcp-email/\" target=\"_blank\" rel=\"noopener\">pecas/mcp-email/</a> (arquivo <code>mcp.json</code>), anote na coluna \"ações\" tudo o que a integraçêo pode fazer e se existe aprovaçêo humana (F9).",
           "pronto": "a linha do MCP diz \"ler, enviar, apagar\" e \"aprovaçêo humana: nêo\"."
         }
       ]
@@ -270,22 +270,22 @@
         },
         {
           "t": "Curso Agente sob controle: inventário de acessos (aula 1)",
-          "href": "https://inematds.github.io/curso-agente-sob-controle/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "cadeado"
         },
         {
           "t": "Empresa-laboratório: Horizonte Distribuidora",
-          "href": "https://inematds.github.io/prof2030-lab/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "pasta"
         },
         {
           "t": "Laboratório Horizonte: Integraçêo MCP com o e-mail (F9)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/mcp-email/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/mcp-email/",
           "icone": "lupa"
         },
         {
           "t": "Laboratório Horizonte: Inventário e IA na sombra (F12)",
-          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "href": "https://linnoff88-dev.github.io/arckhe-/inventario.html",
           "icone": "lupa"
         }
       ]

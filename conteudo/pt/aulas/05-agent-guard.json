@@ -163,14 +163,14 @@
           "id": "e1",
           "titulo": "1 · Checklist do agente Hora",
           "min": "35 min",
-          "texto": "Abra o <a href=\"https://inematds.github.io/prof2030-lab/pecas/agente-whatsapp/\" target=\"_blank\" rel=\"noopener\">agente de WhatsApp do laboratório</a> e os arquivos <code>prompt-do-agente.md</code>, <code>agente-config.json</code> e <code>conversas.json</code> (veja as conversas c-201 e c-202). Passe o checklist e preencha a matriz de permissões.",
+          "texto": "Abra o <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/agente-whatsapp/\" target=\"_blank\" rel=\"noopener\">agente de WhatsApp do laboratório</a> e os arquivos <code>prompt-do-agente.md</code>, <code>agente-config.json</code> e <code>conversas.json</code> (veja as conversas c-201 e c-202). Passe o checklist e preencha a matriz de permissões.",
           "pronto": "o checklist está preenchido com evidência e você propôs 3 correções, uma para cada falha (F5 teto no sistema, F6 texto do cliente nêo vira ordem, F7 registro e aprovaçêo acima de R$ 5 mil)."
         },
         {
           "id": "e2",
           "titulo": "2 · Matriz do assistente de e-mail",
           "min": "15 min",
-          "texto": "No <a href=\"https://inematds.github.io/prof2030-lab/pecas/mcp-email/\" target=\"_blank\" rel=\"noopener\">assistente de e-mail</a> (<code>mcp.json</code>), complete as linhas do MCP na matriz de permissões (F9).",
+          "texto": "No <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/mcp-email/\" target=\"_blank\" rel=\"noopener\">assistente de e-mail</a> (<code>mcp.json</code>), complete as linhas do MCP na matriz de permissões (F9).",
           "pronto": "enviar está no nível 1 com aprovador nomeado, e apagar e esvaziar lixeira estêo no nível 0."
         }
       ]
@@ -274,22 +274,22 @@
         },
         {
           "t": "Constituiçêo de agentes: modelo com 4 níveis de autonomia e 8 casos de teste",
-          "href": "https://inematds.github.io/constituicao-agentes/guia/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/guia/",
           "icone": "arquivo"
         },
         {
           "t": "Curso Agente sob controle: 5 controles e ordens escondidas",
-          "href": "https://inematds.github.io/curso-agente-sob-controle/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "cadeado"
         },
         {
           "t": "Agente de WhatsApp do laboratório (F5 a F7)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/agente-whatsapp/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/agente-whatsapp/",
           "icone": "pasta"
         },
         {
           "t": "Laboratório Horizonte: Integraçêo MCP com o e-mail (F9)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/mcp-email/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/mcp-email/",
           "icone": "lupa"
         }
       ]

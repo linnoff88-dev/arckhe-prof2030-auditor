@@ -163,7 +163,7 @@
           "id": "e1",
           "titulo": "1 · Acuerdo de Horizonte Distribuidora",
           "min": "25 min",
-          "texto": "Abre la página de <a href=\"https://inematds.github.io/prof2030-lab/\" target=\"_blank\" rel=\"noopener\">Horizonte Distribuidora</a>. Completa el acuerdo con las 6 piezas del laboratorio (app de pedidos, agente de WhatsApp, planilla de clientes, integración MCP con el e-mail, resumen de atención y panel) y el inventario. Quien autoriza es el responsable, Carlos Mendes.",
+          "texto": "Abre la página de <a href=\"https://linnoff88-dev.github.io/arckhe-/\" target=\"_blank\" rel=\"noopener\">Horizonte Distribuidora</a>. Completa el acuerdo con las 6 piezas del laboratorio (app de pedidos, agente de WhatsApp, planilla de clientes, integración MCP con el e-mail, resumen de atención y panel) y el inventario. Quien autoriza es el responsable, Carlos Mendes.",
           "pronto": "el acuerdo tiene las 6 piezas en el alcance, al menos 1 ítem fuera del alcance, las tres negaciones escritas y el campo de firma de Carlos."
         },
         {
@@ -280,7 +280,7 @@
         },
         {
           "t": "Empresa-laboratorio: Horizonte Distribuidora",
-          "href": "https://inematds.github.io/prof2030-lab/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "pasta"
         },
         {

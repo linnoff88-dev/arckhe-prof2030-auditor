@@ -174,7 +174,7 @@
           "titulo": "1 · Relatório completo da Horizonte",
           "min": "60 min",
           "dias": "1 a 2 dias",
-          "texto": "Junte o termo (aula 1), o inventário (2), a matriz (3), os checklists (4 e 5), as fichas (6) e o checklist de governança (7) num relatório no modelo desta aula. Depois compare a sua matriz com o <a href=\"https://inematds.github.io/prof2030-lab/gabarito.html\" target=\"_blank\" rel=\"noopener\">gabarito do laboratório</a>.",
+          "texto": "Junte o termo (aula 1), o inventário (2), a matriz (3), os checklists (4 e 5), as fichas (6) e o checklist de governança (7) num relatório no modelo desta aula. Depois compare a sua matriz com o <a href=\"https://linnoff88-dev.github.io/arckhe-/gabarito.html\" target=\"_blank\" rel=\"noopener\">gabarito do laboratório</a>.",
           "pronto": "o relatório passa nos 8 critérios da rubrica e cobre as 12 falhas (F1 a F12) com evidência."
         },
         {
@@ -222,7 +222,7 @@
           "certa": 1,
           "cert": true,
           "ref": "codigo",
-          "explica": "Promessa de segurança total é falsa e é motivo de revogaçêo do certificado INEMA. As outras três sêo exatamente o tom certo."
+          "explica": "Promessa de segurança total é falsa e é motivo de revogaçêo do certificado ARCKHÉ. As outras três sêo exatamente o tom certo."
         },
         {
           "p": "O que acontece no dia 30 do plano?",
@@ -267,7 +267,7 @@
         },
         {
           "t": "Certificaçêo",
-          "texto": "Cada formaçêo do Profissional 2030 terá certificaçêo INEMA de qualificaçêo; detalhes em breve."
+          "texto": "Cada formaçêo do Profissional 2030 terá certificaçêo ARCKHÉ de qualificaçêo; detalhes em breve."
         },
         {
           "t": "Escopo",
@@ -366,37 +366,37 @@
         },
         {
           "t": "Gabarito do laboratório (spoiler)",
-          "href": "https://inematds.github.io/prof2030-lab/gabarito.html",
+          "href": "https://linnoff88-dev.github.io/arckhe-/gabarito.html",
           "icone": "check"
         },
         {
           "t": "Programa Profissional 2030",
-          "href": "https://inematds.github.io/profissional-2030/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "camadas"
         },
         {
           "t": "Base comum do Profissional 2030",
-          "href": "https://inematds.github.io/prof2030-base/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "lista"
         },
         {
           "t": "Formaçêo Consultor de IA",
-          "href": "https://inematds.github.io/prof2030-consultor/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "usuario"
         },
         {
           "t": "Laboratório Horizonte: App de pedidos (F1–F4)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/app-pedidos/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/app-pedidos/",
           "icone": "lupa"
         },
         {
           "t": "Laboratório Horizonte: Resumo de atendimento (F10)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/resumo-atendimento/",
           "icone": "lupa"
         },
         {
           "t": "Laboratório Horizonte: Inventário e IA na sombra (F12)",
-          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "href": "https://linnoff88-dev.github.io/arckhe-/inventario.html",
           "icone": "lupa"
         }
       ]

@@ -157,7 +157,7 @@
           "id": "e1",
           "titulo": "1 · The 4 flaws in the orders app",
           "min": "35 min",
-          "texto": "Open the <a href=\"https://inematds.github.io/prof2030-lab/pecas/app-pedidos/\" target=\"_blank\" rel=\"noopener\">lab's orders app</a> and its files (<code>app.js</code>, <code>supabase-config.json</code>, <code>schema.sql</code>, <code>admin.html</code>, <code>package.json</code>). Go through the whole checklist.",
+          "texto": "Open the <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/app-pedidos/\" target=\"_blank\" rel=\"noopener\">lab's orders app</a> and its files (<code>app.js</code>, <code>supabase-config.json</code>, <code>schema.sql</code>, <code>admin.html</code>, <code>package.json</code>). Go through the whole checklist.",
           "pronto": "you found the 4 planted flaws (F1 to F4), each with a file, proof, severity from the lesson 3 scale, and a suggested fix with the fix's risk."
         },
         {
@@ -264,12 +264,12 @@
         },
         {
           "t": "blinda-site: the 7-step method to protect a site by looking from the inside",
-          "href": "https://inematds.github.io/blinda-site/guia/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/guia/",
           "icone": "escudo"
         },
         {
           "t": "Lab order app (F1 to F4)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/app-pedidos/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/app-pedidos/",
           "icone": "pasta"
         }
       ]

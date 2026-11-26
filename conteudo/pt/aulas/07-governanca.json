@@ -157,7 +157,7 @@
           "id": "e1",
           "titulo": "1 · Checklist da Horizonte",
           "min": "35 min",
-          "texto": "Com tudo o que você levantou nas aulas 2 a 6, preencha o checklist de 20 itens para a Horizonte Distribuidora. Use o <a href=\"https://inematds.github.io/prof2030-lab/pecas/painel/\" target=\"_blank\" rel=\"noopener\">painel de indicadores</a> (<code>indicadores.json</code>) para os itens 11 e 12.",
+          "texto": "Com tudo o que você levantou nas aulas 2 a 6, preencha o checklist de 20 itens para a Horizonte Distribuidora. Use o <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/painel/\" target=\"_blank\" rel=\"noopener\">painel de indicadores</a> (<code>indicadores.json</code>) para os itens 11 e 12.",
           "pronto": "os 20 itens têm status; todo \"sim\" tem evidência; todo \"nêo\" e \"parcial\" tem dono e prazo; F11 e F12 aparecem nos itens certos (11-12 e 01, 07)."
         },
         {
@@ -198,7 +198,7 @@
           "certa": 1,
           "cert": true,
           "ref": "diagrama",
-          "explica": "A certificaçêo INEMA é de qualificaçêo de quem avalia, nêo certifica empresa. Prometer certificado ISO é má-fé e motivo de revogaçêo."
+          "explica": "A certificaçêo ARCKHÉ é de qualificaçêo de quem avalia, nêo certifica empresa. Prometer certificado ISO é má-fé e motivo de revogaçêo."
         },
         {
           "p": "O painel mostra pedidos subindo desde que o agente entrou. Isso prova que o agente ajudou?",
@@ -294,12 +294,12 @@
         },
         {
           "t": "Laboratório Horizonte: Painel de indicadores (F11)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/painel/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/painel/",
           "icone": "lupa"
         },
         {
           "t": "Laboratório Horizonte: Inventário e IA na sombra (F12)",
-          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "href": "https://linnoff88-dev.github.io/arckhe-/inventario.html",
           "icone": "lupa"
         }
       ]

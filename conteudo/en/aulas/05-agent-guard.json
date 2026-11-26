@@ -163,14 +163,14 @@
           "id": "e1",
           "titulo": "1 · Hora agent checklist",
           "min": "35 min",
-          "texto": "Open the <a href=\"https://inematds.github.io/prof2030-lab/pecas/agente-whatsapp/\" target=\"_blank\" rel=\"noopener\">lab's WhatsApp agent</a> and the files <code>prompt-do-agente.md</code>, <code>agente-config.json</code>, and <code>conversas.json</code> (see conversations c-201 and c-202). Go through the checklist and fill in the permissions matrix.",
+          "texto": "Open the <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/agente-whatsapp/\" target=\"_blank\" rel=\"noopener\">lab's WhatsApp agent</a> and the files <code>prompt-do-agente.md</code>, <code>agente-config.json</code>, and <code>conversas.json</code> (see conversations c-201 and c-202). Go through the checklist and fill in the permissions matrix.",
           "pronto": "the checklist is filled in with evidence and you proposed 3 fixes, one for each failure (F5 cap in the system, F6 customer text does not become an order, F7 log and approval above R$ 5 mil)."
         },
         {
           "id": "e2",
           "titulo": "2 · Email assistant matrix",
           "min": "15 min",
-          "texto": "In the <a href=\"https://inematds.github.io/prof2030-lab/pecas/mcp-email/\" target=\"_blank\" rel=\"noopener\">email assistant</a> (<code>mcp.json</code>), complete the MCP rows in the permissions matrix (F9).",
+          "texto": "In the <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/mcp-email/\" target=\"_blank\" rel=\"noopener\">email assistant</a> (<code>mcp.json</code>), complete the MCP rows in the permissions matrix (F9).",
           "pronto": "sending is at level 1 with a named approver, and deleting and emptying the trash are at level 0."
         }
       ]
@@ -274,22 +274,22 @@
         },
         {
           "t": "Agent constitution: a model with 4 autonomy levels and 8 test cases",
-          "href": "https://inematds.github.io/constituicao-agentes/guia/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/guia/",
           "icone": "arquivo"
         },
         {
           "t": "Course Agent Under Control: 5 controls and hidden orders",
-          "href": "https://inematds.github.io/curso-agente-sob-controle/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/",
           "icone": "cadeado"
         },
         {
           "t": "WhatsApp agent in the lab (F5 to F7)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/agente-whatsapp/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/agente-whatsapp/",
           "icone": "pasta"
         },
         {
           "t": "Horizonte Distribuidora Lab: MCP Integration with email (F9)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/mcp-email/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/mcp-email/",
           "icone": "lupa"
         }
       ]

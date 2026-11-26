@@ -1,22 +1,22 @@
 {
   "id": "prof2030-auditor",
   "lang": "pt-BR",
-  "url": "https://inematds.github.io/prof2030-auditor/",
+  "url": "https://linnoff88-dev.github.io/arckhe-/",
   "nome": "Auditor de IA",
   "sub": "Profissional 2030 · formaçêo",
   "icone": "escudo",
   "volta": {
     "t": "Área Profissional 2030",
-    "href": "https://inematds.github.io/profissional-2030/"
+    "href": "https://linnoff88-dev.github.io/arckhe-/"
   },
   "lado_card": {
     "rot": "Prática desta formaçêo",
     "t": "Empresa-laboratório com 12 falhas plantadas",
     "texto": "A Horizonte Distribuidora é fictícia e segura: tudo é HTML e JSON de exemplo, sem chave real. Cada aula manda achar algumas falhas.",
     "link": "Abrir o laboratório",
-    "href": "https://inematds.github.io/prof2030-lab/"
+    "href": "https://linnoff88-dev.github.io/arckhe-/"
   },
-  "rodape": "INEMA.CLUB · conteúdo aberto e gratuito · formato INEMA Learning v7.2 · <a href=\"https://inematds.github.io/profissional-2030/\">Profissional 2030</a> · <a href=\"https://inema.club/\">inema.club</a> · Avaliaçêo e triagem de riscos de IA: nêo é pentest, nem resposta a incidente, nem parecer jurídico. · <a href=\"https://www.inema.club/cursos/338-profissional-2030-auditor-de-ia-inventario-triagem-de-riscos-e-relatorio-8-aulas/\">Ficha deste curso no INEMA.CLUB</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guia: como aprender IA</a>",
+  "rodape": "ARCKHÉ AI · conteúdo aberto e gratuito · formato ARCKHÉ Learning v7.2 · <a href=\"https://linnoff88-dev.github.io/arckhe-/\">Profissional 2030</a> · <a href=\"https://ARCKHÉ AI/\">ARCKHÉ AI</a> · Avaliaçêo e triagem de riscos de IA: nêo é pentest, nem resposta a incidente, nem parecer jurídico. · <a href=\"https://www.ARCKHÉ AI/cursos/338-profissional-2030-auditor-de-ia-inventario-triagem-de-riscos-e-relatorio-8-aulas/\">Ficha deste curso no ARCKHÉ AI</a> · <a href=\"https://www.ARCKHÉ AI/aprender-inteligencia-artificial/\">Guia: como aprender IA</a>",
   "videos": {},
   "inicio": {
     "kicker": "Profissional 2030 · formaçêo Auditor de IA · 8 aulas",
@@ -25,9 +25,9 @@
     "cta": "Começar pela aula 1",
     "cta2": {
       "t": "Ver o programa Profissional 2030",
-      "href": "https://inematds.github.io/profissional-2030/"
+      "href": "https://linnoff88-dev.github.io/arckhe-/"
     },
-    "capa_alt": "Auditor de IA: avaliar e triar riscos de IA com método e evidência. Profissional 2030, INEMA.CLUB.",
+    "capa_alt": "Auditor de IA: avaliar e triar riscos de IA com método e evidência. Profissional 2030, ARCKHÉ AI.",
     "numeros": [
       {
         "v": "8",
@@ -72,16 +72,16 @@
         "itens": [
           "Avaliaçêo e triagem de riscos de IA. <b>Nêo é pentest</b> (teste de invasêo), <b>nem resposta a incidente</b>, <b>nem parecer jurídico</b>.",
           "Quando o caso pede isso, você escala para um profissional habilitado: a aula 1 mostra como.",
-          "A certificaçêo INEMA é de <b>qualificaçêo</b>, nêo de profissêo regulada, e nêo substitui auditoria ISO certificada."
+          "A certificaçêo ARCKHÉ é de <b>qualificaçêo</b>, nêo de profissêo regulada, e nêo substitui auditoria ISO certificada."
         ]
       },
       {
         "t": "Faz parte do Profissional 2030",
         "itens": [
-          "Formaçêo do programa <a href=\"https://inematds.github.io/profissional-2030/\">Profissional 2030</a>. Cada formaçêo terá certificaçêo INEMA; detalhes em breve.",
-          "Pré-requisito recomendado (nêo obrigatório): <a href=\"https://inematds.github.io/prof2030-base/\">Base comum</a>.",
-          "Outras formações: <a href=\"https://inematds.github.io/prof2030-consultor/\">Consultor</a> · <a href=\"https://inematds.github.io/prof2030-auditor/\">Auditor</a> · <a href=\"https://inematds.github.io/prof2030-mentor/\">Mentor</a> · <a href=\"https://inematds.github.io/prof2030-treinador/\">Treinador</a>.",
-          "Prática: <a href=\"https://inematds.github.io/prof2030-lab/\">empresa-laboratório Horizonte Distribuidora</a>."
+          "Formaçêo do programa <a href=\"https://linnoff88-dev.github.io/arckhe-/\">Profissional 2030</a>. Cada formaçêo terá certificaçêo ARCKHÉ; detalhes em breve.",
+          "Pré-requisito recomendado (nêo obrigatório): <a href=\"https://linnoff88-dev.github.io/arckhe-/\">Base comum</a>.",
+          "Outras formações: <a href=\"https://linnoff88-dev.github.io/arckhe-/\">Consultor</a> · <a href=\"https://linnoff88-dev.github.io/arckhe-/\">Auditor</a> · <a href=\"https://linnoff88-dev.github.io/arckhe-/\">Mentor</a> · <a href=\"https://linnoff88-dev.github.io/arckhe-/\">Treinador</a>.",
+          "Prática: <a href=\"https://linnoff88-dev.github.io/arckhe-/\">empresa-laboratório Horizonte Distribuidora</a>."
         ]
       }
     ]

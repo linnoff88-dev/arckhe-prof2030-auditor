@@ -162,7 +162,7 @@
           "id": "e1",
           "titulo": "1 · Mapa del dato de Horizonte",
           "min": "25 min",
-          "texto": "Abre la <a href=\"https://inematds.github.io/prof2030-lab/pecas/planilha-clientes/\" target=\"_blank\" rel=\"noopener\">hoja de cálculo de clientes</a> (<code>compartilhamento.json</code>, <code>clientes.csv</code>) y el <a href=\"https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/\" target=\"_blank\" rel=\"noopener\">resumen de atención</a> (<code>fluxo.json</code>). Completa el mapa del dato para los dos flujos.",
+          "texto": "Abre la <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/planilha-clientes/\" target=\"_blank\" rel=\"noopener\">hoja de cálculo de clientes</a> (<code>compartilhamento.json</code>, <code>clientes.csv</code>) y el <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/resumo-atendimento/\" target=\"_blank\" rel=\"noopener\">resumen de atención</a> (<code>fluxo.json</code>). Completa el mapa del dato para los dos flujos.",
           "pronto": "el mapa tiene las dos líneas completas, F8 y F10 aparecen como hallazgos con evidencia y cada uno tiene una corrección sugerida (restringir y minimizar; contrato, anonimización y cláusulas de transferencia)."
         },
         {
@@ -279,17 +279,17 @@
         },
         {
           "t": "Resumen de atención del laboratorio (F10)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/resumo-atendimento/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/resumo-atendimento/",
           "icone": "pasta"
         },
         {
           "t": "Laboratorio Horizonte: Planilla de clientes (F8)",
-          "href": "https://inematds.github.io/prof2030-lab/pecas/planilha-clientes/",
+          "href": "https://linnoff88-dev.github.io/arckhe-/pecas/planilha-clientes/",
           "icone": "lupa"
         },
         {
           "t": "Laboratorio Horizonte: Inventario e IA en la sombra (F12)",
-          "href": "https://inematds.github.io/prof2030-lab/inventario.html",
+          "href": "https://linnoff88-dev.github.io/arckhe-/inventario.html",
           "icone": "lupa"
         }
       ]

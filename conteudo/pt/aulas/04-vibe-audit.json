@@ -80,7 +80,7 @@
       "sub": "Na empresa-laboratório. Falhas desta aula: F1, F2, F3 e F4, todas no app de pedidos.",
       "exercicios": [
         {"id": "e1", "titulo": "1 · As 4 falhas do app de pedidos", "min": "35 min",
-         "texto": "Abra o <a href=\"https://inematds.github.io/prof2030-lab/pecas/app-pedidos/\" target=\"_blank\" rel=\"noopener\">app de pedidos do laboratório</a> e os arquivos dele (<code>app.js</code>, <code>supabase-config.json</code>, <code>schema.sql</code>, <code>admin.html</code>, <code>package.json</code>). Passe o checklist inteiro.",
+         "texto": "Abra o <a href=\"https://linnoff88-dev.github.io/arckhe-/pecas/app-pedidos/\" target=\"_blank\" rel=\"noopener\">app de pedidos do laboratório</a> e os arquivos dele (<code>app.js</code>, <code>supabase-config.json</code>, <code>schema.sql</code>, <code>admin.html</code>, <code>package.json</code>). Passe o checklist inteiro.",
          "pronto": "você achou as 4 falhas plantadas (F1 a F4), cada uma com arquivo, prova, gravidade pela régua da aula 3 e correçêo sugerida com o risco da correçêo."},
         {"id": "e2", "titulo": "2 · Uma frase para o dono", "min": "10 min",
          "texto": "Para cada uma das 4 falhas, escreva uma frase para o Carlos (dono, nêo técnico) dizendo o que acontece se ninguém fizer nada.",
@@ -126,8 +126,8 @@
       "links": [
         {"t": "OECD.AI: apps de vibe coding expondo dados (07/05/2026)", "href": "https://oecd.ai/en/incidents/2026-05-07-1210", "icone": "lupa"},
         {"t": "IANS Research: vibe coding e novos riscos de dados (15/05/2026)", "href": "https://www.iansresearch.com/resources/all-blogs/post/security-blog/2026/05/15/easy-to-build--easy-to-expose--how-vibe-coding-is-creating-new-data-risks", "icone": "lupa"},
-        {"t": "blinda-site: o método de 7 etapas para proteger um site olhando por dentro", "href": "https://inematds.github.io/blinda-site/guia/", "icone": "escudo"},
-        {"t": "App de pedidos do laboratório (F1 a F4)", "href": "https://inematds.github.io/prof2030-lab/pecas/app-pedidos/", "icone": "pasta"}
+        {"t": "blinda-site: o método de 7 etapas para proteger um site olhando por dentro", "href": "https://linnoff88-dev.github.io/arckhe-/guia/", "icone": "escudo"},
+        {"t": "App de pedidos do laboratório (F1 a F4)", "href": "https://linnoff88-dev.github.io/arckhe-/pecas/app-pedidos/", "icone": "pasta"}
       ]
     }
   ]
